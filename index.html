@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vanessa Salonoy - Operations & Business Systems Leadership</title>
+<meta name="description" content="Operations and business systems leader with 11+ years across ERP, delivery, and AI-powered process automation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vanessa00001.github.io/portfolio/">
+<meta property="og:title" content="Vanessa Salonoy: Operations, Business Systems and Automation">
+<meta property="og:description" content="Operations and business systems leader with 11+ years across ERP, delivery, and AI-powered process automation.">
+<meta property="og:image" content="https://vanessa00001.github.io/portfolio/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vanessa Salonoy: Operations, Business Systems and Automation">
+<meta name="twitter:description" content="Operations and business systems leader with 11+ years across ERP, delivery, and AI-powered process automation.">
+<meta name="twitter:image" content="https://vanessa00001.github.io/portfolio/preview.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -84,7 +96,7 @@
   section{margin-top:clamp(38px,6vw,64px);}
   .shead{display:flex;align-items:baseline;gap:14px;border-top:2px solid var(--navy);padding-top:10px;margin-bottom:26px;}
   .snum{font-family:var(--mono);font-size:12px;color:var(--teal);letter-spacing:.1em;}
-  .stitle{font-family:var(--serif);font-weight:500;font-size:clamp(20px,3vw,27px);color:var(--navy);}
+  .stitle{font-family:var(--serif);font-weight:500;font-size:clamp(20px,3vw,27px);color:var(--navy);margin:0;}
 
   .summary{font-size:clamp(15px,1.9vw,17.5px);max-width:70ch;color:var(--ink);}
   .summary strong{color:var(--navy);font-weight:600;}
@@ -133,89 +145,465 @@
     .eng{grid-template-columns:1fr;}
     .eng .ix{margin-bottom:4px;}
   }
+  /* ---------- case studies ---------- */
+  .cases{display:grid;gap:26px;}
+  .case{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:26px 28px;min-width:0;}
+  .case .ct{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
+  .case h3{font-family:var(--sans);font-weight:600;font-size:19px;color:var(--navy);margin-bottom:16px;}
+  .par{display:grid;grid-template-columns:92px 1fr;gap:9px 18px;align-items:start;}
+  .par dt{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);padding-top:3px;}
+  .par dd{font-size:14.5px;color:var(--ink);margin:0;max-width:74ch;}
+  .par dt.res,.par dd.res{color:var(--navy);}
+  .par dd.res{font-weight:500;}
+  .diagram{margin:24px 0 4px;overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch;}
+  .diagram svg{display:block;width:100%;height:auto;min-width:660px;}
+  .dcap{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:10px;letter-spacing:.02em;}
+  @media (max-width:560px){ .par{grid-template-columns:1fr;} .par dt{padding-top:12px;} }
+
   @media print{
     body{background:#fff;padding:0.5in;}
     .eng,.exp li{break-inside:avoid;}
     .rise{animation:none;opacity:1;transform:none;}
   }
-</style>
+
+  /* ===== multi-section site ===== */
+  body{padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:80px;}
+  .wrap{padding:0 clamp(16px,5vw,48px) clamp(48px,7vw,84px);}
+  section[id],header[id]{scroll-margin-top:80px;}
+  .snum{display:none;}
+  .shead{gap:0;}
+  .nav{position:sticky;top:0;z-index:60;background:rgba(243,245,244,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav-in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px clamp(16px,5vw,48px);}
+  .nav-logo{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--navy);text-decoration:none;letter-spacing:-.01em;white-space:nowrap;}
+  .nav-links{display:flex;flex-wrap:wrap;gap:2px 2px;justify-content:flex-end;}
+  .nav-links a{font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--muted);text-decoration:none;padding:6px 9px;border-radius:5px;white-space:nowrap;}
+  .nav-links a:hover{color:var(--navy);background:rgba(46,110,126,.09);}
+  #home{padding-top:clamp(30px,5vw,58px);}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+  .btn{display:inline-block;font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;text-decoration:none;padding:11px 20px;border-radius:6px;transition:all .2s ease;}
+  .btn-p{background:var(--navy);color:#fff;}
+  .btn-p:hover{background:#274b5c;}
+  .btn-s{border:1px solid var(--navy);color:var(--navy);}
+  .btn-s:hover{background:rgba(46,110,126,.08);}
+  .about-lead{font-family:var(--serif);font-size:clamp(18px,2.4vw,24px);line-height:1.4;color:var(--navy);max-width:52ch;margin-bottom:22px;}
+  .about p{font-size:15.5px;color:var(--ink);max-width:72ch;margin-bottom:14px;}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px 22px 24px;border-top:3px solid var(--teal);}
+  .svc h3{font-family:var(--sans);font-weight:600;font-size:16.5px;color:var(--navy);margin-bottom:8px;}
+  .svc p{font-size:14px;color:var(--ink);}
+  .subh{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin:6px 0 14px;}
+  .skills-block{margin-bottom:30px;}
+  .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+  .tcard{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:24px;position:relative;}
+  .tcard .mark{font-family:var(--serif);font-size:44px;line-height:.6;color:var(--teal);opacity:.5;}
+  .tcard blockquote{font-size:15px;color:var(--ink);font-style:italic;margin:6px 0 16px;line-height:1.55;}
+  .tcard .who{font-size:13px;color:var(--navy);font-weight:600;}
+  .tcard .who span{display:block;font-weight:400;color:var(--muted);font-size:12px;font-style:normal;}
+  .tcard .ttag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
+  .tph{color:var(--muted)!important;font-style:italic;}
+  .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:start;}
+  .contact-lead{font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);color:var(--navy);line-height:1.35;margin-bottom:14px;}
+  #contact p{font-size:15px;color:var(--ink);max-width:52ch;margin-bottom:18px;}
+  #contact .btn{display:block;width:-moz-fit-content;width:fit-content;margin-top:20px;}
+  .cinfo{font-family:var(--mono);font-size:13.5px;color:var(--ink);display:grid;gap:18px;}
+  .cinfo a{color:var(--teal);text-decoration:none;border-bottom:1px solid var(--line);}
+  .cinfo a:hover{border-color:var(--teal);}
+  .cinfo .k{display:block;color:var(--muted);letter-spacing:.08em;font-size:10.5px;text-transform:uppercase;margin-bottom:5px;}
+  @media (max-width:760px){ .nav-in{flex-direction:column;align-items:flex-start;gap:8px;} .nav-links{justify-content:flex-start;} .contact-grid{grid-template-columns:1fr;} }
+
+  
+  /* ===== polish ===== */
+  .sintro{font-size:15px;color:var(--muted);max-width:70ch;margin:-6px 0 26px;line-height:1.55;}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .pcard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:6px;padding:20px 22px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+  .pcard:hover{transform:translateY(-2px);border-left-color:var(--teal-bright);box-shadow:0 6px 18px rgba(31,61,76,.08);}
+  .pcard .pdom{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);}
+  .pcard h3{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--navy);margin:6px 0 8px;}
+  .pcard .pmet{font-size:13.5px;color:var(--ink);line-height:1.5;}
+  .pcard .parrow{font-family:var(--mono);font-size:11px;color:var(--teal);margin-top:14px;display:inline-block;letter-spacing:.02em;}
+
+  
+  a:focus-visible,.btn:focus-visible,.nav-links a:focus-visible,.pcard:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px;}
+
+  </style>
 </head>
 <body>
+<nav class="nav"><div class="nav-in">
+  <a href="#home" class="nav-logo">Vanessa Salonoy</a>
+  <div class="nav-links">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#cases">Case Studies</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
 <div class="wrap">
+<main>
 
-  <!-- HERO -->
-  <header>
+  <header id="home">
     <div class="eyebrow rise d1">Operations · Business Systems · Automation</div>
     <h1 class="rise d1">Vanessa Salonoy</h1>
     <p class="tagline rise d2">Eleven years turning complex programs into running systems, as both an internal leader and an outside consultant.</p>
-    <div class="contact rise d2">
-      <span>Cainta, Rizal, PH</span>
-      <span>093-2437-0596</span>
-      <span><a href="mailto:nesxia0494@gmail.com">nesxia0494@gmail.com</a></span>
-      <span><a href="https://www.linkedin.com/in/vanessa-salonoy">linkedin.com/in/vanessa-salonoy</a></span>
-    </div>
     <div class="rail rise d3">
       <span class="chip">PMP</span>
-      <span class="chip">Lean Six Sigma · Black Belt</span>
-      <span class="chip">ERP · SAP · Oracle · Workday · NetSuite</span>
-      <span class="chip">CRM · Salesforce · HubSpot</span>
-      <span class="chip">Ecommerce · Shopify · BigCommerce · Amazon · eBay</span>
-      <span class="chip">Delivery &amp; PMO</span>
-      <span class="chip">n8n + AI Automation</span>
-      <span class="chip">Workato · Celigo</span>
+      <span class="chip">Lean Six Sigma Black Belt</span>
+      <span class="chip">ERP & Systems Delivery</span>
+      <span class="chip">AI Automation · n8n + Workato</span>
       <span class="chip">APAC · LATAM · EMEA · NA</span>
+    </div>
+    <div class="cta">
+      <a href="#cases" class="btn btn-p">View case studies</a>
+      <a href="Vanessa_Salonoy_Resume.pdf" download class="btn btn-s">Download resume</a>
+      <a href="#contact" class="btn btn-s">Get in touch</a>
     </div>
   </header>
 
-  <!-- SUMMARY -->
-  <section>
-    <div class="shead"><span class="snum">01</span><span class="stitle">Profile</span></div>
-    <p class="summary">Operations and delivery leader with 11+ years taking complex programs from strategy through execution, and 8 years applying Lean Six Sigma to process transformation. Runs <strong>ERP and systems implementations across SAP, Oracle, Workday, and NetSuite</strong>, alongside operational transformations and cross-functional delivery across BPO, SaaS, ecommerce, and enterprise environments. Sets the roadmap, builds the systems and SOPs that make teams run, and stays close enough to the work to unblock it. Lean Six Sigma Black Belt and PMP, now building <strong>AI-assisted workflow automation</strong> that removes manual cost from core business processes. Brings structure to ambiguity and owns outcomes, not just tasks.</p>
-  </section>
-
-  <!-- ENGAGEMENTS -->
-  <section>
-    <div class="shead"><span class="snum">02</span><span class="stitle">Selected Engagements</span></div>
-    <div class="ledger">
-      <article class="eng">
-        <div class="ix">/01</div>
-        <div>
-          <div class="dom">Systems Integration · Ecommerce / CPG · Waiakea</div>
-          <h3>Systems integration at scale across 7+ platforms</h3>
-          <p>Led end-to-end delivery across NetSuite, Shopify, SPS Commerce, RF-Smart, Celigo, and multiple 3PL and WMS partners, keeping 10+ EDI transaction types flowing across trading partners. Rebuilt Celigo automations and standardized integration processes, removing recurring manual work from the order-to-fulfillment lifecycle and documenting it so delivery no longer lived in one person's head.</p>
-        </div>
-      </article>
-      <article class="eng">
-        <div class="ix">/02</div>
-        <div>
-          <div class="dom">ERP Program · Enterprise Systems · TELUS International</div>
-          <h3>Enterprise ERP operations and delivery across Finance, HR, and Tech</h3>
-          <p>Directed ERP programs from planning through rollout across Finance, HR, and Technical functions, owning delivery governance, system stability, and stakeholder alignment, and coordinating integrations, upgrades, and customizations to optimize core business processes across concurrent workstreams.</p>
-        </div>
-      </article>
-      <article class="eng">
-        <div class="ix">/03</div>
-        <div>
-          <div class="dom">Automation · AI + n8n + Workato · Kairion Group · Current</div>
-          <h3>AI-powered order-to-cash across CRM, ERP, and inventory</h3>
-          <p>Built an end-to-end workflow in n8n and Workato that validates orders from ecommerce and marketplace channels including Shopify, BigCommerce, Amazon, and eBay, syncs customer and order data across CRM and ERP, checks inventory, triggers fulfillment, generates invoices, sends notifications, and reconciles payment, with an AI layer that catches exceptions like payment failures and stockouts and routes them with full context. At volume it removes the equivalent of 1 to 5 full-time roles and hundreds of labor hours a year while cutting order errors.</p>
-        </div>
-      </article>
-      <article class="eng">
-        <div class="ix">/04</div>
-        <div>
-          <div class="dom">Customer Success · SaaS · This Fish Inc.</div>
-          <h3>Onboarding and retention for global SaaS clients</h3>
-          <p>Led onboarding and implementation for global clients and built the implementation playbooks and onboarding guides the team ran on, managing relationships to drive adoption and reduce churn.</p>
-        </div>
-      </article>
+  <section id="about">
+    <div class="shead"><h2 class="stitle">About Me</h2></div>
+    <p class="about-lead">I help organizations run better by pairing deep operational insight with the systems and automation to make it real.</p>
+    <div class="about">
+    <p>Across eleven-plus years in BPO, SaaS, ecommerce, and enterprise settings spanning APAC, LATAM, EMEA, and North America, I have led ERP implementations, delivery programs, and operational transformations, as both an internal leader and an outside consultant.</p>
+    <p>I founded Kairion Group, a consulting, technology, and talent firm, to help organizations across the US, Canada, and Australia improve how they operate. My work sits where strategy meets execution: I set the roadmap, build the systems and SOPs that make teams run, and stay close enough to the work to unblock it.</p>
+    <p>Today my focus is AI-assisted automation, designing workflows in n8n and Workato that strip manual cost out of core processes. A PMP and Lean Six Sigma Black Belt, I care most about outcomes teams can feel: faster delivery, fewer errors, and lower operating cost.</p>
     </div>
   </section>
 
-  <!-- EXPERTISE -->
-  <section>
-    <div class="shead"><span class="snum">03</span><span class="stitle">Core Expertise</span></div>
-    <div class="exp">
+  <section id="services">
+    <div class="shead"><h2 class="stitle">Services</h2></div>
+    <div class="services">
+      <div class="svc"><h3>Operations & Process Improvement</h3><p>Operational assessments, workflow redesign, and Lean Six Sigma improvement that cut cost and cycle time.</p></div>
+      <div class="svc"><h3>ERP & Systems Delivery</h3><p>ERP implementation, integration, and delivery across SAP, Oracle, Workday, and NetSuite, with full PMO governance.</p></div>
+      <div class="svc"><h3>AI & Workflow Automation</h3><p>AI-assisted automation in n8n and Workato across order-to-cash, accounts payable, support, and reporting.</p></div>
+      <div class="svc"><h3>Program & Project Management</h3><p>PMP-led delivery from planning through go-live: scope, risk, dependencies, stakeholders, and reporting.</p></div>
+      <div class="svc"><h3>Business Systems Integration</h3><p>Connecting CRM, ERP, ecommerce, and logistics systems so orders, inventory, and data flow without manual work.</p></div>
+      <div class="svc"><h3>Customer Success & Onboarding</h3><p>SaaS onboarding, adoption, and retention, with implementation playbooks and enablement that stick.</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="shead"><h2 class="stitle">Portfolio Projects</h2></div>
+    <p class="sintro">A snapshot of recent work and its impact. Full write-ups, with architecture diagrams, follow in Case Studies.</p>
+    <div class="pgrid">
+      <a class="pcard" href="#cases"><div class="pdom">Automation · n8n + Workato</div><h3>Order-to-cash automation</h3><div class="pmet">Thousands of manual hours removed a year, with real-time executive visibility</div><span class="parrow">Read the case study &rarr;</span></a>
+      <a class="pcard" href="#cases"><div class="pdom">Automation · AI agents</div><h3>Customer-support automation</h3><div class="pmet">40 to 80% of routine inquiries deflected, with 24/7 coverage</div><span class="parrow">Read the case study &rarr;</span></a>
+      <a class="pcard" href="#cases"><div class="pdom">Automation · Finance</div><h3>Accounts-payable processing</h3><div class="pmet">About $150,000 a year saved at 3,000 invoices a month</div><span class="parrow">Read the case study &rarr;</span></a>
+      <a class="pcard" href="#cases"><div class="pdom">Integration · Ecommerce</div><h3>Systems integration at scale</h3><div class="pmet">7+ platforms and 10+ EDI transaction types kept in sync</div><span class="parrow">Read the case study &rarr;</span></a>
+      <a class="pcard" href="#cases"><div class="pdom">Automation · Delivery</div><h3>AI project-management assistant</h3><div class="pmet">Project setup from hours to minutes</div><span class="parrow">Read the case study &rarr;</span></a>
+      <a class="pcard" href="#cases"><div class="pdom">Reporting · Analytics</div><h3>Executive KPI dashboard</h3><div class="pmet">The weekly manual reporting cycle eliminated</div><span class="parrow">Read the case study &rarr;</span></a>
+    </div>
+  </section>
+
+  <section id="cases">
+    <div class="shead"><h2 class="stitle">Case Studies</h2></div>
+    <p class="sintro">Selected problems, what I designed, and the measurable result, each with a workflow diagram.</p>
+    <div class="cases">
+
+      <article class="case">
+        <div class="ct">Automation · AI + n8n + Workato · Kairion Group</div>
+        <h3>AI-powered order-to-cash automation</h3>
+        <dl class="par">
+          <dt>Problem</dt><dd>Orders came in through email, e-commerce, EDI, and a web portal, and operations re-keyed each one across CRM, ERP, inventory, and fulfillment, coordinating by email and updating status by hand. Depending on complexity, each order took 10 to 15 minutes of manual work, invited errors, and tied the team up in routine processing.</dd>
+          <dt>Action</dt><dd>n8n monitors incoming orders, reads PDF and email purchase orders, and uses AI and OCR to extract customer details, SKUs, quantities, shipping addresses, delivery dates, and payment terms, then validates and de-duplicates into a structured record. Workato creates or updates the customer in the CRM, creates the sales order in the ERP, checks and reserves inventory, triggers fulfillment, sends shipping notifications and confirmations, and routes exceptions like stock shortages or pricing gaps to the right team. It also refreshes real-time executive dashboards and sends an AI summary of risks and delayed orders to leadership by email or Microsoft Teams.</dd>
+          <dt class="res">Result</dt><dd class="res">For organizations processing several hundred orders a day, eliminates thousands of manual processing hours a year, improves order accuracy, and gives leadership real-time visibility, while operations focus on exceptions instead of routine entry.</dd>
+          <dt>Stack</dt><dd>n8n as the AI and document layer; Workato as the governed enterprise orchestration across CRM, ERP, fulfillment, and reporting.</dd>
+        </dl>
+        <div class="diagram">
+          <svg role="img" aria-label="Two-layer design: n8n reads and structures each order, Workato orchestrates CRM, ERP, fulfillment, and reporting." viewBox="0 0 1080 452" xmlns="http://www.w3.org/2000/svg"><defs>
+    <linearGradient id="aiga" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A8A94"/><stop offset="1" stop-color="#245C68"/></linearGradient>
+    <filter id="sha" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1F3D4C" flood-opacity="0.12"/></filter>
+    <filter id="shaia" x="-20%" y="-20%" width="140%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1F3D4C" flood-opacity="0.22"/></filter>
+    <marker id="mka" markerWidth="10" markerHeight="10" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="var(--teal)"/></marker>
+  </defs><style>
+    text{font-family:Inter,-apple-system,sans-serif;}
+    .laneA-a{fill:rgba(46,110,126,.055);}
+    .laneB-a{fill:rgba(31,61,76,.05);}
+    .node-a{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#sha);}
+    .inp-a{fill:#EAF3F2;stroke:#BFD6D4;stroke-width:1;filter:url(#sha);}
+    .call-a{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#sha);}
+    .ai-a{fill:url(#aiga);filter:url(#shaia);}
+    .lbl-a{fill:var(--navy);}
+    .wt-a{fill:#FFFFFF;}
+    .wtx-a{fill:#EAF2F1;}
+    .step-a{fill:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;}
+    .pill-a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;fill:#FFFFFF;}
+    .eyb-a{fill:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;}
+    .acc-a{fill:var(--teal);}
+  
+  /* ===== polish ===== */
+  .sintro{font-size:15px;color:var(--muted);max-width:70ch;margin:-6px 0 26px;line-height:1.55;}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .pcard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:6px;padding:20px 22px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+  .pcard:hover{transform:translateY(-2px);border-left-color:var(--teal-bright);box-shadow:0 6px 18px rgba(31,61,76,.08);}
+  .pcard .pdom{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);}
+  .pcard h3{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--navy);margin:6px 0 8px;}
+  .pcard .pmet{font-size:13.5px;color:var(--ink);line-height:1.5;}
+  .pcard .parrow{font-family:var(--mono);font-size:11px;color:var(--teal);margin-top:14px;display:inline-block;letter-spacing:.02em;}
+
+  
+  a:focus-visible,.btn:focus-visible,.nav-links a:focus-visible,.pcard:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px;}
+
+  </style><rect x="16" y="64" width="1048" height="134" rx="16" class="laneA-a"/><rect x="30" y="52" width="214" height="26" rx="13" fill="#1F3D4C"/><text x="137.0" y="69" text-anchor="middle" class="pill-a">n8n · AI + DOCUMENT LAYER</text><rect x="44" y="96" width="210" height="74" rx="10" class="inp-a"/><text x="149.0" y="122.2" text-anchor="middle" class="lbl-a" font-size="12.5">Intake</text><text x="149.0" y="137.2" text-anchor="middle" class="lbl-a" font-size="12.5">Email · Ecommerce</text><text x="149.0" y="152.2" text-anchor="middle" class="lbl-a" font-size="12.5">EDI · Web portal</text><rect x="300" y="90" width="286" height="86" rx="12" class="ai-a"/><text x="443.0" y="123.1" text-anchor="middle" class="wt-a" font-size="12">AI EXTRACT · OCR</text><text x="443.0" y="138.4" text-anchor="middle" class="wtx-a" font-size="11.5">customer, SKUs, quantities,</text><text x="443.0" y="153.4" text-anchor="middle" class="wtx-a" font-size="11.5">dates, terms</text><rect x="636" y="96" width="200" height="74" rx="10" class="node-a"/><text x="736.0" y="129.8" text-anchor="middle" class="lbl-a" font-size="12.5">Validate + dedupe</text><text x="736.0" y="144.8" text-anchor="middle" class="lbl-a" font-size="12.5">structured record</text><path d="M254,133 L300,133" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mka)"/><path d="M586,133 L636,133" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mka)"/><rect x="16" y="250" width="1048" height="134" rx="16" class="laneB-a"/><rect x="30" y="238" width="262" height="26" rx="13" fill="#245C68"/><text x="161.0" y="255" text-anchor="middle" class="pill-a">Workato · ENTERPRISE ORCHESTRATION</text><rect x="48" y="282" width="176" height="72" rx="10" class="node-a"/><text x="136.0" y="322.2" text-anchor="middle" class="lbl-a" font-size="12.5">Upsert CRM</text><text x="59" y="275" class="step-a">01</text><rect x="244" y="282" width="176" height="72" rx="10" class="node-a"/><text x="332.0" y="314.8" text-anchor="middle" class="lbl-a" font-size="12.5">Create Sales</text><text x="332.0" y="329.8" text-anchor="middle" class="lbl-a" font-size="12.5">Order (ERP)</text><text x="255" y="275" class="step-a">02</text><rect x="440" y="282" width="176" height="72" rx="10" class="node-a"/><text x="528.0" y="314.8" text-anchor="middle" class="lbl-a" font-size="12.5">Check + reserve</text><text x="528.0" y="329.8" text-anchor="middle" class="lbl-a" font-size="12.5">inventory</text><text x="451" y="275" class="step-a">03</text><rect x="636" y="282" width="176" height="72" rx="10" class="node-a"/><text x="724.0" y="314.8" text-anchor="middle" class="lbl-a" font-size="12.5">Trigger</text><text x="724.0" y="329.8" text-anchor="middle" class="lbl-a" font-size="12.5">fulfillment</text><text x="647" y="275" class="step-a">04</text><rect x="832" y="282" width="176" height="72" rx="10" class="node-a"/><text x="920.0" y="314.8" text-anchor="middle" class="lbl-a" font-size="12.5">Confirm customer</text><text x="920.0" y="329.8" text-anchor="middle" class="lbl-a" font-size="12.5">+ teams</text><text x="843" y="275" class="step-a">05</text><path d="M224,318 L244,318" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mka)"/><path d="M420,318 L440,318" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mka)"/><path d="M616,318 L636,318" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mka)"/><path d="M812,318 L832,318" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mka)"/><path d="M736,170 L736,214 L136,214 L136,250" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#mka)"/><text x="436.0" y="208" text-anchor="middle" class="eyb-a">structured data</text><rect x="44" y="400" width="470" height="40" rx="9" class="call-a"/><text x="279.0" y="424.2" text-anchor="middle" class="lbl-a" font-size="12.5">Route exceptions (stock, pricing, missing info) to the right team</text><rect x="560" y="400" width="500" height="40" rx="9" class="call-a"/><text x="810.0" y="424.2" text-anchor="middle" class="lbl-a" font-size="12.5">Real-time exec dashboard + AI summary to email / Teams</text><path d="M300,384 L300,400" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3 5" marker-end="url(#mka)"/><path d="M810,384 L810,400" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3 5" marker-end="url(#mka)"/></svg>
+        </div>
+        <div class="dcap">Two-layer design: n8n reads and structures each order, Workato orchestrates CRM, ERP, fulfillment, and reporting.</div>
+      </article>
+
+      <article class="case">
+        <div class="ct">Automation · AI Agents · Kairion Group</div>
+        <h3>AI customer-support automation</h3>
+        <dl class="par">
+          <dt>Problem</dt><dd>Repetitive questions arrived across live chat, email, and social, consuming agent time and leaving gaps outside business hours.</dd>
+          <dt>Action</dt><dd>Built AI support agents that read each inquiry, identify intent, check the CRM and knowledge base, answer common questions, draft replies, create and route tickets, qualify leads, and schedule meetings, escalating to a human only when a case is genuinely complex.</dd>
+          <dt class="res">Result</dt><dd class="res">Deflects 40 to 80% of routine inquiries, enables 24/7 coverage, lowers support staffing cost, and frees agents for high-value cases.</dd>
+        </dl>
+        <div class="diagram">
+          <svg role="img" aria-label="Support flow: inbound channels triaged by an AI layer, with human escalation reserved for complex cases." viewBox="0 0 1080 320" xmlns="http://www.w3.org/2000/svg"><defs>
+    <linearGradient id="aigb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3A8A94"/><stop offset="1" stop-color="#245C68"/>
+    </linearGradient>
+    <filter id="shb" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1F3D4C" flood-opacity="0.12"/>
+    </filter>
+    <filter id="shaib" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1F3D4C" flood-opacity="0.22"/>
+    </filter>
+    <marker id="mkb" markerWidth="10" markerHeight="10" refX="7.5" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="var(--teal)"/>
+    </marker>
+  </defs><style>
+    text{font-family:Inter,-apple-system,sans-serif;}
+    .lane-b{fill:rgba(46,110,126,.055);}
+    .node-b{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#shb);}
+    .inp-b{fill:#EAF3F2;stroke:#BFD6D4;stroke-width:1;filter:url(#shb);}
+    .out-b{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#shb);}
+    .ai-b{fill:url(#aigb);filter:url(#shaib);}
+    .lbl-b{fill:var(--navy);font-size:13px;}
+    .wt-b{fill:#FFFFFF;}
+    .wtx-b{fill:#EAF2F1;}
+    .step-b{fill:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;}
+    .eyb-b{fill:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;}
+    .cap-b{fill:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.5px;}
+    .acc-b{fill:var(--teal);}
+  
+  /* ===== polish ===== */
+  .sintro{font-size:15px;color:var(--muted);max-width:70ch;margin:-6px 0 26px;line-height:1.55;}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .pcard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:6px;padding:20px 22px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+  .pcard:hover{transform:translateY(-2px);border-left-color:var(--teal-bright);box-shadow:0 6px 18px rgba(31,61,76,.08);}
+  .pcard .pdom{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);}
+  .pcard h3{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--navy);margin:6px 0 8px;}
+  .pcard .pmet{font-size:13.5px;color:var(--ink);line-height:1.5;}
+  .pcard .parrow{font-family:var(--mono);font-size:11px;color:var(--teal);margin-top:14px;display:inline-block;letter-spacing:.02em;}
+
+  
+  a:focus-visible,.btn:focus-visible,.nav-links a:focus-visible,.pcard:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px;}
+
+  </style><text x="20" y="26" class="eyb-b">INBOUND</text><rect x="20" y="64" width="150" height="42" rx="8" class="inp-b"/><text x="95.0" y="89.4" text-anchor="middle" class="lbl-b" font-size="13">Live chat</text><rect x="20" y="120" width="150" height="42" rx="8" class="inp-b"/><text x="95.0" y="145.4" text-anchor="middle" class="lbl-b" font-size="13">Email</text><rect x="20" y="176" width="150" height="42" rx="8" class="inp-b"/><text x="95.0" y="201.4" text-anchor="middle" class="lbl-b" font-size="13">Social</text><rect x="250" y="104" width="252" height="100" rx="14" class="ai-b"/><text x="376.0" y="149.1" text-anchor="middle" class="wt-b" font-size="12">AI LAYER</text><text x="376.0" y="161.6" text-anchor="middle" class="wtx-b" font-size="12">Analyze intent, extract info,</text><text x="376.0" y="176.6" text-anchor="middle" class="wtx-b" font-size="12">check CRM and knowledge base</text><path d="M170,85 L210.0,85 L210.0,138.32 L250,138.32" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#mkb)"/><path d="M170,141 L210.0,141 L210.0,154.0 L250,154.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#mkb)"/><path d="M170,197 L210.0,197 L210.0,169.68 L250,169.68" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#mkb)"/><rect x="590" y="52" width="250" height="54" rx="9" class="out-b"/><rect x="590" y="52" width="4" height="54" rx="2" class="acc-b"/><text x="715.0" y="83.4" text-anchor="middle" class="lbl-b" font-size="13">Answer and draft reply</text><rect x="590" y="124" width="250" height="54" rx="9" class="out-b"/><rect x="590" y="124" width="4" height="54" rx="2" class="acc-b"/><text x="715.0" y="155.4" text-anchor="middle" class="lbl-b" font-size="13">Create and route ticket</text><rect x="590" y="196" width="250" height="54" rx="9" class="out-b"/><rect x="590" y="196" width="4" height="54" rx="2" class="acc-b"/><text x="715.0" y="227.4" text-anchor="middle" class="lbl-b" font-size="13">Qualify lead and schedule</text><path d="M502,154.0 L540,154.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M540,79.0 L540,223.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M540,79.0 L590,79.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkb)"/><path d="M540,151.0 L590,151.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkb)"/><path d="M540,223.0 L590,223.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkb)"/><rect x="884" y="113" width="176" height="76" rx="10" class="node-b"/><text x="972.0" y="146.9" text-anchor="middle" class="lbl-b" font-size="13">Escalate complex</text><text x="972.0" y="163.9" text-anchor="middle" class="lbl-b" font-size="13">cases to a human</text><rect x="884" y="113" width="176" height="76" rx="10" fill="var(--navy)"/><text x="972.0" y="146.8" text-anchor="middle" class="wt-b" font-size="12.5">Escalate complex</text><text x="972.0" y="163.8" text-anchor="middle" class="wt-b" font-size="12.5">cases to a human</text><path d="M840,151.0 L884,151.0" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mkb)"/><text x="848" y="143.0" class="cap-b">if complex</text></svg>
+        </div>
+        <div class="dcap">Support flow: inbound channels triaged by an AI layer, with human escalation reserved for complex cases.</div>
+      </article>
+
+      <article class="case">
+        <div class="ct">Systems Integration · Ecommerce / CPG · Waiakea</div>
+        <h3>Systems integration across 7+ platforms</h3>
+        <dl class="par">
+          <dt>Problem</dt><dd>Ecommerce operations spanned NetSuite, Shopify, SPS Commerce, RF-Smart, Celigo, and multiple 3PL and WMS partners, with fragile integrations and delivery knowledge concentrated in one person.</dd>
+          <dt>Action</dt><dd>Owned end-to-end integrations and the EDI flows (850, 855, 856, 810, 940, 945), rebuilt and tested Celigo integration flows, supported NetSuite configuration and data accuracy, and documented every process.</dd>
+          <dt class="res">Result</dt><dd class="res">Kept 10+ EDI transaction types flowing reliably across trading partners and made delivery repeatable rather than dependent on any single person.</dd>
+        </dl>
+        <div class="diagram">
+          <svg role="img" aria-label="Hub-and-spoke integration: Celigo connects sales channels, ERP, and warehouse and 3PL systems, keeping orders, inventory, fulfillment, returns, and EDI in sync." viewBox="0 0 1080 400" xmlns="http://www.w3.org/2000/svg"><defs>
+    <linearGradient id="aige" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A8A94"/><stop offset="1" stop-color="#245C68"/></linearGradient>
+    <filter id="she" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1F3D4C" flood-opacity="0.12"/></filter>
+    <filter id="shaie" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1F3D4C" flood-opacity="0.22"/></filter>
+    <marker id="mke" markerWidth="10" markerHeight="10" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="var(--teal)"/></marker>
+    <marker id="mkSe" markerWidth="10" markerHeight="10" refX="1.5" refY="4.5" orient="auto"><path d="M9,0 L0,4.5 L9,9 Z" fill="var(--teal)"/></marker>
+  </defs><style>
+    text{font-family:Inter,-apple-system,sans-serif;}
+    .lane-e{fill:rgba(46,110,126,.055);}
+    .node-e{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#she);}
+    .inp-e{fill:#EAF3F2;stroke:#BFD6D4;stroke-width:1;filter:url(#she);}
+    .out-e{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#she);}
+    .ai-e{fill:url(#aige);filter:url(#shaie);}
+    .lbl-e{fill:var(--navy);}
+    .wt-e{fill:#FFFFFF;}
+    .wtx-e{fill:#EAF2F1;}
+    .eyb-e{fill:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;}
+    .cap-e{fill:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.5px;}
+    .acc-e{fill:var(--teal);}
+  
+  /* ===== polish ===== */
+  .sintro{font-size:15px;color:var(--muted);max-width:70ch;margin:-6px 0 26px;line-height:1.55;}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .pcard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:6px;padding:20px 22px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+  .pcard:hover{transform:translateY(-2px);border-left-color:var(--teal-bright);box-shadow:0 6px 18px rgba(31,61,76,.08);}
+  .pcard .pdom{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);}
+  .pcard h3{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--navy);margin:6px 0 8px;}
+  .pcard .pmet{font-size:13.5px;color:var(--ink);line-height:1.5;}
+  .pcard .parrow{font-family:var(--mono);font-size:11px;color:var(--teal);margin-top:14px;display:inline-block;letter-spacing:.02em;}
+
+  
+  a:focus-visible,.btn:focus-visible,.nav-links a:focus-visible,.pcard:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px;}
+
+  </style><text x="20" y="26" class="eyb-e">SYSTEMS INTEGRATION · 7+ PLATFORMS</text><rect x="40" y="92" width="210" height="66" rx="10" class="inp-e"/><text x="145.0" y="121.8" text-anchor="middle" class="lbl-e" font-size="12.5">Shopify</text><text x="145.0" y="136.8" text-anchor="middle" class="lbl-e" font-size="12.5">B2B / B2C store</text><rect x="40" y="214" width="210" height="66" rx="10" class="inp-e"/><text x="145.0" y="243.8" text-anchor="middle" class="lbl-e" font-size="12.5">SPS Commerce</text><text x="145.0" y="258.8" text-anchor="middle" class="lbl-e" font-size="12.5">EDI trading partners</text><rect x="430" y="108" width="220" height="150" rx="16" class="ai-e"/><text x="540.0" y="179.1" text-anchor="middle" class="wt-e" font-size="12">CELIGO</text><text x="540.0" y="195.9" text-anchor="middle" class="wtx-e" font-size="11.5">INTEGRATION HUB</text><rect x="840" y="66" width="210" height="60" rx="10" class="node-e"/><text x="945.0" y="100.2" text-anchor="middle" class="lbl-e" font-size="12.5">NetSuite (ERP)</text><rect x="840" y="153" width="210" height="60" rx="10" class="node-e"/><text x="945.0" y="179.8" text-anchor="middle" class="lbl-e" font-size="12.5">RF-Smart</text><text x="945.0" y="194.8" text-anchor="middle" class="lbl-e" font-size="12.5">warehouse scanning</text><rect x="840" y="240" width="210" height="60" rx="10" class="node-e"/><text x="945.0" y="274.2" text-anchor="middle" class="lbl-e" font-size="12.5">3PL / WMS partners</text><path d="M250,125 L430,155" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-start="url(#mkSe)" marker-end="url(#mke)"/><path d="M250,247 L430,215" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-start="url(#mkSe)" marker-end="url(#mke)"/><path d="M650,150 L840,96" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-start="url(#mkSe)" marker-end="url(#mke)"/><path d="M650,183 L840,183" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-start="url(#mkSe)" marker-end="url(#mke)"/><path d="M650,216 L840,270" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-start="url(#mkSe)" marker-end="url(#mke)"/><rect x="40" y="332" width="1010" height="44" rx="12" class="lane-e"/><text x="545" y="359" text-anchor="middle" class="cap-e">Data flows: orders · inventory · fulfillment · returns          EDI: 850 · 855 · 856 · 810 · 940 · 945</text></svg>
+        </div>
+        <div class="dcap">Hub-and-spoke integration: Celigo connects sales channels, ERP, and warehouse and 3PL systems, keeping orders, inventory, fulfillment, returns, and EDI in sync.</div>
+      </article>
+
+      <article class="case">
+        <div class="ct">Automation · n8n + Workato · Finance · Kairion Group</div>
+        <h3>Accounts-payable invoice processing</h3>
+        <dl class="par">
+          <dt>Problem</dt><dd>Finance staff opened every invoice, keyed the data, checked the purchase order, sent approval emails, updated the ERP, and tracked payment status in spreadsheets, roughly 10 to 20 minutes per invoice.</dd>
+          <dt>Action</dt><dd>n8n reads each invoice from email, a shared folder, or a vendor portal and uses AI to extract the vendor, invoice and PO numbers, dates, line items, tax, currency, and total, flagging missing data, duplicates, and unusual values. Workato then validates the supplier against the ERP, matches the invoice to the purchase order and goods receipt, routes exceptions for approval, creates the invoice record, updates payment status, notifies finance or the supplier, and refreshes the executive dashboard.</dd>
+          <dt class="res">Result</dt><dd class="res">At 3,000 invoices a month, cutting even 10 minutes of manual work per invoice frees around 500 labor hours a month, roughly $12,500 monthly or $150,000 a year at a $25 hourly cost, before further savings from fewer duplicate payments, fewer late fees, and faster approvals.</dd>
+          <dt>Stack</dt><dd>n8n as the AI and document-processing layer; Workato as the governed workflow across the ERP, approvals, notifications, and reporting.</dd>
+        </dl>
+        <div class="diagram">
+          <svg role="img" aria-label="Two-layer design: n8n extracts and validates invoices, Workato runs supplier check, PO match, approvals, ERP posting, and reporting." viewBox="0 0 1080 452" xmlns="http://www.w3.org/2000/svg"><defs>
+    <linearGradient id="aigc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A8A94"/><stop offset="1" stop-color="#245C68"/></linearGradient>
+    <filter id="shc" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1F3D4C" flood-opacity="0.12"/></filter>
+    <filter id="shaic" x="-20%" y="-20%" width="140%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1F3D4C" flood-opacity="0.22"/></filter>
+    <marker id="mkc" markerWidth="10" markerHeight="10" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="var(--teal)"/></marker>
+  </defs><style>
+    text{font-family:Inter,-apple-system,sans-serif;}
+    .laneA-c{fill:rgba(46,110,126,.055);}
+    .laneB-c{fill:rgba(31,61,76,.05);}
+    .node-c{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#shc);}
+    .inp-c{fill:#EAF3F2;stroke:#BFD6D4;stroke-width:1;filter:url(#shc);}
+    .call-c{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#shc);}
+    .ai-c{fill:url(#aigc);filter:url(#shaic);}
+    .lbl-c{fill:var(--navy);}
+    .wt-c{fill:#FFFFFF;}
+    .wtx-c{fill:#EAF2F1;}
+    .step-c{fill:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;}
+    .pill-c{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;fill:#FFFFFF;}
+    .eyb-c{fill:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;}
+    .acc-c{fill:var(--teal);}
+  
+  /* ===== polish ===== */
+  .sintro{font-size:15px;color:var(--muted);max-width:70ch;margin:-6px 0 26px;line-height:1.55;}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .pcard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:6px;padding:20px 22px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+  .pcard:hover{transform:translateY(-2px);border-left-color:var(--teal-bright);box-shadow:0 6px 18px rgba(31,61,76,.08);}
+  .pcard .pdom{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);}
+  .pcard h3{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--navy);margin:6px 0 8px;}
+  .pcard .pmet{font-size:13.5px;color:var(--ink);line-height:1.5;}
+  .pcard .parrow{font-family:var(--mono);font-size:11px;color:var(--teal);margin-top:14px;display:inline-block;letter-spacing:.02em;}
+
+  
+  a:focus-visible,.btn:focus-visible,.nav-links a:focus-visible,.pcard:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px;}
+
+  </style><rect x="16" y="64" width="1048" height="134" rx="16" class="laneA-c"/><rect x="30" y="52" width="214" height="26" rx="13" fill="#1F3D4C"/><text x="137.0" y="69" text-anchor="middle" class="pill-c">n8n · AI + DOCUMENT LAYER</text><rect x="44" y="96" width="210" height="74" rx="10" class="inp-c"/><text x="149.0" y="122.2" text-anchor="middle" class="lbl-c" font-size="12.5">Intake</text><text x="149.0" y="137.2" text-anchor="middle" class="lbl-c" font-size="12.5">Email · Shared folder</text><text x="149.0" y="152.2" text-anchor="middle" class="lbl-c" font-size="12.5">Vendor portal</text><rect x="300" y="90" width="286" height="86" rx="12" class="ai-c"/><text x="443.0" y="123.1" text-anchor="middle" class="wt-c" font-size="12">AI EXTRACT</text><text x="443.0" y="138.4" text-anchor="middle" class="wtx-c" font-size="11.5">vendor, PO#, dates, lines,</text><text x="443.0" y="153.4" text-anchor="middle" class="wtx-c" font-size="11.5">tax, currency, total</text><rect x="636" y="96" width="210" height="74" rx="10" class="node-c"/><text x="741.0" y="129.8" text-anchor="middle" class="lbl-c" font-size="12.5">Check missing,</text><text x="741.0" y="144.8" text-anchor="middle" class="lbl-c" font-size="12.5">duplicates, anomalies</text><path d="M254,133 L300,133" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mkc)"/><path d="M586,133 L636,133" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mkc)"/><rect x="16" y="250" width="1048" height="134" rx="16" class="laneB-c"/><rect x="30" y="238" width="262" height="26" rx="13" fill="#245C68"/><text x="161.0" y="255" text-anchor="middle" class="pill-c">Workato · ENTERPRISE ORCHESTRATION</text><rect x="48" y="282" width="176" height="72" rx="10" class="node-c"/><text x="136.0" y="314.8" text-anchor="middle" class="lbl-c" font-size="12.5">Validate supplier</text><text x="136.0" y="329.8" text-anchor="middle" class="lbl-c" font-size="12.5">(ERP)</text><text x="59" y="275" class="step-c">01</text><rect x="244" y="282" width="176" height="72" rx="10" class="node-c"/><text x="332.0" y="314.8" text-anchor="middle" class="lbl-c" font-size="12.5">Match PO +</text><text x="332.0" y="329.8" text-anchor="middle" class="lbl-c" font-size="12.5">goods receipt</text><text x="255" y="275" class="step-c">02</text><rect x="440" y="282" width="176" height="72" rx="10" class="node-c"/><text x="528.0" y="314.8" text-anchor="middle" class="lbl-c" font-size="12.5">Route</text><text x="528.0" y="329.8" text-anchor="middle" class="lbl-c" font-size="12.5">approvals</text><text x="451" y="275" class="step-c">03</text><rect x="636" y="282" width="176" height="72" rx="10" class="node-c"/><text x="724.0" y="314.8" text-anchor="middle" class="lbl-c" font-size="12.5">Create invoice</text><text x="724.0" y="329.8" text-anchor="middle" class="lbl-c" font-size="12.5">+ payment</text><text x="647" y="275" class="step-c">04</text><rect x="832" y="282" width="176" height="72" rx="10" class="node-c"/><text x="920.0" y="314.8" text-anchor="middle" class="lbl-c" font-size="12.5">Notify finance</text><text x="920.0" y="329.8" text-anchor="middle" class="lbl-c" font-size="12.5">/ supplier</text><text x="843" y="275" class="step-c">05</text><path d="M224,318 L244,318" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mkc)"/><path d="M420,318 L440,318" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mkc)"/><path d="M616,318 L636,318" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mkc)"/><path d="M812,318 L832,318" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mkc)"/><path d="M736,170 L736,214 L136,214 L136,250" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#mkc)"/><text x="436.0" y="208" text-anchor="middle" class="eyb-c">structured data</text><rect x="300" y="400" width="480" height="40" rx="9" class="call-c"/><text x="540.0" y="424.2" text-anchor="middle" class="lbl-c" font-size="12.5">Exec dashboard · volume, cycle time, duplicates, overdue, cash needs</text><path d="M540,384 L540,400" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3 5" marker-end="url(#mkc)"/></svg>
+        </div>
+        <div class="dcap">Two-layer design: n8n extracts and validates invoices, Workato runs supplier check, PO match, approvals, ERP posting, and reporting.</div>
+      </article>
+
+      <article class="case">
+        <div class="ct">Automation · AI Assistant · Kairion Group</div>
+        <h3>AI project-management assistant</h3>
+        <dl class="par">
+          <dt>Problem</dt><dd>Setting up a new engagement meant building implementation plans, schedules, task lists, risk registers, and status reports from scratch, hours of documentation before real delivery work could begin.</dd>
+          <dt>Action</dt><dd>Built an AI assistant that turns a short client brief into a full project starter kit: an implementation plan, project schedule, task list, risk register, status report, and meeting summaries, ready for the project manager to refine.</dd>
+          <dt class="res">Result</dt><dd class="res">Turns work that took several hours into minutes, letting project managers spend their time on stakeholders and delivery instead of first-draft documentation.</dd>
+        </dl>
+        <div class="diagram">
+          <svg role="img" aria-label="From a single brief, the assistant drafts the full project starter kit for review." viewBox="0 0 1080 320" xmlns="http://www.w3.org/2000/svg"><defs>
+    <linearGradient id="aigd" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3A8A94"/><stop offset="1" stop-color="#245C68"/>
+    </linearGradient>
+    <filter id="shd" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1F3D4C" flood-opacity="0.12"/>
+    </filter>
+    <filter id="shaid" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1F3D4C" flood-opacity="0.22"/>
+    </filter>
+    <marker id="mkd" markerWidth="10" markerHeight="10" refX="7.5" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="var(--teal)"/>
+    </marker>
+  </defs><style>
+    text{font-family:Inter,-apple-system,sans-serif;}
+    .lane-d{fill:rgba(46,110,126,.055);}
+    .node-d{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#shd);}
+    .inp-d{fill:#EAF3F2;stroke:#BFD6D4;stroke-width:1;filter:url(#shd);}
+    .out-d{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#shd);}
+    .ai-d{fill:url(#aigd);filter:url(#shaid);}
+    .lbl-d{fill:var(--navy);font-size:13px;}
+    .wt-d{fill:#FFFFFF;}
+    .wtx-d{fill:#EAF2F1;}
+    .step-d{fill:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;}
+    .eyb-d{fill:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;}
+    .cap-d{fill:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.5px;}
+    .acc-d{fill:var(--teal);}
+  
+  /* ===== polish ===== */
+  .sintro{font-size:15px;color:var(--muted);max-width:70ch;margin:-6px 0 26px;line-height:1.55;}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .pcard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:6px;padding:20px 22px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+  .pcard:hover{transform:translateY(-2px);border-left-color:var(--teal-bright);box-shadow:0 6px 18px rgba(31,61,76,.08);}
+  .pcard .pdom{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);}
+  .pcard h3{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--navy);margin:6px 0 8px;}
+  .pcard .pmet{font-size:13.5px;color:var(--ink);line-height:1.5;}
+  .pcard .parrow{font-family:var(--mono);font-size:11px;color:var(--teal);margin-top:14px;display:inline-block;letter-spacing:.02em;}
+
+  
+  a:focus-visible,.btn:focus-visible,.nav-links a:focus-visible,.pcard:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px;}
+
+  </style><text x="20" y="26" class="eyb-d">PROJECT SETUP</text><rect x="24" y="128" width="150" height="64" rx="10" class="inp-d"/><text x="99.0" y="164.4" text-anchor="middle" class="lbl-d" font-size="13">Client brief</text><rect x="250" y="116" width="212" height="90" rx="14" class="ai-d"/><text x="356.0" y="156.1" text-anchor="middle" class="wt-d" font-size="12">AI ASSISTANT</text><text x="356.0" y="176.1" text-anchor="middle" class="wtx-d" font-size="12">drafts the starter kit</text><path d="M174,160 L250,161.0" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mkd)"/><rect x="592" y="28" width="240" height="38" rx="7" class="out-d"/><rect x="592" y="28" width="4" height="38" rx="2" class="acc-d"/><text x="712.0" y="51.4" text-anchor="middle" class="lbl-d" font-size="13">Implementation plan</text><rect x="592" y="72" width="240" height="38" rx="7" class="out-d"/><rect x="592" y="72" width="4" height="38" rx="2" class="acc-d"/><text x="712.0" y="95.4" text-anchor="middle" class="lbl-d" font-size="13">Project schedule</text><rect x="592" y="116" width="240" height="38" rx="7" class="out-d"/><rect x="592" y="116" width="4" height="38" rx="2" class="acc-d"/><text x="712.0" y="139.4" text-anchor="middle" class="lbl-d" font-size="13">Task list</text><rect x="592" y="160" width="240" height="38" rx="7" class="out-d"/><rect x="592" y="160" width="4" height="38" rx="2" class="acc-d"/><text x="712.0" y="183.4" text-anchor="middle" class="lbl-d" font-size="13">Risk register</text><rect x="592" y="204" width="240" height="38" rx="7" class="out-d"/><rect x="592" y="204" width="4" height="38" rx="2" class="acc-d"/><text x="712.0" y="227.4" text-anchor="middle" class="lbl-d" font-size="13">Status report</text><rect x="592" y="248" width="240" height="38" rx="7" class="out-d"/><rect x="592" y="248" width="4" height="38" rx="2" class="acc-d"/><text x="712.0" y="271.4" text-anchor="middle" class="lbl-d" font-size="13">Meeting summaries</text><path d="M462,161.0 L545,161.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M545,47.0 L545,267.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M545,47.0 L592,47.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkd)"/><path d="M545,91.0 L592,91.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkd)"/><path d="M545,135.0 L592,135.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkd)"/><path d="M545,179.0 L592,179.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkd)"/><path d="M545,223.0 L592,223.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkd)"/><path d="M545,267.0 L592,267.0" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkd)"/></svg>
+        </div>
+        <div class="dcap">From a single brief, the assistant drafts the full project starter kit for review.</div>
+      </article>
+
+      <article class="case">
+        <div class="ct">Automation · Reporting & Analytics · Kairion Group</div>
+        <h3>Executive KPI dashboard automation</h3>
+        <dl class="par">
+          <dt>Problem</dt><dd>Leadership reporting meant pulling numbers from several systems by hand each week and rebuilding the same dashboards and summaries, time-consuming and easy to get wrong.</dd>
+          <dt>Action</dt><dd>Built a workflow that consolidates data from multiple systems on a schedule, refreshes the dashboards automatically, and generates a plain-language AI summary of what changed and why it matters.</dd>
+          <dt class="res">Result</dt><dd class="res">Eliminates the weekly manual reporting cycle and puts a current, readable view of the numbers in front of leadership without analyst effort.</dd>
+        </dl>
+        <div class="diagram">
+          <svg role="img" aria-label="Reporting flow: source systems consolidate on a schedule, an AI layer refreshes dashboards and writes a plain-language summary for leadership." viewBox="0 0 1080 300" xmlns="http://www.w3.org/2000/svg"><defs>
+    <linearGradient id="aigf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A8A94"/><stop offset="1" stop-color="#245C68"/></linearGradient>
+    <filter id="shf" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1F3D4C" flood-opacity="0.12"/></filter>
+    <filter id="shaif" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1F3D4C" flood-opacity="0.22"/></filter>
+    <marker id="mkf" markerWidth="10" markerHeight="10" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="var(--teal)"/></marker>
+    <marker id="mkSf" markerWidth="10" markerHeight="10" refX="1.5" refY="4.5" orient="auto"><path d="M9,0 L0,4.5 L9,9 Z" fill="var(--teal)"/></marker>
+  </defs><style>
+    text{font-family:Inter,-apple-system,sans-serif;}
+    .lane-f{fill:rgba(46,110,126,.055);}
+    .node-f{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#shf);}
+    .inp-f{fill:#EAF3F2;stroke:#BFD6D4;stroke-width:1;filter:url(#shf);}
+    .out-f{fill:#FFFFFF;stroke:var(--line);stroke-width:1;filter:url(#shf);}
+    .ai-f{fill:url(#aigf);filter:url(#shaif);}
+    .lbl-f{fill:var(--navy);}
+    .wt-f{fill:#FFFFFF;}
+    .wtx-f{fill:#EAF2F1;}
+    .eyb-f{fill:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;}
+    .cap-f{fill:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.5px;}
+    .acc-f{fill:var(--teal);}
+  
+  /* ===== polish ===== */
+  .sintro{font-size:15px;color:var(--muted);max-width:70ch;margin:-6px 0 26px;line-height:1.55;}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .pcard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:6px;padding:20px 22px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+  .pcard:hover{transform:translateY(-2px);border-left-color:var(--teal-bright);box-shadow:0 6px 18px rgba(31,61,76,.08);}
+  .pcard .pdom{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);}
+  .pcard h3{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--navy);margin:6px 0 8px;}
+  .pcard .pmet{font-size:13.5px;color:var(--ink);line-height:1.5;}
+  .pcard .parrow{font-family:var(--mono);font-size:11px;color:var(--teal);margin-top:14px;display:inline-block;letter-spacing:.02em;}
+
+  
+  a:focus-visible,.btn:focus-visible,.nav-links a:focus-visible,.pcard:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px;}
+
+  </style><text x="20" y="26" class="eyb-f">EXECUTIVE REPORTING</text><rect x="40" y="56" width="170" height="40" rx="8" class="inp-f"/><text x="125.0" y="80.2" text-anchor="middle" class="lbl-f" font-size="12.5">ERP</text><rect x="40" y="104" width="170" height="40" rx="8" class="inp-f"/><text x="125.0" y="128.2" text-anchor="middle" class="lbl-f" font-size="12.5">CRM</text><rect x="40" y="152" width="170" height="40" rx="8" class="inp-f"/><text x="125.0" y="176.2" text-anchor="middle" class="lbl-f" font-size="12.5">Inventory / Ops</text><rect x="40" y="200" width="170" height="40" rx="8" class="inp-f"/><text x="125.0" y="224.2" text-anchor="middle" class="lbl-f" font-size="12.5">Finance</text><rect x="282" y="96" width="200" height="96" rx="10" class="node-f"/><text x="382.0" y="140.8" text-anchor="middle" class="lbl-f" font-size="12.5">Consolidate data</text><text x="382.0" y="155.8" text-anchor="middle" class="lbl-f" font-size="12.5">(scheduled refresh)</text><rect x="542" y="96" width="220" height="96" rx="14" class="ai-f"/><text x="652.0" y="140.1" text-anchor="middle" class="wt-f" font-size="12">AI SUMMARY</text><text x="652.0" y="156.9" text-anchor="middle" class="wtx-f" font-size="11.5">+ dashboard refresh</text><rect x="832" y="88" width="212" height="56" rx="9" class="out-f"/><rect x="832" y="88" width="4" height="56" rx="2" class="acc-f"/><text x="938.0" y="120.2" text-anchor="middle" class="lbl-f" font-size="12.5">Live exec dashboard</text><rect x="832" y="172" width="212" height="56" rx="9" class="out-f"/><rect x="832" y="172" width="4" height="56" rx="2" class="acc-f"/><text x="938.0" y="204.2" text-anchor="middle" class="lbl-f" font-size="12.5">Summary to email / Teams</text><path d="M210,76 L246,76 L246,144 L282,144" stroke="var(--teal)" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#mkf)"/><path d="M210,124 L246,124 L246,144 L282,144" stroke="var(--teal)" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#mkf)"/><path d="M210,172 L246,172 L246,144 L282,144" stroke="var(--teal)" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#mkf)"/><path d="M210,220 L246,220 L246,144 L282,144" stroke="var(--teal)" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#mkf)"/><path d="M482,144 L542,144" stroke="var(--teal)" stroke-width="1.8" fill="none" stroke-linecap="round" marker-end="url(#mkf)"/><path d="M762,144 L800,144" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M800,116 L800,200" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M800,116 L832,116" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkf)"/><path d="M800,200 L832,200" stroke="var(--teal)" stroke-width="1.7" fill="none" stroke-linecap="round" marker-end="url(#mkf)"/><text x="540" y="276" text-anchor="middle" class="cap-f">Tracks order volume, fulfillment, processing time, cash needs, and revenue trends</text></svg>
+        </div>
+        <div class="dcap">Reporting flow: source systems consolidate on a schedule, an AI layer refreshes dashboards and writes a plain-language summary for leadership.</div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="shead"><h2 class="stitle">Skills</h2></div>
+    <div class="skills-block"><div class="subh">Core Expertise</div><div class="exp">
       <div>
         <div class="g-label">Operations &amp; Delivery</div>
         <ul>
@@ -230,7 +618,7 @@
         <ul>
           <li>ERP Implementation &amp; Support</li>
           <li>Systems Integration</li>
-          <li>Process Automation (n8n, Workato)</li>
+          <li>Business Process Automation</li>
           <li>AI-Assisted Workflow Design</li>
         </ul>
       </div>
@@ -243,13 +631,8 @@
           <li>Executive &amp; Stakeholder Alignment</li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- TECHNOLOGY -->
-  <section>
-    <div class="shead"><span class="snum">04</span><span class="stitle">Technology &amp; Tools</span></div>
-    <div class="exp">
+    </div></div>
+    <div class="skills-block"><div class="subh">Tools & Platforms</div><div class="exp">
       <div>
         <div class="g-label">ERP</div>
         <ul>
@@ -308,16 +691,14 @@
           <li>IT budgeting &amp; cost optimization</li>
         </ul>
       </div>
-    </div>
+    </div></div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section>
-    <div class="shead"><span class="snum">05</span><span class="stitle">Experience</span></div>
-
-    <div class="job">
+  <section id="experience">
+    <div class="shead"><h2 class="stitle">Experience</h2></div>
+<div class="job">
       <div class="top"><div><span class="role">Founder &amp; Principal Consultant</span> <span class="org">· Kairion Group</span></div><div class="dates">2020 - Present</div></div>
-      <div class="desc">Founded and run a Philippines-based consulting, technology, and talent firm serving clients across the US, Canada, and Australia. Build AI-assisted automation in n8n and Workato across order-to-cash, accounts-payable invoice processing, procure-to-pay, and customer support, connecting CRM, ERP, and inventory, with outcomes such as 60 to 90% lower invoice-processing cost and 40 to 80% support-ticket deflection, plus an AI project-management assistant that turns a brief into plans and reports in minutes.</div>
+      <div class="desc">Founded and run a Philippines-based consulting, technology, and talent firm serving clients across the US, Canada, and Australia, designing AI-assisted automation in n8n and Workato across order-to-cash, accounts payable, support, and reporting. See Case Studies for detailed outcomes.</div>
     </div>
     <div class="job">
       <div class="top"><div><span class="role">Business Consultant</span> <span class="org">· CEF Solutions Inc. (Part-time)</span></div><div class="dates">03/2023 - Present</div></div>
@@ -359,29 +740,29 @@
       <div class="top"><div><span class="role">Application Support Analyst</span> <span class="org">· VXI Global Holdings Inc.</span></div><div class="dates">10/2015 - 07/2016</div></div>
       <div class="desc">Supported multiple ERP platforms, resolving system issues and maintaining documentation to keep operations running.</div>
     </div>
+  
   </section>
 
-  <!-- CREDENTIALS -->
-  <section>
-    <div class="shead"><span class="snum">06</span><span class="stitle">Credentials</span></div>
-    <div class="meta">
+  <section id="contact">
+    <div class="shead"><h2 class="stitle">Contact</h2></div>
+    <div class="contact-grid">
       <div>
-        <div class="g-label">Certifications</div>
-        <div class="item">Project Management Professional (PMP), PMI</div>
-        <div class="item">Lean Six Sigma Black Belt</div>
-        <div class="item">Lean Six Sigma AI Belt</div>
-        <div class="item">n8n Foundations: Integrations, APIs &amp; Connected Systems</div>
-        <div class="item">Workato Certified</div>
+        <div class="contact-lead">Let's build systems that run.</div>
+        <p>Open to operations, systems, and automation leadership roles, and to consulting engagements across the US, Canada, and Australia.</p>
+        <a href="mailto:nesxia0494@gmail.com" class="btn btn-p">Email me</a>
       </div>
-      <div>
-        <div class="g-label">Education</div>
-        <div class="item">BS Information Technology</div>
-        <div class="item">Mapua Malayan Digital College</div>
-        <div class="item">2019 - 2023</div>
+      <div class="cinfo">
+        <div><span class="k">Email</span><a href="mailto:nesxia0494@gmail.com">nesxia0494@gmail.com</a></div>
+        <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/vanessa-salonoy">linkedin.com/in/vanessa-salonoy</a></div>
+        <div><span class="k">GitHub</span><a href="https://github.com/vanessa00001">github.com/vanessa00001</a></div>
+        <div><span class="k">Resume</span><a href="Vanessa_Salonoy_Resume.pdf" download>Download PDF</a></div>
+        <div><span class="k">Based in</span>Philippines · working across US, Canada & Australia</div>
       </div>
     </div>
   </section>
 
+
+</main>
   <footer>
     <span>Vanessa Salonoy · Operations &amp; Business Systems Leadership</span>
     <span>Kairion Group - Where Opportunity Becomes Legacy</span>
