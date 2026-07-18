@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanessa Salonoy - Operations & Business Systems Leadership</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14232B;
+    --navy:#1F3D4C;
+    --teal:#2E6E7E;
+    --teal-bright:#3A8A94;
+    --paper:#F3F5F4;
+    --card:#FBFCFB;
+    --line:#CBD6D4;
+    --muted:#5A6B70;
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Inter",-apple-system,"Segoe UI",sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,"Courier New",monospace;
+    --maxw:1000px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding:clamp(20px,5vw,64px) clamp(16px,5vw,48px);
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;}
+
+  /* ---------- reveal ---------- */
+  .rise{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;}
+  .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.rise{animation:none;opacity:1;transform:none}}
+
+  /* ---------- hero ---------- */
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);}
+  h1{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(44px,8vw,84px);
+    line-height:.98;
+    letter-spacing:-.01em;
+    color:var(--navy);
+    margin:.18em 0 .12em;
+  }
+  .tagline{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(17px,2.4vw,22px);
+    color:var(--ink);
+    max-width:46ch;
+  }
+  .contact{
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--muted);
+    margin-top:20px;
+    display:flex;flex-wrap:wrap;gap:6px 14px;
+  }
+  .contact span{white-space:nowrap;}
+  .contact a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);}
+  .contact a:hover{color:var(--teal);border-color:var(--teal);}
+
+  .rail{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;
+  }
+  .chip{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;
+    color:var(--navy);background:var(--card);
+    border:1px solid var(--line);border-radius:2px;
+    padding:5px 10px;
+  }
+
+  /* ---------- section frame ---------- */
+  section{margin-top:clamp(38px,6vw,64px);}
+  .shead{display:flex;align-items:baseline;gap:14px;border-top:2px solid var(--navy);padding-top:10px;margin-bottom:26px;}
+  .snum{font-family:var(--mono);font-size:12px;color:var(--teal);letter-spacing:.1em;}
+  .stitle{font-family:var(--serif);font-weight:500;font-size:clamp(20px,3vw,27px);color:var(--navy);}
+
+  .summary{font-size:clamp(15px,1.9vw,17.5px);max-width:70ch;color:var(--ink);}
+  .summary strong{color:var(--navy);font-weight:600;}
+
+  /* ---------- engagement ledger (signature) ---------- */
+  .ledger{display:grid;gap:14px;}
+  .eng{
+    display:grid;grid-template-columns:40px 1fr;gap:0 18px;
+    background:var(--card);border:1px solid var(--line);border-left:3px solid var(--line);
+    border-radius:3px;padding:18px 20px 18px 18px;
+    transition:border-left-color .25s ease, transform .25s ease;
+  }
+  .eng:hover{border-left-color:var(--teal-bright);transform:translateX(3px);}
+  .eng .ix{font-family:var(--mono);font-size:13px;color:var(--teal);padding-top:3px;}
+  .eng .dom{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+  .eng h3{font-family:var(--sans);font-weight:600;font-size:16.5px;color:var(--navy);margin:3px 0 7px;}
+  .eng p{font-size:14.5px;color:var(--ink);max-width:74ch;}
+
+  /* ---------- expertise ---------- */
+  .exp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
+  .exp .g-label{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+  .exp ul{list-style:none;}
+  .exp li{font-size:14px;color:var(--ink);padding:3px 0;border-bottom:1px solid rgba(203,214,212,.5);}
+  .exp li:last-child{border-bottom:none;}
+
+  /* ---------- experience ---------- */
+  .job{padding:16px 0;border-bottom:1px solid var(--line);}
+  .job:last-child{border-bottom:none;}
+  .job .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px;}
+  .job .role{font-weight:600;font-size:15.5px;color:var(--navy);}
+  .job .org{font-weight:400;color:var(--ink);}
+  .job .dates{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap;}
+  .job .desc{font-size:14px;color:var(--ink);margin-top:5px;max-width:80ch;}
+
+  /* ---------- footer meta ---------- */
+  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
+  .meta .g-label{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+  .meta p{font-size:14px;color:var(--ink);}
+  .meta .item{padding:2px 0;}
+
+  footer{margin-top:56px;border-top:2px solid var(--navy);padding-top:16px;
+    font-family:var(--mono);font-size:11.5px;color:var(--muted);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;}
+
+  @media (max-width:560px){
+    .eng{grid-template-columns:1fr;}
+    .eng .ix{margin-bottom:4px;}
+  }
+  @media print{
+    body{background:#fff;padding:0.5in;}
+    .eng,.exp li{break-inside:avoid;}
+    .rise{animation:none;opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header>
+    <div class="eyebrow rise d1">Operations · Business Systems · Automation</div>
+    <h1 class="rise d1">Vanessa Salonoy</h1>
+    <p class="tagline rise d2">Eleven years turning complex programs into running systems, as both an internal leader and an outside consultant.</p>
+    <div class="contact rise d2">
+      <span>Cainta, Rizal, PH</span>
+      <span>093-2437-0596</span>
+      <span><a href="mailto:nesxia0494@gmail.com">nesxia0494@gmail.com</a></span>
+      <span><a href="https://www.linkedin.com/in/vanessa-salonoy">linkedin.com/in/vanessa-salonoy</a></span>
+    </div>
+    <div class="rail rise d3">
+      <span class="chip">PMP</span>
+      <span class="chip">Lean Six Sigma · Black Belt</span>
+      <span class="chip">ERP · SAP · Oracle · Workday · NetSuite</span>
+      <span class="chip">CRM · Salesforce · HubSpot</span>
+      <span class="chip">Ecommerce · Shopify · BigCommerce · Amazon · eBay</span>
+      <span class="chip">Delivery &amp; PMO</span>
+      <span class="chip">n8n + AI Automation</span>
+      <span class="chip">Workato · Celigo</span>
+      <span class="chip">APAC · LATAM · EMEA · NA</span>
+    </div>
+  </header>
+
+  <!-- SUMMARY -->
+  <section>
+    <div class="shead"><span class="snum">01</span><span class="stitle">Profile</span></div>
+    <p class="summary">Operations and delivery leader with 11+ years taking complex programs from strategy through execution, and 8 years applying Lean Six Sigma to process transformation. Runs <strong>ERP and systems implementations across SAP, Oracle, Workday, and NetSuite</strong>, alongside operational transformations and cross-functional delivery across BPO, SaaS, ecommerce, and enterprise environments. Sets the roadmap, builds the systems and SOPs that make teams run, and stays close enough to the work to unblock it. Lean Six Sigma Black Belt and PMP, now building <strong>AI-assisted workflow automation</strong> that removes manual cost from core business processes. Brings structure to ambiguity and owns outcomes, not just tasks.</p>
+  </section>
+
+  <!-- ENGAGEMENTS -->
+  <section>
+    <div class="shead"><span class="snum">02</span><span class="stitle">Selected Engagements</span></div>
+    <div class="ledger">
+      <article class="eng">
+        <div class="ix">/01</div>
+        <div>
+          <div class="dom">Systems Integration · Ecommerce / CPG · Waiakea</div>
+          <h3>Systems integration at scale across 7+ platforms</h3>
+          <p>Led end-to-end delivery across NetSuite, Shopify, SPS Commerce, RF-Smart, Celigo, and multiple 3PL and WMS partners, keeping 10+ EDI transaction types flowing across trading partners. Rebuilt Celigo automations and standardized integration processes, removing recurring manual work from the order-to-fulfillment lifecycle and documenting it so delivery no longer lived in one person's head.</p>
+        </div>
+      </article>
+      <article class="eng">
+        <div class="ix">/02</div>
+        <div>
+          <div class="dom">ERP Program · Enterprise Systems · TELUS International</div>
+          <h3>Enterprise ERP operations and delivery across Finance, HR, and Tech</h3>
+          <p>Directed ERP programs from planning through rollout across Finance, HR, and Technical functions, owning delivery governance, system stability, and stakeholder alignment, and coordinating integrations, upgrades, and customizations to optimize core business processes across concurrent workstreams.</p>
+        </div>
+      </article>
+      <article class="eng">
+        <div class="ix">/03</div>
+        <div>
+          <div class="dom">Automation · AI + n8n + Workato · Kairion Group · Current</div>
+          <h3>AI-powered order-to-cash across CRM, ERP, and inventory</h3>
+          <p>Built an end-to-end workflow in n8n and Workato that validates orders from ecommerce and marketplace channels including Shopify, BigCommerce, Amazon, and eBay, syncs customer and order data across CRM and ERP, checks inventory, triggers fulfillment, generates invoices, sends notifications, and reconciles payment, with an AI layer that catches exceptions like payment failures and stockouts and routes them with full context. At volume it removes the equivalent of 1 to 5 full-time roles and hundreds of labor hours a year while cutting order errors.</p>
+        </div>
+      </article>
+      <article class="eng">
+        <div class="ix">/04</div>
+        <div>
+          <div class="dom">Customer Success · SaaS · This Fish Inc.</div>
+          <h3>Onboarding and retention for global SaaS clients</h3>
+          <p>Led onboarding and implementation for global clients and built the implementation playbooks and onboarding guides the team ran on, managing relationships to drive adoption and reduce churn.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section>
+    <div class="shead"><span class="snum">03</span><span class="stitle">Core Expertise</span></div>
+    <div class="exp">
+      <div>
+        <div class="g-label">Operations &amp; Delivery</div>
+        <ul>
+          <li>Operations Leadership</li>
+          <li>Program &amp; Project Management</li>
+          <li>Delivery Governance &amp; PMO</li>
+          <li>Change &amp; Transformation</li>
+        </ul>
+      </div>
+      <div>
+        <div class="g-label">Systems &amp; Automation</div>
+        <ul>
+          <li>ERP Implementation &amp; Support</li>
+          <li>Systems Integration</li>
+          <li>Process Automation (n8n, Workato)</li>
+          <li>AI-Assisted Workflow Design</li>
+        </ul>
+      </div>
+      <div>
+        <div class="g-label">Method &amp; People</div>
+        <ul>
+          <li>Lean Six Sigma (Black Belt)</li>
+          <li>Business Process Improvement</li>
+          <li>SOP &amp; Operating-Model Design</li>
+          <li>Executive &amp; Stakeholder Alignment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY -->
+  <section>
+    <div class="shead"><span class="snum">04</span><span class="stitle">Technology &amp; Tools</span></div>
+    <div class="exp">
+      <div>
+        <div class="g-label">ERP</div>
+        <ul>
+          <li>SAP</li>
+          <li>Oracle</li>
+          <li>Workday</li>
+          <li>NetSuite</li>
+        </ul>
+      </div>
+      <div>
+        <div class="g-label">CRM</div>
+        <ul>
+          <li>Salesforce</li>
+          <li>HubSpot</li>
+        </ul>
+      </div>
+      <div>
+        <div class="g-label">Ecommerce &amp; Marketplace</div>
+        <ul>
+          <li>Shopify · BigCommerce</li>
+          <li>Amazon · eBay</li>
+          <li>SPS Commerce</li>
+        </ul>
+      </div>
+      <div>
+        <div class="g-label">Integration &amp; Automation</div>
+        <ul>
+          <li>Celigo · n8n · Workato</li>
+          <li>EDI (850/855/856/810/940/945)</li>
+          <li>API integrations</li>
+        </ul>
+      </div>
+      <div>
+        <div class="g-label">Cloud &amp; Service Mgmt</div>
+        <ul>
+          <li>AWS · Azure · GCP</li>
+          <li>ServiceNow · Zendesk</li>
+          <li>ITIL</li>
+        </ul>
+      </div>
+      <div>
+        <div class="g-label">Project &amp; Delivery</div>
+        <ul>
+          <li>PMP · Agile · Scrum · Waterfall</li>
+          <li>Jira · Asana · Monday.com</li>
+          <li>MS Project · Smartsheet</li>
+          <li>Confluence</li>
+        </ul>
+      </div>
+      <div>
+        <div class="g-label">Analytics</div>
+        <ul>
+          <li>Power BI · Tableau</li>
+          <li>KPI dashboards</li>
+          <li>ROI analysis</li>
+          <li>IT budgeting &amp; cost optimization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <div class="shead"><span class="snum">05</span><span class="stitle">Experience</span></div>
+
+    <div class="job">
+      <div class="top"><div><span class="role">Founder &amp; Principal Consultant</span> <span class="org">· Kairion Group</span></div><div class="dates">2020 - Present</div></div>
+      <div class="desc">Founded and run a Philippines-based consulting, technology, and talent firm serving clients across the US, Canada, and Australia. Build AI-assisted automation in n8n and Workato across order-to-cash, accounts-payable invoice processing, procure-to-pay, and customer support, connecting CRM, ERP, and inventory, with outcomes such as 60 to 90% lower invoice-processing cost and 40 to 80% support-ticket deflection, plus an AI project-management assistant that turns a brief into plans and reports in minutes.</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><span class="role">Business Consultant</span> <span class="org">· CEF Solutions Inc. (Part-time)</span></div><div class="dates">03/2023 - Present</div></div>
+      <div class="desc">Deliver consulting across enterprise clients, running operational assessments, workflow redesigns, and operating-model improvements from diagnosis through implementation, and build SOPs teams actually adopt.</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><span class="role">System Integration Manager</span> <span class="org">· Waiakea</span></div><div class="dates">02/2025 - 02/2026</div></div>
+      <div class="desc">Ran multiple integration projects at once across Finance, Operations, Warehouse, and Customer Service, and improved delivery reliability by monitoring automation workflows and resolving breakpoints across the order-to-fulfillment lifecycle.</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><span class="role">Senior ERP Manager</span> <span class="org">· TELUS International Philippines</span></div><div class="dates">03/2023 - 01/2025</div></div>
+      <div class="desc">Led ERP initiatives across Finance, HR, and Technical Operations from planning through rollout, owning delivery governance including risks, dependencies, and go-live readiness across concurrent workstreams.</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><span class="role">Head of Customer Success</span> <span class="org">· This Fish Inc.</span></div><div class="dates">02/2022 - 02/2023</div></div>
+      <div class="desc">Led SaaS onboarding and implementation for global clients, driving adoption through structured planning, training, and enablement, and managing relationships to reduce churn.</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><span class="role">IT Service Delivery Manager</span> <span class="org">· Fusion 5 (Part-time)</span></div><div class="dates">05/2020 - 12/2023</div></div>
+      <div class="desc">Ran multi-region IT service delivery to SLA and KPI targets, led critical incident resolution and root cause analysis, and drove service improvements through ITIL and continuous improvement frameworks.</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><span class="role">Oracle ERP Functional Lead</span> <span class="org">· Infosys BPM Philippines</span></div><div class="dates">06/2021 - 09/2022</div></div>
+      <div class="desc">Managed ERP workstreams and releases across Finance, Supply Chain, and HR, and led a team of 30 Level 3 support specialists to SLA through structured incident and problem management.</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><span class="role">ERP Consultant</span> <span class="org">· Concentrix CVG Philippines</span></div><div class="dates">05/2018 - 06/2021</div></div>
+      <div class="desc">Translated business requirements into ERP configurations and functional specs across finance, order management, billing, pricing, and credit workflows, and ran gap analysis, upgrades, and migration planning.</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><span class="role">IT Project Manager</span> <span class="org">· Fusion 5 (Part-time)</span></div><div class="dates">04/2018 - 04/2020</div></div>
+      <div class="desc">Delivered end-to-end IT projects within scope, budget, and schedule, managing plans, risks, dependencies, and stakeholder communication.</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><span class="role">Application Support Lead</span> <span class="org">· VXI Global Holdings Inc.</span></div><div class="dates">07/2016 - 04/2018</div></div>
+      <div class="desc">Led a 25-member application support team to SLA as primary escalation for complex ERP issues, mentoring the team for capability.</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><span class="role">Application Support Analyst</span> <span class="org">· VXI Global Holdings Inc.</span></div><div class="dates">10/2015 - 07/2016</div></div>
+      <div class="desc">Supported multiple ERP platforms, resolving system issues and maintaining documentation to keep operations running.</div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section>
+    <div class="shead"><span class="snum">06</span><span class="stitle">Credentials</span></div>
+    <div class="meta">
+      <div>
+        <div class="g-label">Certifications</div>
+        <div class="item">Project Management Professional (PMP), PMI</div>
+        <div class="item">Lean Six Sigma Black Belt</div>
+        <div class="item">Lean Six Sigma AI Belt</div>
+        <div class="item">n8n Foundations: Integrations, APIs &amp; Connected Systems</div>
+        <div class="item">Workato Certified</div>
+      </div>
+      <div>
+        <div class="g-label">Education</div>
+        <div class="item">BS Information Technology</div>
+        <div class="item">Mapua Malayan Digital College</div>
+        <div class="item">2019 - 2023</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Vanessa Salonoy · Operations &amp; Business Systems Leadership</span>
+    <span>Kairion Group - Where Opportunity Becomes Legacy</span>
+  </footer>
+
+</div>
+</body>
+</html>
