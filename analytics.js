@@ -35,8 +35,8 @@
        Replace  GTM-XXXXXXX   with your Container ID
      ------------------------------------------------- */
   var CONFIG = {
-    GA4_MEASUREMENT_ID: 'G-XXXXXXXXXX',   // ← Google Analytics 4
-    CLARITY_PROJECT_ID: 'xxxxxxxxxx',     // ← Microsoft Clarity
+    GA4_MEASUREMENT_ID: 'G-J00HFQWLBN',   // ← Google Analytics 4
+    CLARITY_PROJECT_ID: 'xpwv1mqjgy',      // ← Microsoft Clarity
     GTM_CONTAINER_ID:   'GTM-XXXXXXX',    // ← Google Tag Manager (leave off if unused)
 
     SCROLL_DEPTHS: [25, 50, 75, 100],     // scroll-depth milestones (%)
