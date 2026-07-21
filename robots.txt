@@ -1,4 +1,6 @@
+# robots.txt — Vanessa Salonoy portfolio
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://vanessa00001.github.io/portfolio/sitemap.xml
