@@ -1,0 +1,407 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Enterprise Integration Strategy Playbook</title><meta name="description" content="A practical methodology for selecting, designing, governing, and evolving enterprise integrations across ERP, CRM, AI automation, and legacy systems."><link rel="canonical" href="https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-integration-strategy-playbook/"><link rel="alternate" type="application/rss+xml" title="Knowledge Center — RSS" href="https://vanessa00001.github.io/portfolio/knowledge/rss.xml"><meta property="og:site_name" content="Knowledge Center"><meta property="og:type" content="article"><meta property="og:title" content="Enterprise Integration Strategy Playbook"><meta property="og:description" content="A practical methodology for selecting, designing, governing, and evolving enterprise integrations across ERP, CRM, AI automation, and legacy systems."><meta property="og:url" content="https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-integration-strategy-playbook/"><meta property="og:image" content="https://vanessa00001.github.io/portfolio/knowledge/og-default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Enterprise Integration Strategy Playbook"><meta name="twitter:description" content="A practical methodology for selecting, designing, governing, and evolving enterprise integrations across ERP, CRM, AI automation, and legacy systems."><meta name="twitter:image" content="https://vanessa00001.github.io/portfolio/knowledge/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Enterprise Integration Strategy Playbook","description":"A practical methodology for selecting, designing, governing, and evolving enterprise integrations across ERP, CRM, AI automation, and legacy systems.","datePublished":"2026-07-22T00:00:00.000Z","dateModified":"2026-07-22T00:00:00.000Z","articleSection":"Playbooks","author":{"@type":"Person","name":"Vanessa Salonoy","url":"https://vanessa00001.github.io/portfolio/knowledge/authors/vanessa-salonoy/"},"mainEntityOfPage":"https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-integration-strategy-playbook/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Knowledge Center","item":"https://vanessa00001.github.io/portfolio/knowledge/"},{"@type":"ListItem","position":2,"name":"Playbooks","item":"https://vanessa00001.github.io/portfolio/knowledge/playbooks/"},{"@type":"ListItem","position":3,"name":"Enterprise Integration Strategy Playbook"}]}</script><meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)"><script>
+      (function () {
+        try {
+          var stored = sessionStorage.getItem('kc-theme');
+          var theme =
+            stored ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {
+          /* storage blocked — fall back to light */
+        }
+      })();
+    </script><link rel="stylesheet" href="/portfolio/knowledge/_astro/_slug_.DM5cgNvv.css">
+<link rel="stylesheet" href="/portfolio/knowledge/_astro/_slug_.BMhP6wvg.css">
+<style>.callout[data-astro-cid-x2ep4vyf]{display:flex;gap:var(--space-3);padding:var(--space-4);background-color:var(--bg-subtle);border:1px solid var(--border);border-left:4px solid var(--callout-accent);border-radius:var(--radius-md)}.callout__icon[data-astro-cid-x2ep4vyf]{flex-shrink:0;color:var(--callout-accent);line-height:0;margin-top:.1em}.callout__body[data-astro-cid-x2ep4vyf]{min-width:0}.callout__label[data-astro-cid-x2ep4vyf]{margin:0 0 var(--space-1);font-weight:700;color:var(--text)}.callout__content[data-astro-cid-x2ep4vyf]{color:var(--text)}.callout__content[data-astro-cid-x2ep4vyf]>:last-child{margin-bottom:0}
+.badge[data-astro-cid-35zd7xm4]{display:inline-flex;align-items:center;gap:var(--space-1);padding:var(--space-1) var(--space-2);font-size:var(--fs-xs);font-weight:600;line-height:1.2;color:var(--text);background-color:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius-sm);white-space:nowrap}.badge__icon[data-astro-cid-35zd7xm4]{display:inline-flex;color:var(--badge-accent)}.badge__dot[data-astro-cid-35zd7xm4]{width:.5rem;height:.5rem;border-radius:50%;background-color:var(--badge-accent)}
+.card[data-astro-cid-dd5txfcy]{position:relative;display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);background-color:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);transition:box-shadow .15s ease,transform .15s ease,border-color .15s ease}.card[data-astro-cid-dd5txfcy]:hover{transform:translateY(-2px);box-shadow:var(--shadow-2);border-color:var(--brand-primary)}.card__top[data-astro-cid-dd5txfcy]{display:flex;align-items:center;gap:var(--space-2)}.card__title[data-astro-cid-dd5txfcy]{margin:0;font-size:var(--fs-lg)}.card__link[data-astro-cid-dd5txfcy]{color:var(--text);text-decoration:none}.card__link[data-astro-cid-dd5txfcy]:after{content:"";position:absolute;inset:0;border-radius:inherit}.card[data-astro-cid-dd5txfcy]:hover .card__link[data-astro-cid-dd5txfcy]{color:var(--brand-primary)}.card__summary[data-astro-cid-dd5txfcy]{margin:0;color:var(--text-muted);font-size:var(--fs-sm);line-height:var(--line-height-body);display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.card__meta[data-astro-cid-dd5txfcy],.card__tags[data-astro-cid-dd5txfcy]{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2)}.card__meta[data-astro-cid-dd5txfcy]{margin-top:auto}.card__meta[data-astro-cid-dd5txfcy] a,.card__tags[data-astro-cid-dd5txfcy] a{position:relative;z-index:1}
+.btn[data-astro-cid-6ygtcg62]{--btn-height: 2.5rem;display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-height:var(--btn-height);padding-inline:var(--space-4);font:inherit;font-weight:600;line-height:1.2;text-decoration:none;border:1px solid transparent;border-radius:var(--radius-md);cursor:pointer;transition:background-color .15s ease,border-color .15s ease,color .15s ease}.btn--sm[data-astro-cid-6ygtcg62]{--btn-height: 2rem;padding-inline:var(--space-3);font-size:var(--fs-sm)}.btn--primary[data-astro-cid-6ygtcg62]{background-color:var(--brand-primary);color:#fff}.btn--primary[data-astro-cid-6ygtcg62]:hover{background-color:var(--brand-primary-ink)}.btn--secondary[data-astro-cid-6ygtcg62]{background-color:transparent;color:var(--text);border-color:var(--border)}.btn--secondary[data-astro-cid-6ygtcg62]:hover{border-color:var(--brand-primary);color:var(--brand-primary)}.btn--ghost[data-astro-cid-6ygtcg62]{background-color:transparent;color:var(--brand-primary)}.btn--ghost[data-astro-cid-6ygtcg62]:hover{background-color:var(--bg-subtle)}.btn[data-astro-cid-6ygtcg62]:disabled,.btn[data-astro-cid-6ygtcg62][aria-disabled=true]{opacity:.5;cursor:not-allowed;pointer-events:none}.btn__format[data-astro-cid-6ygtcg62]{font-family:var(--font-mono);font-size:var(--fs-xs);padding:0 var(--space-1);border:1px solid currentColor;border-radius:var(--radius-sm);opacity:.9}
+.author-chip[data-astro-cid-qtsfwbd5]{display:inline-flex;align-items:center;gap:var(--space-2);text-decoration:none;color:var(--text)}.author-chip__avatar[data-astro-cid-qtsfwbd5]{width:1.75rem;height:1.75rem;border-radius:50%;object-fit:cover;flex-shrink:0}.author-chip__initials[data-astro-cid-qtsfwbd5]{display:inline-flex;align-items:center;justify-content:center;font-size:var(--fs-xs);font-weight:700;color:#fff;background-color:var(--brand-primary)}.author-chip__meta[data-astro-cid-qtsfwbd5]{display:inline-flex;flex-direction:column;line-height:1.2}.author-chip__name[data-astro-cid-qtsfwbd5]{font-weight:600;font-size:var(--fs-sm)}.author-chip__role[data-astro-cid-qtsfwbd5]{font-size:var(--fs-xs);color:var(--text-muted)}a[data-astro-cid-qtsfwbd5].author-chip:hover .author-chip__name[data-astro-cid-qtsfwbd5]{color:var(--brand-primary)}.reading-time[data-astro-cid-mzf3d6uz]{display:inline-flex;align-items:center;gap:var(--space-1);font-size:var(--fs-sm);color:var(--text-muted);white-space:nowrap}.difficulty[data-astro-cid-f22gsth5]{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-1) var(--space-2);font-size:var(--fs-xs);font-weight:600;line-height:1.2;color:var(--text);background-color:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius-sm);white-space:nowrap}.difficulty__dot[data-astro-cid-f22gsth5]{width:.5rem;height:.5rem;border-radius:50%;background-color:var(--diff-accent)}.tag[data-astro-cid-tugpja7w]{display:inline-flex;align-items:center;padding:var(--space-1) var(--space-2);font-size:var(--fs-xs);line-height:1.2;color:var(--text-muted);background-color:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius-sm);text-decoration:none;white-space:nowrap}.tag__hash[data-astro-cid-tugpja7w]{opacity:.6;margin-right:.1em}a[data-astro-cid-tugpja7w].tag:hover{color:var(--brand-primary);border-color:var(--brand-primary)}.metadata-bar[data-astro-cid-sgo5wfom]{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-3);font-size:var(--fs-sm);color:var(--text-muted)}.metadata-bar__item[data-astro-cid-sgo5wfom]:not(:first-child):not(.metadata-bar__tags):before{content:"·";margin-right:var(--space-3);color:var(--border)}.metadata-bar__item[data-astro-cid-sgo5wfom]{display:inline-flex;align-items:center;gap:var(--space-1)}.metadata-bar__tags[data-astro-cid-sgo5wfom]{gap:var(--space-1);flex-wrap:wrap}.metadata-bar[data-astro-cid-sgo5wfom] a[data-astro-cid-sgo5wfom]{color:var(--text-muted);text-decoration:none}.metadata-bar[data-astro-cid-sgo5wfom] a[data-astro-cid-sgo5wfom]:hover{color:var(--brand-primary);text-decoration:underline}
+</style><script type="module" src="/portfolio/knowledge/_astro/hoisted.BPOG4pMv.js"></script>
+<script type="module" src="/portfolio/knowledge/_astro/page.DCTgdEH6.js"></script></head> <body> <a class="skip-link" href="#main-content">Skip to content</a> <header class="site-header" data-astro-cid-qlfjksao> <div class="site-header__inner container" data-astro-cid-qlfjksao> <a class="site-header__home" href="/portfolio/knowledge/" data-astro-cid-qlfjksao> <span class="site-header__mark" aria-hidden="true" data-astro-cid-qlfjksao>K</span> <span class="site-header__home-text" data-astro-cid-qlfjksao>Knowledge Center</span> </a> <nav class="site-header__nav" aria-label="Primary" data-astro-cid-qlfjksao> <button type="button" class="site-header__disclosure" data-nav-toggle aria-expanded="false" aria-controls="kc-panel" aria-haspopup="dialog" data-astro-cid-qlfjksao> <svg class="site-header__burger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-qlfjksao> <path d="M3 6h18M3 12h18M3 18h18" data-astro-cid-qlfjksao></path> </svg> <span class="site-header__disclosure-text" data-astro-cid-qlfjksao>Browse</span> </button> <a class="site-header__search" href="/portfolio/knowledge/search/" data-astro-cid-qlfjksao> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-qlfjksao> <circle cx="11" cy="11" r="7" data-astro-cid-qlfjksao></circle> <path d="M21 21l-4.3-4.3" data-astro-cid-qlfjksao></path> </svg> <span class="site-header__search-text" data-astro-cid-qlfjksao>Search</span> <kbd class="site-header__kbd" aria-hidden="true" data-astro-cid-qlfjksao>⌘K</kbd> </a> <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" data-astro-cid-efubawbo> <span class="visually-hidden" data-astro-cid-efubawbo>Toggle dark mode</span> <!-- sun (shown in dark mode → action: go light) --> <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-efubawbo> <circle cx="12" cy="12" r="4" data-astro-cid-efubawbo></circle> <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" data-astro-cid-efubawbo></path> </svg> <!-- moon (shown in light mode → action: go dark) --> <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-efubawbo> <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" data-astro-cid-efubawbo></path> </svg> </button>   <a class="site-header__cta" href="/portfolio/knowledge/contact/" data-astro-cid-qlfjksao>Let&rsquo;s Talk</a> </nav> </div> </header> <div class="nav-backdrop" data-nav-backdrop hidden data-astro-cid-rs4xygvj></div> <div id="kc-panel" class="nav-panel" role="dialog" aria-modal="true" aria-label="Knowledge Center navigation" data-active-axis="type" hidden data-astro-cid-rs4xygvj> <div class="nav-panel__inner container" data-astro-cid-rs4xygvj> <div class="nav-panel__bar" data-astro-cid-rs4xygvj> <p class="nav-panel__title" data-astro-cid-rs4xygvj>Knowledge Center</p> <button type="button" class="nav-panel__close" data-nav-close data-astro-cid-rs4xygvj> <span class="visually-hidden" data-astro-cid-rs4xygvj>Close navigation</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-rs4xygvj> <path d="M6 6l12 12M18 6L6 18" data-astro-cid-rs4xygvj></path> </svg> </button> </div> <a class="nav-panel__search" href="/portfolio/knowledge/search/" data-astro-cid-rs4xygvj> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-rs4xygvj> <circle cx="11" cy="11" r="7" data-astro-cid-rs4xygvj></circle> <path d="M21 21l-4.3-4.3" data-astro-cid-rs4xygvj></path> </svg> <span data-astro-cid-rs4xygvj>Search the Knowledge Center</span> </a> <div class="nav-panel__tabs" role="tablist" aria-label="Browse by" data-astro-cid-rs4xygvj> <button type="button" role="tab" id="tab-type" aria-controls="axis-type" aria-selected="true" data-axis-tab="type" data-astro-cid-rs4xygvj>By type</button> <button type="button" role="tab" id="tab-capability" aria-controls="axis-capability" aria-selected="false" data-axis-tab="capability" data-astro-cid-rs4xygvj>By capability</button> </div> <div class="nav-panel__columns" data-astro-cid-rs4xygvj> <section class="nav-panel__col" id="axis-type" role="tabpanel" aria-labelledby="tab-type" data-astro-cid-rs4xygvj> <p class="nav-panel__heading" data-astro-cid-rs4xygvj>Browse by knowledge type</p> <ul data-astro-cid-rs4xygvj> <li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/insights/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Insights</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Points of view and articles.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/playbooks/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Playbooks</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Step-by-step operational guides.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/frameworks/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Frameworks</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Mental models and structures.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/templates/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Templates</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Fill-in reusable artifacts.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/automation-labs/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Automation Lab</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Hands-on technical builds.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/case-studies/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Case Studies</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Real-world applications.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/resources/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Resources</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Reference knowledge.</span> </a> </li> </ul> </section> <section class="nav-panel__col" id="axis-capability" role="tabpanel" aria-labelledby="tab-capability" data-astro-cid-rs4xygvj> <p class="nav-panel__heading" data-astro-cid-rs4xygvj>Browse by capability</p> <ul data-astro-cid-rs4xygvj> <li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/business-analysis-and-requirements/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Business Analysis &amp; Requirements</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/project-and-delivery-management/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Project &amp; Delivery Management</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/intelligent-automation-and-ai/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Intelligent Automation &amp; AI</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/change-adoption-and-stakeholder-management/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Change, Adoption &amp; Stakeholder Management</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/governance-risk-and-assurance/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Governance, Risk &amp; Assurance</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/enterprise-systems-strategy/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Enterprise Systems Strategy</span> </a> </li> <li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/" class="nav-panel__all" data-astro-cid-rs4xygvj>All capabilities →</a> </li> </ul> </section> </div> <div class="nav-panel__foot" data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/start-here/" data-astro-cid-rs4xygvj>Start here — featured &amp; cornerstone content →</a> </div> </div> </div>    <nav class="breadcrumbs" aria-label="Breadcrumb" data-astro-cid-fdlnsr2d><div class="container" data-astro-cid-fdlnsr2d><ol data-astro-cid-fdlnsr2d><li data-astro-cid-fdlnsr2d><a href="/portfolio/knowledge/" data-astro-cid-fdlnsr2d>Knowledge Center</a><span class="separator" aria-hidden="true" data-astro-cid-fdlnsr2d>
+›
+</span></li><li data-astro-cid-fdlnsr2d><a href="/portfolio/knowledge/playbooks/" data-astro-cid-fdlnsr2d>Playbooks</a><span class="separator" aria-hidden="true" data-astro-cid-fdlnsr2d>
+›
+</span></li><li data-astro-cid-fdlnsr2d><span aria-current="page" data-astro-cid-fdlnsr2d>Enterprise Integration Strategy Playbook</span></li></ol></div></nav> <main id="main-content" tabindex="-1">  <div class="leaf container" data-astro-cid-5ega6rs2> <div class="leaf__grid" data-astro-cid-5ega6rs2> <article class="leaf__main" data-pagefind-body data-astro-cid-5ega6rs2> <div class="visually-hidden" aria-hidden="true" data-astro-cid-5ega6rs2> <span data-pagefind-filter="Type" data-astro-cid-5ega6rs2>Playbooks</span> <span data-pagefind-filter="Capability" data-astro-cid-5ega6rs2>Enterprise Systems Strategy</span> <span data-pagefind-filter="Difficulty" data-astro-cid-5ega6rs2>advanced</span> </div> <header class="leaf__header" data-astro-cid-5ega6rs2> <span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Playbooks</span> </span>  <h1 class="leaf__title" data-astro-cid-5ega6rs2>Enterprise Integration Strategy Playbook</h1> <p class="leaf__deck" data-astro-cid-5ega6rs2>A practical methodology for selecting, designing, governing, and evolving enterprise integrations across ERP, CRM, AI automation, and legacy systems.</p> <div class="metadata-bar" data-astro-cid-sgo5wfom> <span class="metadata-bar__item" data-astro-cid-sgo5wfom> <a href="/portfolio/knowledge/authors/vanessa-salonoy/" data-astro-cid-qtsfwbd5 class="author-chip"><span class="author-chip__avatar author-chip__initials" aria-hidden="true" data-astro-cid-qtsfwbd5>VS</span><span class="author-chip__meta" data-astro-cid-qtsfwbd5> <span class="author-chip__name" data-astro-cid-qtsfwbd5>Vanessa Salonoy</span>  </span> </a>  </span> <span class="metadata-bar__item" data-astro-cid-sgo5wfom><time datetime="2026-07-22" data-astro-cid-sgo5wfom>Jul 22, 2026</time></span>  <span class="metadata-bar__item" data-astro-cid-sgo5wfom><span class="reading-time" data-astro-cid-mzf3d6uz><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-mzf3d6uz><circle cx="12" cy="12" r="9" data-astro-cid-mzf3d6uz></circle><path d="M12 7v5l3 2" data-astro-cid-mzf3d6uz></path></svg><span data-astro-cid-mzf3d6uz>12 min read</span></span></span> <span class="metadata-bar__item" data-astro-cid-sgo5wfom><span class="difficulty" style="--diff-accent: var(--diff-advanced);" data-astro-cid-f22gsth5> <span class="difficulty__dot" aria-hidden="true" data-astro-cid-f22gsth5></span> <span class="difficulty__label" data-astro-cid-f22gsth5>Advanced</span> </span> </span> <span class="metadata-bar__item" data-astro-cid-sgo5wfom> <a href="/portfolio/knowledge/capabilities/enterprise-systems-strategy/" data-astro-cid-sgo5wfom>Enterprise Systems Strategy</a> </span> <span class="metadata-bar__item metadata-bar__tags" data-astro-cid-sgo5wfom> <a href="/portfolio/knowledge/search/?q=integration" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>integration</a> <a href="/portfolio/knowledge/search/?q=enterprise%20architecture" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>enterprise architecture</a> <a href="/portfolio/knowledge/search/?q=APIs" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>APIs</a> <a href="/portfolio/knowledge/search/?q=event-driven" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>event-driven</a> <a href="/portfolio/knowledge/search/?q=middleware" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>middleware</a>  </span> </div>  <div class="pb-facts" data-astro-cid-iqtmuo6l> <p class="pb-outcome" data-astro-cid-iqtmuo6l><strong data-astro-cid-iqtmuo6l>By the end you will have:</strong> A governed integration strategy - patterns chosen per boundary on criteria, decisions recorded, failure and observation designed, middleware chosen inside its constraints - that keeps the landscape operable as it grows and changes.</p> <ul class="pb-attrs" data-astro-cid-iqtmuo6l> <li data-astro-cid-iqtmuo6l><span data-astro-cid-iqtmuo6l>Time to execute</span><strong data-astro-cid-iqtmuo6l>2 to 4 weeks to establish; governs the landscape for its life</strong></li> <li data-astro-cid-iqtmuo6l><span data-astro-cid-iqtmuo6l>Roles</span><strong data-astro-cid-iqtmuo6l>Enterprise Architect, Solution Architect, Integration Lead, Project Manager</strong></li> <li data-astro-cid-iqtmuo6l><span data-astro-cid-iqtmuo6l>Prerequisites</span><strong data-astro-cid-iqtmuo6l>A system landscape inventory (even a rough one), The solution designs or requirements creating integration demand, A named integration authority</strong></li> </ul> </div> </header> <div class="leaf__body" data-astro-cid-5ega6rs2>    <h2 id="executive-overview">Executive overview</h2>
+<p>Integration is the part of the enterprise nobody buys on purpose and everybody operates forever.
+Landscapes do not fail at their centers; they fail at their boundaries, where systems meet on
+patterns chosen in a hurry, on contracts nobody wrote down, with failure behavior discovered in
+production. And because every program adds boundaries but almost none retires them, the integration
+estate grows by accretion until it is the quiet majority of operational risk.</p>
+<p>An integration strategy is the alternative to accretion. It is not a middleware purchase and not a
+diagram of arrows; it is a small set of governed decisions, which patterns are used when, how
+boundaries fail and are observed, where truth lives, and how the estate evolves, applied every time
+a new boundary is born. This playbook follows the
+<a href="/portfolio/knowledge/playbooks/enterprise-solution-design-playbook/">Enterprise Solution Design Playbook</a>:
+where that playbook designs each boundary inside a solution, this one governs the boundaries as a
+landscape, across solutions and across years.</p>
+<h2 id="when-to-use-this-playbook">When to use this playbook</h2>
+<p>Use it when the landscape is growing (an ERP or CRM program adding a wave of boundaries), when it is
+hurting (integration incidents are a standing agenda item), when it is consolidating (platform
+rationalization, post-merger), or when AI automation is arriving (new flows crossing old systems).
+Establish the strategy once, then apply it as standing governance: every new boundary passes through
+it, and the existing estate is brought under it opportunistically, worst-first, rather than through
+a heroic remediation program that will not survive its first budget review.</p>
+<h2 id="principles">Principles</h2>
+<ol>
+<li>Boundaries are decisions. Every integration is a recorded choice of pattern, contract, truth,
+and failure behavior, per the <a href="/portfolio/knowledge/insights/requirements-are-decisions-not-documents/">RDR Model</a>
+discipline; an ADR per significant boundary is the working form.</li>
+<li>Criteria over fashion. Patterns are chosen by the boundary’s properties, never by what is
+current, familiar, or already licensed.</li>
+<li>Fewer patterns, well governed. A landscape that does five patterns well beats one that does
+twelve badly; variety is a cost you spend deliberately.</li>
+<li>Design the failure first. A boundary is not designed until what-happens-when-the-other-side-is-down
+is designed; hope is not a failure mode.</li>
+<li>Truth is singular. Every data element crossing a boundary has one system of record, and the
+boundary knows which side it is.</li>
+<li>The estate is a portfolio. Boundaries are inventoried, owned, health-tracked, and retired, the
+way any asset portfolio is managed.</li>
+</ol>
+<h2 id="from-solution-design-to-integration-strategy">From solution design to integration strategy</h2>
+<p>The Solution Design Playbook decides each boundary’s pattern, contract, and failure behavior inside
+a program. This playbook supplies what the program-level view cannot: the standards those decisions
+are made against, the reuse they should discover (the boundary you need often half-exists), the
+portfolio they join, and the governance that keeps a hundred locally-reasonable decisions from
+becoming a globally unreasonable landscape. Mechanically: every integration ADR produced in solution
+design lands in the estate inventory, is checked against the pattern standards, and inherits the
+observation and failure conventions, so the landscape stays one system of intent rather than an
+archive of exceptions.</p>
+<h2 id="the-integration-strategy-lifecycle">The integration strategy lifecycle</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Stage</th><th>What happens</th><th>The test of done</th></tr></thead><tbody><tr><td>Inventory</td><td>The existing estate is cataloged: boundaries, patterns, contracts, owners, health</td><td>You can answer “what connects to what, and how” without a meeting</td></tr><tr><td>Standardize</td><td>The sanctioned pattern set and decision criteria are agreed and published</td><td>An architect can choose a pattern without a committee</td></tr><tr><td>Decide</td><td>New boundaries are pattern-matched on criteria; significant ones get ADRs</td><td>Every new boundary has a recorded decision</td></tr><tr><td>Design</td><td>Contracts, truth, failure, and observation are designed per boundary</td><td>The Solution Design Playbook’s integration discipline, applied</td></tr><tr><td>Govern</td><td>Boundaries pass proportionate review; exceptions are owned, not silent</td><td>The estate’s variety is chosen, not accumulated</td></tr><tr><td>Operate</td><td>Health is observed, incidents feed learning, contracts are versioned</td><td>Boundary trouble is seen before the business feels it</td></tr><tr><td>Evolve</td><td>Patterns are promoted or retired; boundaries are consolidated or decommissioned</td><td>The estate shrinks where it should, not just grows</td></tr></tbody></table>
+<h2 id="choosing-patterns-by-criteria">Choosing patterns by criteria</h2>
+<p>The Solution Design Playbook compares the five approaches (API-first, event-driven, batch,
+file-based, hybrid) at the boundary level; the strategy’s job is to make that comparison a standard
+instead of a per-program debate. Publish the decision criteria as questions any architect can
+answer: What latency does the business genuinely need, not want? What volume and shape is the data?
+Which side owns truth for what crosses? What consistency can the consuming process tolerate? What
+is the failure blast radius? What can both systems actually support without heroics? Then map
+criteria to sanctioned patterns, and require an ADR wherever a boundary departs from the mapping.
+The point is not rigidity; it is that departure becomes a decision with an owner instead of a
+preference with momentum.</p>
+<p>The selection matrix, scored per dimension, makes the standard usable at a glance:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Pattern</th><th>Latency</th><th>Complexity</th><th>Scalability</th><th>Reliability</th><th>Best use cases</th></tr></thead><tbody><tr><td>API-first</td><td>Real-time</td><td>Moderate</td><td>High, with management</td><td>Coupled to callee availability</td><td>Interactive processes, external consumption, request-and-response</td></tr><tr><td>Event-driven</td><td>Near real-time</td><td>High</td><td>Very high</td><td>High, with eventual consistency</td><td>State changes many systems consume; decoupled scale</td></tr><tr><td>Batch processing</td><td>Hours</td><td>Low</td><td>High volume per run</td><td>High, reconciliation-friendly</td><td>Periodic bulk movement, finance cycles, reporting loads</td></tr><tr><td>File-based</td><td>Hours to daily</td><td>Low</td><td>Moderate</td><td>Fragile contracts, slow failure discovery</td><td>Legacy edges, third parties, regulated handoffs</td></tr><tr><td>Hybrid</td><td>Mixed by boundary</td><td>Governed variety</td><td>As designed</td><td>As designed</td><td>Real landscapes with honestly different boundary needs</td></tr></tbody></table>
+<p>No single pattern is universally correct, and the matrix must never be read as a ranking. Selection
+is driven by the business capability the boundary serves and its operational requirements: the
+latency the process genuinely needs, the volume and shape of the data, and what both sides can
+support. A pattern that is wrong for the boundary is wrong however well it scores in general.</p>
+<h2 id="integration-decision-records">Integration decision records</h2>
+<p>Significant boundaries get ADRs with the standard five fields, and three integration-specific
+disciplines. State the contract as part of the decision: what crosses, in what shape, versioned
+how, because an integration without a written contract is an agreement between two teams’ memories.
+State the reversibility honestly: some patterns (files, batch) are cheap to change, others
+(event backbones, deep API coupling) are constraint adoptions in miniature, deserving the
+<a href="/portfolio/knowledge/insights/the-platform-decision-that-constrains-the-next-decade/">Constraint Horizon’s</a>
+ten-year questions. And state the revisit trigger operationally: volume thresholds, contract
+version changes, or the retirement of a system on either side.</p>
+<h2 id="middleware-and-platform-choices">Middleware and platform choices</h2>
+<p>Middleware is where integration strategies go to become procurement, and the discipline is to
+resist that inversion: the strategy chooses the middleware, never the reverse. Evaluate integration
+platforms, ESBs, iPaaS, API management, event backbones, exactly as the Constraint Horizon
+prescribes for any platform: integration model, data posture, upgrade economics, talent market, and
+vendor trajectory, over ten years, before features. Two strategy-level truths to hold: middleware
+does not remove boundary decisions, it centralizes where they are enforced; and the middleware
+itself becomes the landscape’s largest single constraint set, which is a fine trade when made
+knowingly and a decade of lock-in when made by demo.</p>
+<h2 id="legacy-systems">Legacy systems</h2>
+<p>Legacy is not a pattern problem; it is a constraint problem. The old system supports what it
+supports, files where you wanted events, nightly where you wanted now, and the strategy’s job is
+honest accommodation: wrap where feasible (an API or event facade over the legacy interface, so
+consumers see the sanctioned pattern while the legacy side sees what it can bear), stage where not
+(accepting the batch boundary and designing the reconciliation it implies), and quarantine the
+constraint so it does not propagate, the facade absorbs the legacy’s shape instead of every
+consumer inheriting it. Every accommodation is an ADR with a retirement trigger, because legacy
+accommodations outlive the legacy unless someone wrote down when to remove them.</p>
+<h2 id="ai-automation-across-boundaries">AI automation across boundaries</h2>
+<p>AI-driven flows are integration consumers with two extra properties: they act, and they are
+confidently wrong at scale when fed stale or broken data. Apply the
+<a href="/portfolio/knowledge/insights/automate-the-toil-not-the-judgment/">Toil-Judgment Line</a> to what the flow does,
+and its Escalation Seam to the boundaries it crosses: the seam is designed into the integration, so
+when the boundary degrades, the automation stands down to a human with the case, its evidence, and
+its history, rather than acting on yesterday’s truth. Boundary health signals feed the seam’s
+stand-down conditions directly; an automation consuming a boundary with no health signal is a
+judgment delegation nobody decided to make.</p>
+<h2 id="failure-observation-and-contracts">Failure, observation, and contracts</h2>
+<p>Three conventions applied estate-wide, so every boundary answers them the same way. Failure: each
+boundary’s designed behavior when the other side is down, slow, or wrong (queue, retry with
+backoff, degrade, halt), with blast radius stated; failure behavior is part of the contract, not an
+operational discovery. Observation: every boundary emits health someone watches, flow, latency,
+error and reconciliation signals, because a boundary observed only by its consumers is observed by
+incident. Contracts: versioned, owned on both sides, with breaking changes governed like the
+changes they are; the <a href="/portfolio/knowledge/insights/the-status-report-that-tells-the-truth/">Evidence-Backed Status</a>
+discipline applies to estate reporting, where “integration is fine” is a claim that owes its
+evidence, trend, and the decision requested.</p>
+<h2 id="the-integration-readiness-assessment">The integration readiness assessment</h2>
+<p>Run this assessment per boundary before implementation begins; it is the pre-build gate that turns
+strategy into practice. Each item is answered with evidence, and any “no” becomes an owned action or
+a recorded, accepted risk, never a silence.</p>
+<ul>
+<li>System readiness: can both systems actually support the chosen pattern at the required volume,
+today, without heroics?</li>
+<li>Data quality: is what will cross the boundary fit to act on, and has someone measured rather than
+assumed it?</li>
+<li>API maturity: where the pattern needs interfaces, do they exist, are they versioned, and are they
+supported by their owners?</li>
+<li>Security: are authentication, authorization, and data protection designed for this boundary at
+the tier its consequence demands?</li>
+<li>Monitoring: will the boundary emit health signals from day one, and does someone own watching
+them?</li>
+<li>Operational support: who runs this boundary at 2 a.m., and do they know it exists before it
+fails?</li>
+<li>Ownership: are both sides of the contract owned by named roles, business and technical?</li>
+<li>Change management: is there a path for versioning the contract and consuming systems when either
+side must change?</li>
+</ul>
+<p>Used honestly, the assessment moves failure discovery from production to paper, which is the
+cheapest place it will ever be found.</p>
+<h2 id="governance-and-evolution">Governance and evolution</h2>
+<p>Integration governance follows the
+<a href="/portfolio/knowledge/insights/assurance-is-what-lets-leaders-say-yes/">Proportionate Assurance model</a>:
+sanctioned-pattern boundaries with modest blast radius are self-attested against the standards;
+material boundaries get peer review; the vital few, regulated data crossings, event backbones,
+anything whose failure stops revenue, get independent verification. The estate evolves under the
+same governance: quarterly, the inventory is read for consolidation candidates (three boundaries
+doing one job), retirement candidates (boundaries whose systems or triggers have expired), and
+pattern promotions or retirements. An estate that only ever grows is not being governed; it is
+being accumulated.</p>
+<p>Governance also needs named responsibilities, not just tiers and cadences. The working split:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Role</th><th>Owns</th><th>Decision rights</th><th>Escalates to</th></tr></thead><tbody><tr><td>Business</td><td>The capability each boundary serves; data meaning and truth rulings</td><td>What the boundary must achieve; acceptable latency and loss</td><td>Sponsor or steering</td></tr><tr><td>Product management</td><td>Boundary priorities and roadmap; consumer experience of the estate</td><td>Sequencing; build versus reuse for a needed boundary</td><td>Business</td></tr><tr><td>Enterprise architecture</td><td>The pattern standards, decision criteria, and estate coherence</td><td>Pattern selection and exceptions; middleware direction</td><td>Design authority or architecture board</td></tr><tr><td>Engineering</td><td>Boundary implementation, contracts, and versioning</td><td>How the pattern is realized within the standards</td><td>Enterprise architecture</td></tr><tr><td>Operations</td><td>Boundary health, incident response, and runbooks</td><td>Degrade and stand-down actions within designed failure behavior</td><td>Engineering, then the integration authority</td></tr></tbody></table>
+<p>Ownership is per boundary and named, decision rights follow the table rather than the loudest voice,
+and the escalation path is short and published: operator to engineer to architecture to the
+integration authority, with the business owner engaged wherever meaning or truth is in question. A
+boundary whose escalation path is discovered during its first incident did not have one.</p>
+<h2 id="metrics">Metrics</h2>
+<p>Measure the estate as a portfolio. Leading: percentage of boundaries with recorded decisions and
+written contracts, percentage emitting health signals, pattern-exception rate on new boundaries,
+and time-to-integrate for a standard boundary (the strategy’s speed dividend, which is the number
+that buys its budget). Lagging: integration incidents by boundary and cause, mean time to detect
+boundary failure (before or after the business felt it), and reconciliation effort trend. Report
+them as claims with evidence, and let the leading set predict what the lagging set will otherwise
+confirm.</p>
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li>Buying the middleware first and calling it the strategy.</li>
+<li>Pattern by fashion: event-driven because it is current, files because they are familiar.</li>
+<li>The unwritten contract: two teams’ memories, versioned by incident.</li>
+<li>Failure behavior discovered in production instead of designed at the boundary.</li>
+<li>Point-to-point accretion: every program solving only its own boundary, forever.</li>
+<li>Legacy accommodations without retirement triggers, outliving the legacy itself.</li>
+<li>Observing boundaries through their consumers’ incidents.</li>
+<li>An estate that only grows: no inventory, no consolidation, no retirement, no owner.</li>
+</ul>
+<h2 id="integration-maturity-model">Integration maturity model</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Level</th><th>Name</th><th>Characteristics</th></tr></thead><tbody><tr><td>Level 1</td><td>Point-to-Point</td><td>Accretion without inventory; contracts unwritten; failures discovered in production</td></tr><tr><td>Level 2</td><td>Managed</td><td>An inventory exists; patterns named; health observed on the worst boundaries</td></tr><tr><td>Level 3</td><td>Standardized</td><td>Sanctioned pattern set with published decision criteria; ADRs on significant boundaries; contracts versioned</td></tr><tr><td>Level 4</td><td>Governed</td><td>Estate-wide failure and observation conventions; proportionate review tiers; exceptions owned, not silent</td></tr><tr><td>Level 5</td><td>Enterprise Integration Platform</td><td>The estate runs as a strategic capability: consolidation and retirement are routine, time-to-integrate is a managed number, and AI flows inherit seams by construction</td></tr></tbody></table>
+<p>The evolution from tactical to strategic follows the levels in order: organizations move from
+integrations as project by-products (Levels 1 and 2) to integration as a standardized discipline
+(Level 3) to a governed estate (Level 4) and finally to integration as an enterprise capability in
+its own right (Level 5), where the landscape accelerates programs instead of taxing them. One habit
+per program, made standard.</p>
+<h2 id="deliverables">Deliverables</h2>
+<ol>
+<li>The estate inventory: boundaries, patterns, contracts, owners, health.</li>
+<li>The sanctioned pattern set with published decision criteria.</li>
+<li>ADRs for significant boundaries, contracts included.</li>
+<li>The estate-wide failure, observation, and contract conventions.</li>
+<li>The governance record: tiers, reviews, exceptions with owners.</li>
+<li>The evolution log: consolidations, retirements, pattern changes.</li>
+</ol>
+<h2 id="learning-path">Learning path</h2>
+<p>This playbook extends the delivery sequence outward from a single solution to the landscape. Behind
+it: the <a href="/portfolio/knowledge/playbooks/enterprise-solution-design-playbook/">Enterprise Solution Design Playbook</a>
+for boundary-level design, the
+<a href="/portfolio/knowledge/playbooks/enterprise-requirements-management-playbook/">Enterprise Requirements Management Playbook</a>
+for the baseline integration answers to, and the
+<a href="/portfolio/knowledge/playbooks/enterprise-discovery-playbook/">Enterprise Discovery Playbook</a> where the
+landscape is first evidenced. Around it:
+<a href="/portfolio/knowledge/insights/the-platform-decision-that-constrains-the-next-decade/">The Platform Decision That Constrains the Next Decade</a>
+for middleware and platform choices,
+<a href="/portfolio/knowledge/insights/automate-the-toil-not-the-judgment/">Automate the Toil, Not the Judgment</a> for
+the flows the estate increasingly carries,
+<a href="/portfolio/knowledge/insights/assurance-is-what-lets-leaders-say-yes/">Assurance Is What Lets Leaders Say Yes</a>
+for the governance tiers, and
+<a href="/portfolio/knowledge/insights/requirements-are-decisions-not-documents/">Requirements Are Decisions, Not Documents</a>
+with its <a href="/portfolio/knowledge/templates/requirements-decision-record-template/">template</a> for the record
+discipline every boundary carries.</p>
+<h2 id="how-this-playbook-uses-the-framework-library">How this playbook uses the framework library</h2>
+<p>The pattern, applied at landscape scale: the RDR Model’s discipline becomes the integration ADR,
+per boundary. The Constraint Horizon governs middleware and the deep-coupling choices that are
+platform decisions in disguise. The Toil-Judgment Line and Escalation Seam shape every AI flow the
+estate carries. Proportionate Assurance sets review tiers, and Evidence-Backed Status carries
+estate reporting. One system, one language, now spanning discovery, requirements, design, and the
+boundaries that hold the enterprise together.</p>  </div> <section class="leaf__author" aria-label="About the author" data-astro-cid-5ega6rs2> <a href="/portfolio/knowledge/authors/vanessa-salonoy/" data-astro-cid-qtsfwbd5 class="author-chip"><span class="author-chip__avatar author-chip__initials" aria-hidden="true" data-astro-cid-qtsfwbd5>VS</span><span class="author-chip__meta" data-astro-cid-qtsfwbd5> <span class="author-chip__name" data-astro-cid-qtsfwbd5>Vanessa Salonoy</span> <span class="author-chip__role" data-astro-cid-qtsfwbd5>Enterprise Digital Transformation Consultant | ERP, CRM, AI Automation &amp; Business Strategy</span> </span> </a>  </section> <nav class="leaf__prevnext" aria-label="Series navigation" data-astro-cid-5ega6rs2> <a class="leaf__pn" href="/portfolio/knowledge/playbooks/enterprise-discovery-playbook/" data-astro-cid-5ega6rs2><span data-astro-cid-5ega6rs2>&larr; Previous</span><strong data-astro-cid-5ega6rs2>Enterprise Discovery Playbook</strong></a> <a class="leaf__pn leaf__pn--next" href="/portfolio/knowledge/playbooks/enterprise-project-delivery-playbook/" data-astro-cid-5ega6rs2><span data-astro-cid-5ega6rs2>Next &rarr;</span><strong data-astro-cid-5ega6rs2>Enterprise Project Delivery Playbook</strong></a> </nav> <section class="leaf__related" aria-labelledby="related-h" data-astro-cid-5ega6rs2> <h2 id="related-h" data-astro-cid-5ega6rs2>Related resources</h2> <div class="leaf__related-grid" data-astro-cid-5ega6rs2> <article class="card" data-astro-cid-dd5txfcy> <div class="card__top" data-astro-cid-dd5txfcy><span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Insights</span> </span> </div> <h3 class="card__title" data-astro-cid-dd5txfcy> <a class="card__link" href="/portfolio/knowledge/insights/the-platform-decision-that-constrains-the-next-decade/" data-astro-cid-dd5txfcy>The Platform Decision That Constrains the Next Decade</a> </h3> <p class="card__summary" data-astro-cid-dd5txfcy>A platform choice is the adoption of a constraint set, not a purchase. The Constraint Horizon evaluates five constraint classes before any demo.</p>   </article> <article class="card" data-astro-cid-dd5txfcy> <div class="card__top" data-astro-cid-dd5txfcy><span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Resources</span> </span> </div> <h3 class="card__title" data-astro-cid-dd5txfcy> <a class="card__link" href="/portfolio/knowledge/resources/erp-and-crm-platform-landscape/" data-astro-cid-dd5txfcy>The ERP and CRM Platform Landscape</a> </h3> <p class="card__summary" data-astro-cid-dd5txfcy>Platform categories compared by the constraints they impose rather than the features they demo, an orientation map for ERP and CRM decisions.</p>   </article> <article class="card" data-astro-cid-dd5txfcy> <div class="card__top" data-astro-cid-dd5txfcy><span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Playbooks</span> </span> </div> <h3 class="card__title" data-astro-cid-dd5txfcy> <a class="card__link" href="/portfolio/knowledge/playbooks/enterprise-solution-design-playbook/" data-astro-cid-dd5txfcy>Enterprise Solution Design Playbook</a> </h3> <p class="card__summary" data-astro-cid-dd5txfcy>A structured approach to turning a requirements baseline into implementable solution architecture, with decisions recorded and constraints faced early.</p>   </article>  </div> </section> </article> <aside class="leaf__rail" aria-label="Article tools" data-astro-cid-5ega6rs2> <div class="leaf__rail-inner" data-astro-cid-5ega6rs2> <div class="rail-block" data-astro-cid-vltmujbe> <p class="rail-block__title" data-astro-cid-vltmujbe>Share</p> <button type="button" class="copy-button" data-copy-button data-copy-value="https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-integration-strategy-playbook/" data-astro-cid-52zhjzn3> <svg class="copy-button__icon copy-button__icon--copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-52zhjzn3> <rect x="9" y="9" width="12" height="12" rx="2" data-astro-cid-52zhjzn3></rect> <path d="M5 15V5a2 2 0 0 1 2-2h10" data-astro-cid-52zhjzn3></path> </svg> <svg class="copy-button__icon copy-button__icon--done" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-52zhjzn3> <path d="M5 13l4 4L19 7" data-astro-cid-52zhjzn3></path> </svg> <span class="copy-button__label" data-copy-label data-astro-cid-52zhjzn3>Copy link</span> <span class="visually-hidden" role="status" aria-live="polite" data-copy-status data-astro-cid-52zhjzn3></span> </button>   </div>  </div> </aside> </div> </div>  </main> <footer class="site-footer" data-astro-cid-35ed7um5> <div class="site-footer__inner container" data-astro-cid-35ed7um5> <nav class="site-footer__cols" aria-label="Footer" data-astro-cid-35ed7um5> <div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>Knowledge Types</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/insights/" data-astro-cid-35ed7um5>Insights</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/playbooks/" data-astro-cid-35ed7um5>Playbooks</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/frameworks/" data-astro-cid-35ed7um5>Frameworks</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/templates/" data-astro-cid-35ed7um5>Templates</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/automation-labs/" data-astro-cid-35ed7um5>Automation Lab</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/case-studies/" data-astro-cid-35ed7um5>Case Studies</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/resources/" data-astro-cid-35ed7um5>Resources</a> </li> </ul> </div><div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>Capabilities</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/business-analysis-and-requirements/" data-astro-cid-35ed7um5>Business Analysis &amp; Requirements</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/project-and-delivery-management/" data-astro-cid-35ed7um5>Project &amp; Delivery Management</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/intelligent-automation-and-ai/" data-astro-cid-35ed7um5>Intelligent Automation &amp; AI</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/change-adoption-and-stakeholder-management/" data-astro-cid-35ed7um5>Change, Adoption &amp; Stakeholder Management</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/governance-risk-and-assurance/" data-astro-cid-35ed7um5>Governance, Risk &amp; Assurance</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/enterprise-systems-strategy/" data-astro-cid-35ed7um5>Enterprise Systems Strategy</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/" data-astro-cid-35ed7um5>All capabilities</a> </li> </ul> </div><div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>Start Here</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/start-here/" data-astro-cid-35ed7um5>Featured</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/search/" data-astro-cid-35ed7um5>Search</a> </li> </ul> </div><div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>About</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/about/" data-astro-cid-35ed7um5>About</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/contact/" data-astro-cid-35ed7um5>Let&#39;s Talk</a> </li> </ul> </div> </nav> <p class="site-footer__meta" data-astro-cid-35ed7um5> <span data-astro-cid-35ed7um5>&copy; 2026 Knowledge Center.</span> <span data-astro-cid-35ed7um5>Built to Master Blueprint v1.6.</span> </p> </div> </footer>  </body></html>  

@@ -1,0 +1,463 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Enterprise Solution Design Playbook</title><meta name="description" content="A structured approach to turning a requirements baseline into implementable solution architecture, with decisions recorded and constraints faced early."><link rel="canonical" href="https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-solution-design-playbook/"><link rel="alternate" type="application/rss+xml" title="Knowledge Center — RSS" href="https://vanessa00001.github.io/portfolio/knowledge/rss.xml"><meta property="og:site_name" content="Knowledge Center"><meta property="og:type" content="article"><meta property="og:title" content="Enterprise Solution Design Playbook"><meta property="og:description" content="A structured approach to turning a requirements baseline into implementable solution architecture, with decisions recorded and constraints faced early."><meta property="og:url" content="https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-solution-design-playbook/"><meta property="og:image" content="https://vanessa00001.github.io/portfolio/knowledge/og-default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Enterprise Solution Design Playbook"><meta name="twitter:description" content="A structured approach to turning a requirements baseline into implementable solution architecture, with decisions recorded and constraints faced early."><meta name="twitter:image" content="https://vanessa00001.github.io/portfolio/knowledge/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Enterprise Solution Design Playbook","description":"A structured approach to turning a requirements baseline into implementable solution architecture, with decisions recorded and constraints faced early.","datePublished":"2026-07-22T00:00:00.000Z","dateModified":"2026-07-22T00:00:00.000Z","articleSection":"Playbooks","author":{"@type":"Person","name":"Vanessa Salonoy","url":"https://vanessa00001.github.io/portfolio/knowledge/authors/vanessa-salonoy/"},"mainEntityOfPage":"https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-solution-design-playbook/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Knowledge Center","item":"https://vanessa00001.github.io/portfolio/knowledge/"},{"@type":"ListItem","position":2,"name":"Playbooks","item":"https://vanessa00001.github.io/portfolio/knowledge/playbooks/"},{"@type":"ListItem","position":3,"name":"Enterprise Solution Design Playbook"}]}</script><meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)"><script>
+      (function () {
+        try {
+          var stored = sessionStorage.getItem('kc-theme');
+          var theme =
+            stored ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {
+          /* storage blocked — fall back to light */
+        }
+      })();
+    </script><link rel="stylesheet" href="/portfolio/knowledge/_astro/_slug_.DM5cgNvv.css">
+<link rel="stylesheet" href="/portfolio/knowledge/_astro/_slug_.BMhP6wvg.css">
+<style>.callout[data-astro-cid-x2ep4vyf]{display:flex;gap:var(--space-3);padding:var(--space-4);background-color:var(--bg-subtle);border:1px solid var(--border);border-left:4px solid var(--callout-accent);border-radius:var(--radius-md)}.callout__icon[data-astro-cid-x2ep4vyf]{flex-shrink:0;color:var(--callout-accent);line-height:0;margin-top:.1em}.callout__body[data-astro-cid-x2ep4vyf]{min-width:0}.callout__label[data-astro-cid-x2ep4vyf]{margin:0 0 var(--space-1);font-weight:700;color:var(--text)}.callout__content[data-astro-cid-x2ep4vyf]{color:var(--text)}.callout__content[data-astro-cid-x2ep4vyf]>:last-child{margin-bottom:0}
+.badge[data-astro-cid-35zd7xm4]{display:inline-flex;align-items:center;gap:var(--space-1);padding:var(--space-1) var(--space-2);font-size:var(--fs-xs);font-weight:600;line-height:1.2;color:var(--text);background-color:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius-sm);white-space:nowrap}.badge__icon[data-astro-cid-35zd7xm4]{display:inline-flex;color:var(--badge-accent)}.badge__dot[data-astro-cid-35zd7xm4]{width:.5rem;height:.5rem;border-radius:50%;background-color:var(--badge-accent)}
+.card[data-astro-cid-dd5txfcy]{position:relative;display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);background-color:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);transition:box-shadow .15s ease,transform .15s ease,border-color .15s ease}.card[data-astro-cid-dd5txfcy]:hover{transform:translateY(-2px);box-shadow:var(--shadow-2);border-color:var(--brand-primary)}.card__top[data-astro-cid-dd5txfcy]{display:flex;align-items:center;gap:var(--space-2)}.card__title[data-astro-cid-dd5txfcy]{margin:0;font-size:var(--fs-lg)}.card__link[data-astro-cid-dd5txfcy]{color:var(--text);text-decoration:none}.card__link[data-astro-cid-dd5txfcy]:after{content:"";position:absolute;inset:0;border-radius:inherit}.card[data-astro-cid-dd5txfcy]:hover .card__link[data-astro-cid-dd5txfcy]{color:var(--brand-primary)}.card__summary[data-astro-cid-dd5txfcy]{margin:0;color:var(--text-muted);font-size:var(--fs-sm);line-height:var(--line-height-body);display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.card__meta[data-astro-cid-dd5txfcy],.card__tags[data-astro-cid-dd5txfcy]{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2)}.card__meta[data-astro-cid-dd5txfcy]{margin-top:auto}.card__meta[data-astro-cid-dd5txfcy] a,.card__tags[data-astro-cid-dd5txfcy] a{position:relative;z-index:1}
+.btn[data-astro-cid-6ygtcg62]{--btn-height: 2.5rem;display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-height:var(--btn-height);padding-inline:var(--space-4);font:inherit;font-weight:600;line-height:1.2;text-decoration:none;border:1px solid transparent;border-radius:var(--radius-md);cursor:pointer;transition:background-color .15s ease,border-color .15s ease,color .15s ease}.btn--sm[data-astro-cid-6ygtcg62]{--btn-height: 2rem;padding-inline:var(--space-3);font-size:var(--fs-sm)}.btn--primary[data-astro-cid-6ygtcg62]{background-color:var(--brand-primary);color:#fff}.btn--primary[data-astro-cid-6ygtcg62]:hover{background-color:var(--brand-primary-ink)}.btn--secondary[data-astro-cid-6ygtcg62]{background-color:transparent;color:var(--text);border-color:var(--border)}.btn--secondary[data-astro-cid-6ygtcg62]:hover{border-color:var(--brand-primary);color:var(--brand-primary)}.btn--ghost[data-astro-cid-6ygtcg62]{background-color:transparent;color:var(--brand-primary)}.btn--ghost[data-astro-cid-6ygtcg62]:hover{background-color:var(--bg-subtle)}.btn[data-astro-cid-6ygtcg62]:disabled,.btn[data-astro-cid-6ygtcg62][aria-disabled=true]{opacity:.5;cursor:not-allowed;pointer-events:none}.btn__format[data-astro-cid-6ygtcg62]{font-family:var(--font-mono);font-size:var(--fs-xs);padding:0 var(--space-1);border:1px solid currentColor;border-radius:var(--radius-sm);opacity:.9}
+.author-chip[data-astro-cid-qtsfwbd5]{display:inline-flex;align-items:center;gap:var(--space-2);text-decoration:none;color:var(--text)}.author-chip__avatar[data-astro-cid-qtsfwbd5]{width:1.75rem;height:1.75rem;border-radius:50%;object-fit:cover;flex-shrink:0}.author-chip__initials[data-astro-cid-qtsfwbd5]{display:inline-flex;align-items:center;justify-content:center;font-size:var(--fs-xs);font-weight:700;color:#fff;background-color:var(--brand-primary)}.author-chip__meta[data-astro-cid-qtsfwbd5]{display:inline-flex;flex-direction:column;line-height:1.2}.author-chip__name[data-astro-cid-qtsfwbd5]{font-weight:600;font-size:var(--fs-sm)}.author-chip__role[data-astro-cid-qtsfwbd5]{font-size:var(--fs-xs);color:var(--text-muted)}a[data-astro-cid-qtsfwbd5].author-chip:hover .author-chip__name[data-astro-cid-qtsfwbd5]{color:var(--brand-primary)}.reading-time[data-astro-cid-mzf3d6uz]{display:inline-flex;align-items:center;gap:var(--space-1);font-size:var(--fs-sm);color:var(--text-muted);white-space:nowrap}.difficulty[data-astro-cid-f22gsth5]{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-1) var(--space-2);font-size:var(--fs-xs);font-weight:600;line-height:1.2;color:var(--text);background-color:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius-sm);white-space:nowrap}.difficulty__dot[data-astro-cid-f22gsth5]{width:.5rem;height:.5rem;border-radius:50%;background-color:var(--diff-accent)}.tag[data-astro-cid-tugpja7w]{display:inline-flex;align-items:center;padding:var(--space-1) var(--space-2);font-size:var(--fs-xs);line-height:1.2;color:var(--text-muted);background-color:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius-sm);text-decoration:none;white-space:nowrap}.tag__hash[data-astro-cid-tugpja7w]{opacity:.6;margin-right:.1em}a[data-astro-cid-tugpja7w].tag:hover{color:var(--brand-primary);border-color:var(--brand-primary)}.metadata-bar[data-astro-cid-sgo5wfom]{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-3);font-size:var(--fs-sm);color:var(--text-muted)}.metadata-bar__item[data-astro-cid-sgo5wfom]:not(:first-child):not(.metadata-bar__tags):before{content:"·";margin-right:var(--space-3);color:var(--border)}.metadata-bar__item[data-astro-cid-sgo5wfom]{display:inline-flex;align-items:center;gap:var(--space-1)}.metadata-bar__tags[data-astro-cid-sgo5wfom]{gap:var(--space-1);flex-wrap:wrap}.metadata-bar[data-astro-cid-sgo5wfom] a[data-astro-cid-sgo5wfom]{color:var(--text-muted);text-decoration:none}.metadata-bar[data-astro-cid-sgo5wfom] a[data-astro-cid-sgo5wfom]:hover{color:var(--brand-primary);text-decoration:underline}
+</style><script type="module" src="/portfolio/knowledge/_astro/hoisted.BPOG4pMv.js"></script>
+<script type="module" src="/portfolio/knowledge/_astro/page.DCTgdEH6.js"></script></head> <body> <a class="skip-link" href="#main-content">Skip to content</a> <header class="site-header" data-astro-cid-qlfjksao> <div class="site-header__inner container" data-astro-cid-qlfjksao> <a class="site-header__home" href="/portfolio/knowledge/" data-astro-cid-qlfjksao> <span class="site-header__mark" aria-hidden="true" data-astro-cid-qlfjksao>K</span> <span class="site-header__home-text" data-astro-cid-qlfjksao>Knowledge Center</span> </a> <nav class="site-header__nav" aria-label="Primary" data-astro-cid-qlfjksao> <button type="button" class="site-header__disclosure" data-nav-toggle aria-expanded="false" aria-controls="kc-panel" aria-haspopup="dialog" data-astro-cid-qlfjksao> <svg class="site-header__burger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-qlfjksao> <path d="M3 6h18M3 12h18M3 18h18" data-astro-cid-qlfjksao></path> </svg> <span class="site-header__disclosure-text" data-astro-cid-qlfjksao>Browse</span> </button> <a class="site-header__search" href="/portfolio/knowledge/search/" data-astro-cid-qlfjksao> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-qlfjksao> <circle cx="11" cy="11" r="7" data-astro-cid-qlfjksao></circle> <path d="M21 21l-4.3-4.3" data-astro-cid-qlfjksao></path> </svg> <span class="site-header__search-text" data-astro-cid-qlfjksao>Search</span> <kbd class="site-header__kbd" aria-hidden="true" data-astro-cid-qlfjksao>⌘K</kbd> </a> <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" data-astro-cid-efubawbo> <span class="visually-hidden" data-astro-cid-efubawbo>Toggle dark mode</span> <!-- sun (shown in dark mode → action: go light) --> <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-efubawbo> <circle cx="12" cy="12" r="4" data-astro-cid-efubawbo></circle> <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" data-astro-cid-efubawbo></path> </svg> <!-- moon (shown in light mode → action: go dark) --> <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-efubawbo> <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" data-astro-cid-efubawbo></path> </svg> </button>   <a class="site-header__cta" href="/portfolio/knowledge/contact/" data-astro-cid-qlfjksao>Let&rsquo;s Talk</a> </nav> </div> </header> <div class="nav-backdrop" data-nav-backdrop hidden data-astro-cid-rs4xygvj></div> <div id="kc-panel" class="nav-panel" role="dialog" aria-modal="true" aria-label="Knowledge Center navigation" data-active-axis="type" hidden data-astro-cid-rs4xygvj> <div class="nav-panel__inner container" data-astro-cid-rs4xygvj> <div class="nav-panel__bar" data-astro-cid-rs4xygvj> <p class="nav-panel__title" data-astro-cid-rs4xygvj>Knowledge Center</p> <button type="button" class="nav-panel__close" data-nav-close data-astro-cid-rs4xygvj> <span class="visually-hidden" data-astro-cid-rs4xygvj>Close navigation</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-rs4xygvj> <path d="M6 6l12 12M18 6L6 18" data-astro-cid-rs4xygvj></path> </svg> </button> </div> <a class="nav-panel__search" href="/portfolio/knowledge/search/" data-astro-cid-rs4xygvj> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-rs4xygvj> <circle cx="11" cy="11" r="7" data-astro-cid-rs4xygvj></circle> <path d="M21 21l-4.3-4.3" data-astro-cid-rs4xygvj></path> </svg> <span data-astro-cid-rs4xygvj>Search the Knowledge Center</span> </a> <div class="nav-panel__tabs" role="tablist" aria-label="Browse by" data-astro-cid-rs4xygvj> <button type="button" role="tab" id="tab-type" aria-controls="axis-type" aria-selected="true" data-axis-tab="type" data-astro-cid-rs4xygvj>By type</button> <button type="button" role="tab" id="tab-capability" aria-controls="axis-capability" aria-selected="false" data-axis-tab="capability" data-astro-cid-rs4xygvj>By capability</button> </div> <div class="nav-panel__columns" data-astro-cid-rs4xygvj> <section class="nav-panel__col" id="axis-type" role="tabpanel" aria-labelledby="tab-type" data-astro-cid-rs4xygvj> <p class="nav-panel__heading" data-astro-cid-rs4xygvj>Browse by knowledge type</p> <ul data-astro-cid-rs4xygvj> <li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/insights/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Insights</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Points of view and articles.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/playbooks/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Playbooks</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Step-by-step operational guides.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/frameworks/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Frameworks</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Mental models and structures.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/templates/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Templates</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Fill-in reusable artifacts.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/automation-labs/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Automation Lab</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Hands-on technical builds.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/case-studies/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Case Studies</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Real-world applications.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/resources/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Resources</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Reference knowledge.</span> </a> </li> </ul> </section> <section class="nav-panel__col" id="axis-capability" role="tabpanel" aria-labelledby="tab-capability" data-astro-cid-rs4xygvj> <p class="nav-panel__heading" data-astro-cid-rs4xygvj>Browse by capability</p> <ul data-astro-cid-rs4xygvj> <li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/business-analysis-and-requirements/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Business Analysis &amp; Requirements</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/project-and-delivery-management/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Project &amp; Delivery Management</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/intelligent-automation-and-ai/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Intelligent Automation &amp; AI</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/change-adoption-and-stakeholder-management/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Change, Adoption &amp; Stakeholder Management</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/governance-risk-and-assurance/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Governance, Risk &amp; Assurance</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/enterprise-systems-strategy/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Enterprise Systems Strategy</span> </a> </li> <li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/" class="nav-panel__all" data-astro-cid-rs4xygvj>All capabilities →</a> </li> </ul> </section> </div> <div class="nav-panel__foot" data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/start-here/" data-astro-cid-rs4xygvj>Start here — featured &amp; cornerstone content →</a> </div> </div> </div>    <nav class="breadcrumbs" aria-label="Breadcrumb" data-astro-cid-fdlnsr2d><div class="container" data-astro-cid-fdlnsr2d><ol data-astro-cid-fdlnsr2d><li data-astro-cid-fdlnsr2d><a href="/portfolio/knowledge/" data-astro-cid-fdlnsr2d>Knowledge Center</a><span class="separator" aria-hidden="true" data-astro-cid-fdlnsr2d>
+›
+</span></li><li data-astro-cid-fdlnsr2d><a href="/portfolio/knowledge/playbooks/" data-astro-cid-fdlnsr2d>Playbooks</a><span class="separator" aria-hidden="true" data-astro-cid-fdlnsr2d>
+›
+</span></li><li data-astro-cid-fdlnsr2d><span aria-current="page" data-astro-cid-fdlnsr2d>Enterprise Solution Design Playbook</span></li></ol></div></nav> <main id="main-content" tabindex="-1">  <div class="leaf container" data-astro-cid-5ega6rs2> <div class="leaf__grid" data-astro-cid-5ega6rs2> <article class="leaf__main" data-pagefind-body data-astro-cid-5ega6rs2> <div class="visually-hidden" aria-hidden="true" data-astro-cid-5ega6rs2> <span data-pagefind-filter="Type" data-astro-cid-5ega6rs2>Playbooks</span> <span data-pagefind-filter="Capability" data-astro-cid-5ega6rs2>Enterprise Systems Strategy</span> <span data-pagefind-filter="Difficulty" data-astro-cid-5ega6rs2>advanced</span> </div> <header class="leaf__header" data-astro-cid-5ega6rs2> <span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Playbooks</span> </span>  <h1 class="leaf__title" data-astro-cid-5ega6rs2>Enterprise Solution Design Playbook</h1> <p class="leaf__deck" data-astro-cid-5ega6rs2>A structured approach to turning a requirements baseline into implementable solution architecture, with decisions recorded and constraints faced early.</p> <div class="metadata-bar" data-astro-cid-sgo5wfom> <span class="metadata-bar__item" data-astro-cid-sgo5wfom> <a href="/portfolio/knowledge/authors/vanessa-salonoy/" data-astro-cid-qtsfwbd5 class="author-chip"><span class="author-chip__avatar author-chip__initials" aria-hidden="true" data-astro-cid-qtsfwbd5>VS</span><span class="author-chip__meta" data-astro-cid-qtsfwbd5> <span class="author-chip__name" data-astro-cid-qtsfwbd5>Vanessa Salonoy</span>  </span> </a>  </span> <span class="metadata-bar__item" data-astro-cid-sgo5wfom><time datetime="2026-07-22" data-astro-cid-sgo5wfom>Jul 22, 2026</time></span>  <span class="metadata-bar__item" data-astro-cid-sgo5wfom><span class="reading-time" data-astro-cid-mzf3d6uz><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-mzf3d6uz><circle cx="12" cy="12" r="9" data-astro-cid-mzf3d6uz></circle><path d="M12 7v5l3 2" data-astro-cid-mzf3d6uz></path></svg><span data-astro-cid-mzf3d6uz>14 min read</span></span></span> <span class="metadata-bar__item" data-astro-cid-sgo5wfom><span class="difficulty" style="--diff-accent: var(--diff-advanced);" data-astro-cid-f22gsth5> <span class="difficulty__dot" aria-hidden="true" data-astro-cid-f22gsth5></span> <span class="difficulty__label" data-astro-cid-f22gsth5>Advanced</span> </span> </span> <span class="metadata-bar__item" data-astro-cid-sgo5wfom> <a href="/portfolio/knowledge/capabilities/enterprise-systems-strategy/" data-astro-cid-sgo5wfom>Enterprise Systems Strategy</a> </span> <span class="metadata-bar__item metadata-bar__tags" data-astro-cid-sgo5wfom> <a href="/portfolio/knowledge/search/?q=solution%20design" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>solution design</a> <a href="/portfolio/knowledge/search/?q=architecture" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>architecture</a> <a href="/portfolio/knowledge/search/?q=design%20decisions" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>design decisions</a> <a href="/portfolio/knowledge/search/?q=integration" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>integration</a> <a href="/portfolio/knowledge/search/?q=enterprise%20systems" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>enterprise systems</a>  </span> </div>  <div class="pb-facts" data-astro-cid-iqtmuo6l> <p class="pb-outcome" data-astro-cid-iqtmuo6l><strong data-astro-cid-iqtmuo6l>By the end you will have:</strong> An implementable solution design - options weighed, decisions recorded, constraints faced, views documented across business, application, data, integration, and infrastructure - validated and approved at the right assurance tier, ready for build.</p> <ul class="pb-attrs" data-astro-cid-iqtmuo6l> <li data-astro-cid-iqtmuo6l><span data-astro-cid-iqtmuo6l>Time to execute</span><strong data-astro-cid-iqtmuo6l>3 to 6 weeks for a major workstream; operates iteratively through delivery</strong></li> <li data-astro-cid-iqtmuo6l><span data-astro-cid-iqtmuo6l>Roles</span><strong data-astro-cid-iqtmuo6l>Solution Architect, Business Analyst, Technical Lead, Project Manager</strong></li> <li data-astro-cid-iqtmuo6l><span data-astro-cid-iqtmuo6l>Prerequisites</span><strong data-astro-cid-iqtmuo6l>A managed requirements baseline with acceptance criteria, A named design authority, The platform and constraint set the design must live inside</strong></li> </ul> </div> </header> <div class="leaf__body" data-astro-cid-5ega6rs2>    <h2 id="executive-overview">Executive overview</h2>
+<p>Solution design is where a program stops describing what it needs and starts committing to how it
+will exist. It is also where the largest quiet decisions of a program are made: what gets configured
+versus customized, where systems meet, who owns which data, and which trade-offs the organization
+will live with for years. Run badly, design is a document produced to unlock build. Run well, it is
+a decision-making discipline that converts a managed requirements baseline into an architecture the
+organization can implement, operate, and change.</p>
+<p>This playbook is the third in the delivery sequence: the
+<a href="/portfolio/knowledge/playbooks/enterprise-discovery-playbook/">Enterprise Discovery Playbook</a> produces the
+evidence, the <a href="/portfolio/knowledge/playbooks/enterprise-requirements-management-playbook/">Enterprise Requirements Management Playbook</a>
+turns evidence into managed commitments, and this playbook turns commitments into an implementable
+design. Its center of gravity is the same as the library’s: significant design choices are recorded
+decisions, with owners, rationale, assumptions, and revisit triggers.</p>
+<h2 id="when-to-use-this-playbook">When to use this playbook</h2>
+<p>Use it wherever design decisions are expensive to reverse: ERP and CRM implementations, systems
+integration, platform consolidation, process-and-system transformation, and major enhancements to
+core platforms. Use it after selection, not instead of it; choosing the platform is the
+<a href="/portfolio/knowledge/insights/the-platform-decision-that-constrains-the-next-decade/">Constraint Horizon’s</a>
+territory, and this playbook begins where a platform, and therefore a constraint set, already
+exists. Scale it down for smaller work by shrinking the views and the ceremony, never the decision
+discipline.</p>
+<h2 id="principles">Principles</h2>
+<ol>
+<li>Design is decisions. The diagrams document the choices; they are not the choices. Every
+significant design decision follows the <a href="/portfolio/knowledge/insights/requirements-are-decisions-not-documents/">RDR Model</a>
+discipline, applied to architecture.</li>
+<li>Constraints first. The platform’s constraint set is the terrain, faced at the start; designs that
+ignore it are fiction with notation.</li>
+<li>Requirements pull design; design never pushes requirements. Every design element answers to the
+baseline through traceability, and a design element that answers to nothing is scope wearing a
+diagram.</li>
+<li>Configure before customize, and prove the exception. The default is the platform’s way; every
+departure is a recorded decision with its cost of ownership stated.</li>
+<li>Design for operation and change, not just for go-live. The design that only considers day one is
+a constraint someone else inherits.</li>
+<li>Options before answers. Significant choices get genuine alternatives evaluated, because a design
+with no options considered is an opinion with confidence.</li>
+</ol>
+<h2 id="from-requirements-to-design">From requirements to design</h2>
+<p>Make the handoff mechanical, as the previous playbook made discovery’s. The inputs are the typed,
+prioritized baseline with acceptance criteria, the decision records for significant requirements,
+and the risk register the program inherited, graded for consequence. Design intake walks the
+baseline and does three things: clusters requirements into design workstreams, identifies the
+requirements whose acceptance criteria constrain design directly (non-functionals do most of this
+work), and extracts the decisions already made upstream so design does not silently reopen them. A
+design that contradicts a recorded requirement decision is not creativity; it is a revisit trigger,
+handled deliberately through the RDR it belongs to.</p>
+<h2 id="solution-design-lifecycle">Solution design lifecycle</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Stage</th><th>What happens</th><th>The test of done</th></tr></thead><tbody><tr><td>Frame</td><td>Workstreams defined, constraints faced, design authority and tiers agreed</td><td>Everyone knows what is being designed and inside what</td></tr><tr><td>Option</td><td>Genuine alternatives developed for significant choices</td><td>Each option has honest costs, not a favorite and two straw men</td></tr><tr><td>Decide</td><td>Options evaluated against requirements and constraints; decisions recorded</td><td>Every significant choice has its design decision record</td></tr><tr><td>Document</td><td>Views produced at the level delivery needs</td><td>A builder and an operator can both act on it</td></tr><tr><td>Validate</td><td>Walkthroughs against requirements, constraints, and operability</td><td>The people who must live with it have challenged it</td></tr><tr><td>Approve</td><td>Design approved at the proportionate assurance tier</td><td>Approval carries evidence, not attendance</td></tr><tr><td>Evolve</td><td>Design maintained through delivery; decisions revisited on trigger</td><td>The as-built and the as-designed still recognize each other</td></tr></tbody></table>
+<h2 id="design-decision-records">Design decision records</h2>
+<p>The significant design choices, the contested, expensive, hard-to-reverse, or regulated ones, get
+the same five-field record the library applies everywhere: the decision, the rationale, the owner,
+the assumptions, and the revisit trigger, using the
+<a href="/portfolio/knowledge/templates/requirements-decision-record-template/">Requirements Decision Record template</a>
+as the working form. In design, the classic candidates are: configure versus customize, buy versus
+build for a gap, synchronous versus asynchronous at each integration boundary, where each data
+entity’s system of record lives, and what is deferred to a later phase and why. A design decision
+record turns next year’s “why on earth did they do it this way” into a one-click answer, and turns
+platform-upgrade planning from archaeology into a filtered list of decisions whose assumptions the
+upgrade touches.</p>
+<h3 id="architecture-decision-records">Architecture Decision Records</h3>
+<p>The industry name for this practice at the architecture level is the Architecture Decision Record
+(ADR), and it is the architectural counterpart to the Requirements Decision Record: the same five
+fields and the same vital-few discipline, applied to the choices about how the solution exists
+rather than what it must do. Used together, the two records preserve decision traceability across
+the entire delivery lifecycle:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="plaintext"><code><span class="line"><span>Business objective</span></span>
+<span class="line"><span>      |</span></span>
+<span class="line"><span>      v</span></span>
+<span class="line"><span> Requirement</span></span>
+<span class="line"><span>      |</span></span>
+<span class="line"><span>      v</span></span>
+<span class="line"><span>Requirements Decision Record   (why the requirement is what it is)</span></span>
+<span class="line"><span>      |</span></span>
+<span class="line"><span>      v</span></span>
+<span class="line"><span>Architecture Decision Record   (why the solution is shaped as it is)</span></span>
+<span class="line"><span>      |</span></span>
+<span class="line"><span>      v</span></span>
+<span class="line"><span>Solution design</span></span>
+<span class="line"><span>      |</span></span>
+<span class="line"><span>      v</span></span>
+<span class="line"><span>Implementation</span></span>
+<span class="line"><span>      |</span></span>
+<span class="line"><span>      v</span></span>
+<span class="line"><span>Verification</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>The chain means every line of build traces upward through two layers of recorded reasoning to the
+objective that funds it, and every objective traces downward to the verification that proves it.
+When a link changes, the records above and below say what is affected and who decides. That is what
+decision traceability across a delivery lifecycle actually is: not a matrix produced for the audit,
+but a chain of owned reasoning the work maintains as it goes.</p>
+<h2 id="solution-options-analysis">Solution options analysis</h2>
+<p>For each significant choice, develop two or three genuine options and evaluate them against the
+same frame: fit to the requirements that pull it, position inside the platform’s constraints, total
+cost of ownership (build, run, and change, not build alone), operability, and reversibility. Present
+the evaluation as evidence, not advocacy, and state the losing options’ real strengths; an options
+paper whose alternatives are straw men is an RDR with missing rationale waiting to happen. The
+recommendation is a claim, and per the
+<a href="/portfolio/knowledge/insights/the-status-report-that-tells-the-truth/">Evidence-Backed Status</a> discipline it
+travels with its evidence and the decision it requests.</p>
+<h2 id="architecture-views">Architecture views</h2>
+<p>Document the design as a small set of views, each answering one audience’s question, all traceable
+to the baseline. Vendor-neutral and notation-light: the discipline is in the questions, not the
+stencil.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>View</th><th>The question it answers</th></tr></thead><tbody><tr><td>Business</td><td>Which processes change, and how does the design serve them?</td></tr><tr><td>Application</td><td>Which components do what, and where does each requirement land?</td></tr><tr><td>Data</td><td>Where does each critical entity live, who owns it, and how does it move?</td></tr><tr><td>Integration</td><td>Where do systems meet, on what pattern, and what happens when a boundary fails?</td></tr><tr><td>Infrastructure and operations</td><td>What runs where, how it scales, and how it is observed and recovered</td></tr></tbody></table>
+<p>Depth follows consequence: the views for a regulated financial boundary are deeper than the views
+for a reporting extract. A view nobody will act on is decoration.</p>
+<h2 id="designing-within-constraints">Designing within constraints</h2>
+<p>Face the platform’s constraint set at Frame, explicitly: its integration model, its data model, its
+upgrade posture, and its extension mechanisms, the same classes the Constraint Horizon evaluated at
+selection. Designs then divide honestly into three kinds: designs with the grain (the platform’s
+native way, cheapest to own), designs at the edge (supported extension points, owned deliberately),
+and designs against the grain (customization that fights the platform, justified only by a recorded
+decision whose rationale survives being read aloud). The ratio among the three is one of the most
+truthful early indicators of what the program’s upgrade and operating costs will be.</p>
+<h2 id="non-functional-design">Non-functional design</h2>
+<p>Non-functional requirements do more constraining than functional ones and get designed, not
+inherited. Performance, availability, security, compliance, and usability each trace from their
+acceptance criteria into specific design mechanisms, and each mechanism is testable before go-live.
+The failure mode to refuse: non-functionals restated as aspirations in a slide. If the acceptance
+criterion says a number, the design says how, and the test says whether.</p>
+<h2 id="integration-design">Integration design</h2>
+<p>Integration is where enterprise designs earn their keep or their incidents. For every boundary,
+decide and record: the pattern (event, API, file, and the honest reason), the direction of truth
+(which system masters what the boundary carries), the failure behavior (what happens when the other
+side is down, slow, or wrong, designed, not discovered), and the observation (how anyone will know
+the boundary is unhealthy before the business does). Where automation flows across a boundary, the
+<a href="/portfolio/knowledge/insights/automate-the-toil-not-the-judgment/">Toil-Judgment Line’s</a> Escalation Seam
+applies: the handoff to human judgment is designed into the boundary, never bolted on after the
+first incident.</p>
+<p>Choosing the pattern for each boundary is a recorded decision, and the honest comparison looks like
+this:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Approach</th><th>When it is appropriate</th><th>Trade-offs to weigh</th></tr></thead><tbody><tr><td>API-first</td><td>Real-time interactions, request-and-response needs, external consumption</td><td>Immediate and governable, but couples availability: the caller feels the callee’s outage</td></tr><tr><td>Event-driven</td><td>State changes many systems care about; decoupled scale</td><td>Resilient and extensible, but eventual consistency and harder end-to-end reasoning</td></tr><tr><td>Batch processing</td><td>High-volume periodic movement; reconciliation-friendly loads</td><td>Simple and efficient, but latency is the product; the business sees yesterday</td></tr><tr><td>File-based</td><td>Legacy edges, third parties, regulated handoffs</td><td>Universal and auditable, but fragile contracts and slow failure discovery</td></tr><tr><td>Hybrid</td><td>Real landscapes, honestly: different boundaries deserve different patterns</td><td>Right answer per boundary, but demands governance so variety does not become chaos</td></tr></tbody></table>
+<p>The decision criteria are the boundary’s own properties: latency the business genuinely needs (not
+wants), volume and shape of the data, direction of truth, tolerance for eventual consistency,
+failure blast radius, and what the systems on each side can actually support. Pattern-by-fashion,
+choosing event-driven because it is current or files because they are familiar, is how landscapes
+accumulate incident surface; pattern-by-criteria, recorded per boundary, is how they stay
+operable.</p>
+<h2 id="data-design">Data design</h2>
+<p>Three rulings per critical entity, made once and recorded: system of record (where truth lives),
+ownership (the named business owner of the entity’s quality), and movement (how it flows,
+transforms, and reconciles across the landscape). Migration is designed with the same seriousness as
+the future state, because go-live confidence is mostly data confidence; the
+cutover’s reconciliation evidence is decided here, at design time, so
+<a href="/portfolio/knowledge/insights/assurance-is-what-lets-leaders-say-yes/">assurance</a> at approach-to-go-live is a
+reading exercise rather than a scramble.</p>
+<h2 id="designing-for-adoption">Designing for adoption</h2>
+<p>A design is not complete when it satisfies the requirements; it is complete when the people it
+lands on can absorb it. At Document and Validate, test the design against the
+<a href="/portfolio/knowledge/insights/adoption-is-the-real-go-live/">Adoption Ledger’s</a> question: for each role whose
+behavior must change, does the design make the new way easier than the workaround? Designs that win
+on paper and lose to a spreadsheet lose because the spreadsheet was easier. Where the design
+knowingly makes a role’s work harder in service of a larger outcome, that is a decision, recorded,
+owned, and handed to the adoption plan as a named risk rather than left as a surprise.</p>
+<h2 id="design-governance">Design governance</h2>
+<p>Design approval follows the
+<a href="/portfolio/knowledge/insights/assurance-is-what-lets-leaders-say-yes/">Proportionate Assurance model</a>.
+Routine, reversible design (a report layout, a with-the-grain configuration) is self-attested by its
+designer against the standards. Material design (a new integration, a data-model extension) gets
+peer review by an architect outside the workstream. The vital few (regulated boundaries,
+irreversible data rulings, against-the-grain customization) get independent verification: the
+design is tested against its requirements and constraints, not just read. Tier decisions are
+recorded, the walkthrough evidence is retained as a byproduct, and design governance thereby
+enables the confident yes instead of collecting tolls.</p>
+<h2 id="solution-design-review-gates">Solution design review gates</h2>
+<p>Governance needs moments as well as tiers. Five gates carry a design from baseline to build, each
+with a purpose, an expected output, and approval criteria; proportionality still applies, so a
+with-the-grain workstream may pass the middle gates lightly while a regulated one earns full
+scrutiny.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Gate</th><th>Purpose</th><th>Expected outputs</th><th>Approval criteria</th></tr></thead><tbody><tr><td>Requirements baseline</td><td>Confirm design starts from managed commitments</td><td>Typed, prioritized baseline; RDRs on the significant set</td><td>Baseline versioned; owners named; acceptance criteria present</td></tr><tr><td>Solution design</td><td>Confirm the design answers the baseline</td><td>Views at consequence-scaled depth; options analyses; ADRs</td><td>Every priority requirement lands somewhere; decisions recorded</td></tr><tr><td>Architecture review</td><td>Confirm the design fits the terrain</td><td>Peer or independent review evidence; constraint findings</td><td>With-the-grain ratio understood; against-the-grain choices justified in ADRs</td></tr><tr><td>Risk review</td><td>Confirm the risk position is owned</td><td>Updated register; failure behavior and reversibility per boundary</td><td>High-consequence items at the right assurance tier, mitigations owned</td></tr><tr><td>Implementation approval</td><td>Release the design to build</td><td>Approved design pack; validation evidence; open items with owners</td><td>All gates passed or waived by name; the design authority signs with evidence</td></tr></tbody></table>
+<p>A gate is a decision point, not a meeting: each ends in an approve, a conditional approve with named
+owners and dates, or a return, and the outcome is recorded. Gates that always pass are not gates;
+track the conditional and return rates as honestly as delivery tracks its own controls.</p>
+<h2 id="design-in-delivery-methods">Design in delivery methods</h2>
+<p>Method-neutral, again. In predictive delivery, the views front the build and Evolve governs
+deviation. In agile delivery, design is intentionally two-speed: an architectural runway of recorded
+decisions and standards that stories design inside, with just-enough documentation per increment;
+the decision records carry the weight the big document used to pretend to. In hybrid programs, one
+design authority and one decision record spine serve both tempos, so the stable core and the
+evolving edge do not quietly diverge.</p>
+<h2 id="design-validation">Design validation</h2>
+<p>Validate before approval, with the people who must live with the design: builders (can they
+implement it), operators (can they run, observe, and recover it), the business owners of the
+requirements it serves (does it deliver their acceptance criteria), and security and compliance
+where the tiers demand it. Run walkthroughs as correction, not theater, the same discipline as
+discovery’s playback: “here is the design; where does it break?” Material challenges are resolved as
+decisions, recorded, and the validation evidence becomes the approval evidence, which is how the
+paperwork disappears into the work.</p>
+<h2 id="the-design-principles-checklist">The design principles checklist</h2>
+<p>A reusable checklist for design reviews and walkthroughs. Run it against every significant design;
+the answer to each is evidence, not assent.</p>
+<ul>
+<li>Simplicity: is this the simplest design that fully meets the requirements, and can its owner
+explain it in five minutes?</li>
+<li>Scalability: what breaks first as volume grows, and is that limit known and acceptable?</li>
+<li>Security: are access, data protection, and audit designed in, at the tier the consequence
+demands?</li>
+<li>Performance: do the mechanisms trace to the stated non-functional numbers, and are they testable
+before go-live?</li>
+<li>Maintainability: can a team that did not build it change it safely, and what does the
+with-the-grain ratio say about upgrade cost?</li>
+<li>Extensibility: where will the next requirement land, and does the design leave it a supported
+place to land?</li>
+<li>Observability: how will anyone know it is unhealthy before the business does?</li>
+<li>Cost awareness: is the total cost of ownership stated (build, run, and change), and did it shape
+the options decision?</li>
+</ul>
+<p>In review sessions, use it as the agenda: walk the checklist, demand the evidence, and log any
+principle answered by assertion as an open item with an owner. A design that passes on evidence is
+ready for its gates; one that passes on nodding is not ready, it is unexamined.</p>
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li>Designing the ideal system, then discovering the platform: constraints faced late are redesigns.</li>
+<li>One option presented as three: advocacy dressed as analysis.</li>
+<li>Diagrams mistaken for decisions: beautiful views over unrecorded choices.</li>
+<li>Non-functionals inherited as slideware instead of designed as mechanisms.</li>
+<li>Integration failure behavior discovered in production instead of decided at the boundary.</li>
+<li>Customization by a thousand reasonable exceptions, none recorded, all inherited.</li>
+<li>Design frozen at approval and never evolved, so as-built and as-designed part ways silently.</li>
+<li>Operability and adoption consulted after the design is emotionally finished.</li>
+</ul>
+<h2 id="solution-design-maturity-model">Solution design maturity model</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Level</th><th>Characteristics</th></tr></thead><tbody><tr><td>Level 1</td><td>Design is documentation produced to unlock build; decisions live in meetings</td></tr><tr><td>Level 2</td><td>Standard views exist; quality depends on the individual architect</td></tr><tr><td>Level 3</td><td>Options analysis and recorded design decisions on significant choices; traceability to the baseline</td></tr><tr><td>Level 4</td><td>Proportionate design governance; constraints faced at Frame; validation with builders and operators</td></tr><tr><td>Level 5</td><td>Design runs as a decision discipline integrated with delivery; decisions revisited on trigger; upgrade planning reads the decision log</td></tr></tbody></table>
+<p>One habit per program, made standard.</p>
+<h2 id="deliverables">Deliverables</h2>
+<ol>
+<li>The design decision records for every significant choice.</li>
+<li>Options analyses for the choices that warranted them.</li>
+<li>The architecture views, at consequence-scaled depth, traceable to the baseline.</li>
+<li>Integration and data rulings: patterns, truth, failure behavior, reconciliation approach.</li>
+<li>Validation and approval evidence at the recorded tiers.</li>
+<li>The evolving design log through delivery.</li>
+</ol>
+<h2 id="learning-path">Learning path</h2>
+<p>This playbook completes the front half of the delivery sequence. Behind it sit the
+<a href="/portfolio/knowledge/playbooks/enterprise-discovery-playbook/">Enterprise Discovery Playbook</a> and the
+<a href="/portfolio/knowledge/playbooks/enterprise-requirements-management-playbook/">Enterprise Requirements Management Playbook</a>,
+and beneath all three, the decision discipline of
+<a href="/portfolio/knowledge/insights/requirements-are-decisions-not-documents/">Requirements Are Decisions, Not Documents</a>
+with its <a href="/portfolio/knowledge/templates/requirements-decision-record-template/">working template</a>. Around it:
+<a href="/portfolio/knowledge/insights/the-platform-decision-that-constrains-the-next-decade/">The Platform Decision That Constrains the Next Decade</a>
+for the constraint set this playbook designs inside,
+<a href="/portfolio/knowledge/insights/automate-the-toil-not-the-judgment/">Automate the Toil, Not the Judgment</a> for
+boundaries that carry automation,
+<a href="/portfolio/knowledge/insights/assurance-is-what-lets-leaders-say-yes/">Assurance Is What Lets Leaders Say Yes</a>
+for the governance tiers, and
+<a href="/portfolio/knowledge/insights/adoption-is-the-real-go-live/">Adoption Is the Real Go-Live</a> for the test a
+design must ultimately pass. As they publish, the selection playbook and scorecard deepen what
+happens before this playbook begins, and the delivery-controls sequence carries what happens after.</p>
+<h2 id="how-this-playbook-uses-the-framework-library">How this playbook uses the framework library</h2>
+<p>The by-now-familiar pattern, applied at design: the RDR Model is the operating center (design
+decision records, options honestly rationalized, upgrade planning as a decision-log read).
+Evidence-Backed Status carries recommendations and design reporting. The Constraint Horizon defines
+the terrain design works inside. The Toil-Judgment Line’s Escalation Seam shapes automated
+boundaries. Proportionate Assurance sets the approval tiers. The Adoption Ledger asks the question
+that decides whether the design will survive contact with its users. One system, one language, now
+spanning discovery, requirements, and design.</p>  </div> <section class="leaf__author" aria-label="About the author" data-astro-cid-5ega6rs2> <a href="/portfolio/knowledge/authors/vanessa-salonoy/" data-astro-cid-qtsfwbd5 class="author-chip"><span class="author-chip__avatar author-chip__initials" aria-hidden="true" data-astro-cid-qtsfwbd5>VS</span><span class="author-chip__meta" data-astro-cid-qtsfwbd5> <span class="author-chip__name" data-astro-cid-qtsfwbd5>Vanessa Salonoy</span> <span class="author-chip__role" data-astro-cid-qtsfwbd5>Enterprise Digital Transformation Consultant | ERP, CRM, AI Automation &amp; Business Strategy</span> </span> </a>  </section> <nav class="leaf__prevnext" aria-label="Series navigation" data-astro-cid-5ega6rs2> <a class="leaf__pn" href="/portfolio/knowledge/playbooks/enterprise-requirements-management-playbook/" data-astro-cid-5ega6rs2><span data-astro-cid-5ega6rs2>&larr; Previous</span><strong data-astro-cid-5ega6rs2>Enterprise Requirements Management Playbook</strong></a> <span data-astro-cid-5ega6rs2></span> </nav> <section class="leaf__related" aria-labelledby="related-h" data-astro-cid-5ega6rs2> <h2 id="related-h" data-astro-cid-5ega6rs2>Related resources</h2> <div class="leaf__related-grid" data-astro-cid-5ega6rs2> <article class="card" data-astro-cid-dd5txfcy> <div class="card__top" data-astro-cid-dd5txfcy><span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Insights</span> </span> </div> <h3 class="card__title" data-astro-cid-dd5txfcy> <a class="card__link" href="/portfolio/knowledge/insights/the-platform-decision-that-constrains-the-next-decade/" data-astro-cid-dd5txfcy>The Platform Decision That Constrains the Next Decade</a> </h3> <p class="card__summary" data-astro-cid-dd5txfcy>A platform choice is the adoption of a constraint set, not a purchase. The Constraint Horizon evaluates five constraint classes before any demo.</p>   </article> <article class="card" data-astro-cid-dd5txfcy> <div class="card__top" data-astro-cid-dd5txfcy><span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Resources</span> </span> </div> <h3 class="card__title" data-astro-cid-dd5txfcy> <a class="card__link" href="/portfolio/knowledge/resources/erp-and-crm-platform-landscape/" data-astro-cid-dd5txfcy>The ERP and CRM Platform Landscape</a> </h3> <p class="card__summary" data-astro-cid-dd5txfcy>Platform categories compared by the constraints they impose rather than the features they demo, an orientation map for ERP and CRM decisions.</p>   </article> <article class="card" data-astro-cid-dd5txfcy> <div class="card__top" data-astro-cid-dd5txfcy><span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Playbooks</span> </span> </div> <h3 class="card__title" data-astro-cid-dd5txfcy> <a class="card__link" href="/portfolio/knowledge/playbooks/enterprise-integration-strategy-playbook/" data-astro-cid-dd5txfcy>Enterprise Integration Strategy Playbook</a> </h3> <p class="card__summary" data-astro-cid-dd5txfcy>A practical methodology for selecting, designing, governing, and evolving enterprise integrations across ERP, CRM, AI automation, and legacy systems.</p>   </article>  </div> </section> </article> <aside class="leaf__rail" aria-label="Article tools" data-astro-cid-5ega6rs2> <div class="leaf__rail-inner" data-astro-cid-5ega6rs2> <div class="rail-block" data-astro-cid-vltmujbe> <p class="rail-block__title" data-astro-cid-vltmujbe>Share</p> <button type="button" class="copy-button" data-copy-button data-copy-value="https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-solution-design-playbook/" data-astro-cid-52zhjzn3> <svg class="copy-button__icon copy-button__icon--copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-52zhjzn3> <rect x="9" y="9" width="12" height="12" rx="2" data-astro-cid-52zhjzn3></rect> <path d="M5 15V5a2 2 0 0 1 2-2h10" data-astro-cid-52zhjzn3></path> </svg> <svg class="copy-button__icon copy-button__icon--done" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-52zhjzn3> <path d="M5 13l4 4L19 7" data-astro-cid-52zhjzn3></path> </svg> <span class="copy-button__label" data-copy-label data-astro-cid-52zhjzn3>Copy link</span> <span class="visually-hidden" role="status" aria-live="polite" data-copy-status data-astro-cid-52zhjzn3></span> </button>   </div>  </div> </aside> </div> </div>  </main> <footer class="site-footer" data-astro-cid-35ed7um5> <div class="site-footer__inner container" data-astro-cid-35ed7um5> <nav class="site-footer__cols" aria-label="Footer" data-astro-cid-35ed7um5> <div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>Knowledge Types</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/insights/" data-astro-cid-35ed7um5>Insights</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/playbooks/" data-astro-cid-35ed7um5>Playbooks</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/frameworks/" data-astro-cid-35ed7um5>Frameworks</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/templates/" data-astro-cid-35ed7um5>Templates</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/automation-labs/" data-astro-cid-35ed7um5>Automation Lab</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/case-studies/" data-astro-cid-35ed7um5>Case Studies</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/resources/" data-astro-cid-35ed7um5>Resources</a> </li> </ul> </div><div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>Capabilities</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/business-analysis-and-requirements/" data-astro-cid-35ed7um5>Business Analysis &amp; Requirements</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/project-and-delivery-management/" data-astro-cid-35ed7um5>Project &amp; Delivery Management</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/intelligent-automation-and-ai/" data-astro-cid-35ed7um5>Intelligent Automation &amp; AI</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/change-adoption-and-stakeholder-management/" data-astro-cid-35ed7um5>Change, Adoption &amp; Stakeholder Management</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/governance-risk-and-assurance/" data-astro-cid-35ed7um5>Governance, Risk &amp; Assurance</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/enterprise-systems-strategy/" data-astro-cid-35ed7um5>Enterprise Systems Strategy</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/" data-astro-cid-35ed7um5>All capabilities</a> </li> </ul> </div><div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>Start Here</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/start-here/" data-astro-cid-35ed7um5>Featured</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/search/" data-astro-cid-35ed7um5>Search</a> </li> </ul> </div><div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>About</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/about/" data-astro-cid-35ed7um5>About</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/contact/" data-astro-cid-35ed7um5>Let&#39;s Talk</a> </li> </ul> </div> </nav> <p class="site-footer__meta" data-astro-cid-35ed7um5> <span data-astro-cid-35ed7um5>&copy; 2026 Knowledge Center.</span> <span data-astro-cid-35ed7um5>Built to Master Blueprint v1.6.</span> </p> </div> </footer>  </body></html>  

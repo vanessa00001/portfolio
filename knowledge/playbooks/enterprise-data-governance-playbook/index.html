@@ -1,0 +1,466 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Enterprise Data Governance Playbook</title><meta name="description" content="A complete methodology for governing data quality, ownership, lifecycle, master data, and compliance, and for building AI-ready data foundations."><link rel="canonical" href="https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-data-governance-playbook/"><link rel="alternate" type="application/rss+xml" title="Knowledge Center — RSS" href="https://vanessa00001.github.io/portfolio/knowledge/rss.xml"><meta property="og:site_name" content="Knowledge Center"><meta property="og:type" content="article"><meta property="og:title" content="Enterprise Data Governance Playbook"><meta property="og:description" content="A complete methodology for governing data quality, ownership, lifecycle, master data, and compliance, and for building AI-ready data foundations."><meta property="og:url" content="https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-data-governance-playbook/"><meta property="og:image" content="https://vanessa00001.github.io/portfolio/knowledge/og-default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Enterprise Data Governance Playbook"><meta name="twitter:description" content="A complete methodology for governing data quality, ownership, lifecycle, master data, and compliance, and for building AI-ready data foundations."><meta name="twitter:image" content="https://vanessa00001.github.io/portfolio/knowledge/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Enterprise Data Governance Playbook","description":"A complete methodology for governing data quality, ownership, lifecycle, master data, and compliance, and for building AI-ready data foundations.","datePublished":"2026-07-22T00:00:00.000Z","dateModified":"2026-07-22T00:00:00.000Z","articleSection":"Playbooks","author":{"@type":"Person","name":"Vanessa Salonoy","url":"https://vanessa00001.github.io/portfolio/knowledge/authors/vanessa-salonoy/"},"mainEntityOfPage":"https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-data-governance-playbook/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Knowledge Center","item":"https://vanessa00001.github.io/portfolio/knowledge/"},{"@type":"ListItem","position":2,"name":"Playbooks","item":"https://vanessa00001.github.io/portfolio/knowledge/playbooks/"},{"@type":"ListItem","position":3,"name":"Enterprise Data Governance Playbook"}]}</script><meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)"><script>
+      (function () {
+        try {
+          var stored = sessionStorage.getItem('kc-theme');
+          var theme =
+            stored ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {
+          /* storage blocked — fall back to light */
+        }
+      })();
+    </script><link rel="stylesheet" href="/portfolio/knowledge/_astro/_slug_.DM5cgNvv.css">
+<link rel="stylesheet" href="/portfolio/knowledge/_astro/_slug_.BMhP6wvg.css">
+<style>.callout[data-astro-cid-x2ep4vyf]{display:flex;gap:var(--space-3);padding:var(--space-4);background-color:var(--bg-subtle);border:1px solid var(--border);border-left:4px solid var(--callout-accent);border-radius:var(--radius-md)}.callout__icon[data-astro-cid-x2ep4vyf]{flex-shrink:0;color:var(--callout-accent);line-height:0;margin-top:.1em}.callout__body[data-astro-cid-x2ep4vyf]{min-width:0}.callout__label[data-astro-cid-x2ep4vyf]{margin:0 0 var(--space-1);font-weight:700;color:var(--text)}.callout__content[data-astro-cid-x2ep4vyf]{color:var(--text)}.callout__content[data-astro-cid-x2ep4vyf]>:last-child{margin-bottom:0}
+.badge[data-astro-cid-35zd7xm4]{display:inline-flex;align-items:center;gap:var(--space-1);padding:var(--space-1) var(--space-2);font-size:var(--fs-xs);font-weight:600;line-height:1.2;color:var(--text);background-color:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius-sm);white-space:nowrap}.badge__icon[data-astro-cid-35zd7xm4]{display:inline-flex;color:var(--badge-accent)}.badge__dot[data-astro-cid-35zd7xm4]{width:.5rem;height:.5rem;border-radius:50%;background-color:var(--badge-accent)}
+.card[data-astro-cid-dd5txfcy]{position:relative;display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);background-color:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);transition:box-shadow .15s ease,transform .15s ease,border-color .15s ease}.card[data-astro-cid-dd5txfcy]:hover{transform:translateY(-2px);box-shadow:var(--shadow-2);border-color:var(--brand-primary)}.card__top[data-astro-cid-dd5txfcy]{display:flex;align-items:center;gap:var(--space-2)}.card__title[data-astro-cid-dd5txfcy]{margin:0;font-size:var(--fs-lg)}.card__link[data-astro-cid-dd5txfcy]{color:var(--text);text-decoration:none}.card__link[data-astro-cid-dd5txfcy]:after{content:"";position:absolute;inset:0;border-radius:inherit}.card[data-astro-cid-dd5txfcy]:hover .card__link[data-astro-cid-dd5txfcy]{color:var(--brand-primary)}.card__summary[data-astro-cid-dd5txfcy]{margin:0;color:var(--text-muted);font-size:var(--fs-sm);line-height:var(--line-height-body);display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.card__meta[data-astro-cid-dd5txfcy],.card__tags[data-astro-cid-dd5txfcy]{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2)}.card__meta[data-astro-cid-dd5txfcy]{margin-top:auto}.card__meta[data-astro-cid-dd5txfcy] a,.card__tags[data-astro-cid-dd5txfcy] a{position:relative;z-index:1}
+.btn[data-astro-cid-6ygtcg62]{--btn-height: 2.5rem;display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-height:var(--btn-height);padding-inline:var(--space-4);font:inherit;font-weight:600;line-height:1.2;text-decoration:none;border:1px solid transparent;border-radius:var(--radius-md);cursor:pointer;transition:background-color .15s ease,border-color .15s ease,color .15s ease}.btn--sm[data-astro-cid-6ygtcg62]{--btn-height: 2rem;padding-inline:var(--space-3);font-size:var(--fs-sm)}.btn--primary[data-astro-cid-6ygtcg62]{background-color:var(--brand-primary);color:#fff}.btn--primary[data-astro-cid-6ygtcg62]:hover{background-color:var(--brand-primary-ink)}.btn--secondary[data-astro-cid-6ygtcg62]{background-color:transparent;color:var(--text);border-color:var(--border)}.btn--secondary[data-astro-cid-6ygtcg62]:hover{border-color:var(--brand-primary);color:var(--brand-primary)}.btn--ghost[data-astro-cid-6ygtcg62]{background-color:transparent;color:var(--brand-primary)}.btn--ghost[data-astro-cid-6ygtcg62]:hover{background-color:var(--bg-subtle)}.btn[data-astro-cid-6ygtcg62]:disabled,.btn[data-astro-cid-6ygtcg62][aria-disabled=true]{opacity:.5;cursor:not-allowed;pointer-events:none}.btn__format[data-astro-cid-6ygtcg62]{font-family:var(--font-mono);font-size:var(--fs-xs);padding:0 var(--space-1);border:1px solid currentColor;border-radius:var(--radius-sm);opacity:.9}
+.author-chip[data-astro-cid-qtsfwbd5]{display:inline-flex;align-items:center;gap:var(--space-2);text-decoration:none;color:var(--text)}.author-chip__avatar[data-astro-cid-qtsfwbd5]{width:1.75rem;height:1.75rem;border-radius:50%;object-fit:cover;flex-shrink:0}.author-chip__initials[data-astro-cid-qtsfwbd5]{display:inline-flex;align-items:center;justify-content:center;font-size:var(--fs-xs);font-weight:700;color:#fff;background-color:var(--brand-primary)}.author-chip__meta[data-astro-cid-qtsfwbd5]{display:inline-flex;flex-direction:column;line-height:1.2}.author-chip__name[data-astro-cid-qtsfwbd5]{font-weight:600;font-size:var(--fs-sm)}.author-chip__role[data-astro-cid-qtsfwbd5]{font-size:var(--fs-xs);color:var(--text-muted)}a[data-astro-cid-qtsfwbd5].author-chip:hover .author-chip__name[data-astro-cid-qtsfwbd5]{color:var(--brand-primary)}.reading-time[data-astro-cid-mzf3d6uz]{display:inline-flex;align-items:center;gap:var(--space-1);font-size:var(--fs-sm);color:var(--text-muted);white-space:nowrap}.difficulty[data-astro-cid-f22gsth5]{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-1) var(--space-2);font-size:var(--fs-xs);font-weight:600;line-height:1.2;color:var(--text);background-color:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius-sm);white-space:nowrap}.difficulty__dot[data-astro-cid-f22gsth5]{width:.5rem;height:.5rem;border-radius:50%;background-color:var(--diff-accent)}.tag[data-astro-cid-tugpja7w]{display:inline-flex;align-items:center;padding:var(--space-1) var(--space-2);font-size:var(--fs-xs);line-height:1.2;color:var(--text-muted);background-color:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius-sm);text-decoration:none;white-space:nowrap}.tag__hash[data-astro-cid-tugpja7w]{opacity:.6;margin-right:.1em}a[data-astro-cid-tugpja7w].tag:hover{color:var(--brand-primary);border-color:var(--brand-primary)}.metadata-bar[data-astro-cid-sgo5wfom]{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-3);font-size:var(--fs-sm);color:var(--text-muted)}.metadata-bar__item[data-astro-cid-sgo5wfom]:not(:first-child):not(.metadata-bar__tags):before{content:"·";margin-right:var(--space-3);color:var(--border)}.metadata-bar__item[data-astro-cid-sgo5wfom]{display:inline-flex;align-items:center;gap:var(--space-1)}.metadata-bar__tags[data-astro-cid-sgo5wfom]{gap:var(--space-1);flex-wrap:wrap}.metadata-bar[data-astro-cid-sgo5wfom] a[data-astro-cid-sgo5wfom]{color:var(--text-muted);text-decoration:none}.metadata-bar[data-astro-cid-sgo5wfom] a[data-astro-cid-sgo5wfom]:hover{color:var(--brand-primary);text-decoration:underline}
+</style><script type="module" src="/portfolio/knowledge/_astro/hoisted.BPOG4pMv.js"></script>
+<script type="module" src="/portfolio/knowledge/_astro/page.DCTgdEH6.js"></script></head> <body> <a class="skip-link" href="#main-content">Skip to content</a> <header class="site-header" data-astro-cid-qlfjksao> <div class="site-header__inner container" data-astro-cid-qlfjksao> <a class="site-header__home" href="/portfolio/knowledge/" data-astro-cid-qlfjksao> <span class="site-header__mark" aria-hidden="true" data-astro-cid-qlfjksao>K</span> <span class="site-header__home-text" data-astro-cid-qlfjksao>Knowledge Center</span> </a> <nav class="site-header__nav" aria-label="Primary" data-astro-cid-qlfjksao> <button type="button" class="site-header__disclosure" data-nav-toggle aria-expanded="false" aria-controls="kc-panel" aria-haspopup="dialog" data-astro-cid-qlfjksao> <svg class="site-header__burger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-qlfjksao> <path d="M3 6h18M3 12h18M3 18h18" data-astro-cid-qlfjksao></path> </svg> <span class="site-header__disclosure-text" data-astro-cid-qlfjksao>Browse</span> </button> <a class="site-header__search" href="/portfolio/knowledge/search/" data-astro-cid-qlfjksao> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-qlfjksao> <circle cx="11" cy="11" r="7" data-astro-cid-qlfjksao></circle> <path d="M21 21l-4.3-4.3" data-astro-cid-qlfjksao></path> </svg> <span class="site-header__search-text" data-astro-cid-qlfjksao>Search</span> <kbd class="site-header__kbd" aria-hidden="true" data-astro-cid-qlfjksao>⌘K</kbd> </a> <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" data-astro-cid-efubawbo> <span class="visually-hidden" data-astro-cid-efubawbo>Toggle dark mode</span> <!-- sun (shown in dark mode → action: go light) --> <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-efubawbo> <circle cx="12" cy="12" r="4" data-astro-cid-efubawbo></circle> <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" data-astro-cid-efubawbo></path> </svg> <!-- moon (shown in light mode → action: go dark) --> <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-efubawbo> <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" data-astro-cid-efubawbo></path> </svg> </button>   <a class="site-header__cta" href="/portfolio/knowledge/contact/" data-astro-cid-qlfjksao>Let&rsquo;s Talk</a> </nav> </div> </header> <div class="nav-backdrop" data-nav-backdrop hidden data-astro-cid-rs4xygvj></div> <div id="kc-panel" class="nav-panel" role="dialog" aria-modal="true" aria-label="Knowledge Center navigation" data-active-axis="type" hidden data-astro-cid-rs4xygvj> <div class="nav-panel__inner container" data-astro-cid-rs4xygvj> <div class="nav-panel__bar" data-astro-cid-rs4xygvj> <p class="nav-panel__title" data-astro-cid-rs4xygvj>Knowledge Center</p> <button type="button" class="nav-panel__close" data-nav-close data-astro-cid-rs4xygvj> <span class="visually-hidden" data-astro-cid-rs4xygvj>Close navigation</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-rs4xygvj> <path d="M6 6l12 12M18 6L6 18" data-astro-cid-rs4xygvj></path> </svg> </button> </div> <a class="nav-panel__search" href="/portfolio/knowledge/search/" data-astro-cid-rs4xygvj> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-rs4xygvj> <circle cx="11" cy="11" r="7" data-astro-cid-rs4xygvj></circle> <path d="M21 21l-4.3-4.3" data-astro-cid-rs4xygvj></path> </svg> <span data-astro-cid-rs4xygvj>Search the Knowledge Center</span> </a> <div class="nav-panel__tabs" role="tablist" aria-label="Browse by" data-astro-cid-rs4xygvj> <button type="button" role="tab" id="tab-type" aria-controls="axis-type" aria-selected="true" data-axis-tab="type" data-astro-cid-rs4xygvj>By type</button> <button type="button" role="tab" id="tab-capability" aria-controls="axis-capability" aria-selected="false" data-axis-tab="capability" data-astro-cid-rs4xygvj>By capability</button> </div> <div class="nav-panel__columns" data-astro-cid-rs4xygvj> <section class="nav-panel__col" id="axis-type" role="tabpanel" aria-labelledby="tab-type" data-astro-cid-rs4xygvj> <p class="nav-panel__heading" data-astro-cid-rs4xygvj>Browse by knowledge type</p> <ul data-astro-cid-rs4xygvj> <li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/insights/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Insights</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Points of view and articles.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/playbooks/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Playbooks</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Step-by-step operational guides.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/frameworks/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Frameworks</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Mental models and structures.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/templates/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Templates</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Fill-in reusable artifacts.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/automation-labs/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Automation Lab</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Hands-on technical builds.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/case-studies/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Case Studies</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Real-world applications.</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/resources/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Resources</span> <span class="nav-panel__blurb" data-astro-cid-rs4xygvj>Reference knowledge.</span> </a> </li> </ul> </section> <section class="nav-panel__col" id="axis-capability" role="tabpanel" aria-labelledby="tab-capability" data-astro-cid-rs4xygvj> <p class="nav-panel__heading" data-astro-cid-rs4xygvj>Browse by capability</p> <ul data-astro-cid-rs4xygvj> <li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/business-analysis-and-requirements/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Business Analysis &amp; Requirements</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/project-and-delivery-management/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Project &amp; Delivery Management</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/intelligent-automation-and-ai/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Intelligent Automation &amp; AI</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/change-adoption-and-stakeholder-management/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Change, Adoption &amp; Stakeholder Management</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/governance-risk-and-assurance/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Governance, Risk &amp; Assurance</span> </a> </li><li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/enterprise-systems-strategy/" data-astro-cid-rs4xygvj> <span class="nav-panel__label" data-astro-cid-rs4xygvj>Enterprise Systems Strategy</span> </a> </li> <li data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/capabilities/" class="nav-panel__all" data-astro-cid-rs4xygvj>All capabilities →</a> </li> </ul> </section> </div> <div class="nav-panel__foot" data-astro-cid-rs4xygvj> <a href="/portfolio/knowledge/start-here/" data-astro-cid-rs4xygvj>Start here — featured &amp; cornerstone content →</a> </div> </div> </div>    <nav class="breadcrumbs" aria-label="Breadcrumb" data-astro-cid-fdlnsr2d><div class="container" data-astro-cid-fdlnsr2d><ol data-astro-cid-fdlnsr2d><li data-astro-cid-fdlnsr2d><a href="/portfolio/knowledge/" data-astro-cid-fdlnsr2d>Knowledge Center</a><span class="separator" aria-hidden="true" data-astro-cid-fdlnsr2d>
+›
+</span></li><li data-astro-cid-fdlnsr2d><a href="/portfolio/knowledge/playbooks/" data-astro-cid-fdlnsr2d>Playbooks</a><span class="separator" aria-hidden="true" data-astro-cid-fdlnsr2d>
+›
+</span></li><li data-astro-cid-fdlnsr2d><span aria-current="page" data-astro-cid-fdlnsr2d>Enterprise Data Governance Playbook</span></li></ol></div></nav> <main id="main-content" tabindex="-1">  <div class="leaf container" data-astro-cid-5ega6rs2> <div class="leaf__grid" data-astro-cid-5ega6rs2> <article class="leaf__main" data-pagefind-body data-astro-cid-5ega6rs2> <div class="visually-hidden" aria-hidden="true" data-astro-cid-5ega6rs2> <span data-pagefind-filter="Type" data-astro-cid-5ega6rs2>Playbooks</span> <span data-pagefind-filter="Capability" data-astro-cid-5ega6rs2>Governance, Risk &amp; Assurance</span> <span data-pagefind-filter="Difficulty" data-astro-cid-5ega6rs2>intermediate</span> </div> <header class="leaf__header" data-astro-cid-5ega6rs2> <span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Playbooks</span> </span>  <h1 class="leaf__title" data-astro-cid-5ega6rs2>Enterprise Data Governance Playbook</h1> <p class="leaf__deck" data-astro-cid-5ega6rs2>A complete methodology for governing data quality, ownership, lifecycle, master data, and compliance, and for building AI-ready data foundations.</p> <div class="metadata-bar" data-astro-cid-sgo5wfom> <span class="metadata-bar__item" data-astro-cid-sgo5wfom> <a href="/portfolio/knowledge/authors/vanessa-salonoy/" data-astro-cid-qtsfwbd5 class="author-chip"><span class="author-chip__avatar author-chip__initials" aria-hidden="true" data-astro-cid-qtsfwbd5>VS</span><span class="author-chip__meta" data-astro-cid-qtsfwbd5> <span class="author-chip__name" data-astro-cid-qtsfwbd5>Vanessa Salonoy</span>  </span> </a>  </span> <span class="metadata-bar__item" data-astro-cid-sgo5wfom><time datetime="2026-07-22" data-astro-cid-sgo5wfom>Jul 22, 2026</time></span>  <span class="metadata-bar__item" data-astro-cid-sgo5wfom><span class="reading-time" data-astro-cid-mzf3d6uz><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-mzf3d6uz><circle cx="12" cy="12" r="9" data-astro-cid-mzf3d6uz></circle><path d="M12 7v5l3 2" data-astro-cid-mzf3d6uz></path></svg><span data-astro-cid-mzf3d6uz>13 min read</span></span></span> <span class="metadata-bar__item" data-astro-cid-sgo5wfom><span class="difficulty" style="--diff-accent: var(--diff-intermediate);" data-astro-cid-f22gsth5> <span class="difficulty__dot" aria-hidden="true" data-astro-cid-f22gsth5></span> <span class="difficulty__label" data-astro-cid-f22gsth5>Intermediate</span> </span> </span> <span class="metadata-bar__item" data-astro-cid-sgo5wfom> <a href="/portfolio/knowledge/capabilities/governance-risk-and-assurance/" data-astro-cid-sgo5wfom>Governance, Risk &amp; Assurance</a> </span> <span class="metadata-bar__item metadata-bar__tags" data-astro-cid-sgo5wfom> <a href="/portfolio/knowledge/search/?q=data%20governance" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>data governance</a> <a href="/portfolio/knowledge/search/?q=data%20quality" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>data quality</a> <a href="/portfolio/knowledge/search/?q=master%20data" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>master data</a> <a href="/portfolio/knowledge/search/?q=compliance" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>compliance</a> <a href="/portfolio/knowledge/search/?q=AI%20readiness" data-astro-cid-tugpja7w class="tag"> <span class="tag__hash" aria-hidden="true" data-astro-cid-tugpja7w>#</span>AI readiness</a>  </span> </div>  <div class="pb-facts" data-astro-cid-iqtmuo6l> <p class="pb-outcome" data-astro-cid-iqtmuo6l><strong data-astro-cid-iqtmuo6l>By the end you will have:</strong> A governed data estate - critical entities owned and stewarded, quality measured against rules that matter, lifecycle and compliance managed by design, and foundations AI can be trusted on - run as standing capability, not a project.</p> <ul class="pb-attrs" data-astro-cid-iqtmuo6l> <li data-astro-cid-iqtmuo6l><span data-astro-cid-iqtmuo6l>Time to execute</span><strong data-astro-cid-iqtmuo6l>4 to 8 weeks to establish the operating model; governs the estate for its life</strong></li> <li data-astro-cid-iqtmuo6l><span data-astro-cid-iqtmuo6l>Roles</span><strong data-astro-cid-iqtmuo6l>Data Owner (business), Data Steward, Enterprise Architect, Compliance Lead</strong></li> <li data-astro-cid-iqtmuo6l><span data-astro-cid-iqtmuo6l>Prerequisites</span><strong data-astro-cid-iqtmuo6l>An inventory of critical data entities (even a rough one), Named executive sponsorship for data accountability, The delivery context creating demand (programs, integrations, AI initiatives)</strong></li> </ul> </div> </header> <div class="leaf__body" data-astro-cid-5ega6rs2>    <h2 id="executive-overview">Executive overview</h2>
+<p>Every enterprise already governs its data; most just do it accidentally, through whoever last
+touched the spreadsheet, whichever system shouted loudest, and whatever the auditors found. The
+symptoms are familiar: two reports that disagree and a meeting to negotiate which is true,
+migrations that stall on quality nobody measured, compliance exercises rebuilt from scratch each
+year, and now AI initiatives confidently automating on data no one would sign their name to.</p>
+<p>Data governance done deliberately is none of the bureaucracy its reputation suggests. It is a small
+set of owned decisions, who owns each critical entity, what quality means for it, where truth
+lives, how long data exists and on what terms, applied as standing capability rather than a
+project. This playbook establishes that capability. It extends the delivery sequence, the
+<a href="/portfolio/knowledge/playbooks/enterprise-discovery-playbook/">Discovery</a>,
+<a href="/portfolio/knowledge/playbooks/enterprise-requirements-management-playbook/">Requirements Management</a>,
+<a href="/portfolio/knowledge/playbooks/enterprise-solution-design-playbook/">Solution Design</a>, and
+<a href="/portfolio/knowledge/playbooks/enterprise-integration-strategy-playbook/">Integration Strategy</a> playbooks,
+into the asset those programs all touch and none of them owns: the data itself.</p>
+<h2 id="when-to-use-this-playbook">When to use this playbook</h2>
+<p>Use it when transformation raises the stakes: an ERP or CRM program about to migrate what it finds,
+an integration strategy formalizing where truth lives, a compliance obligation tired of annual
+heroics, or an AI initiative whose appetite for data has outrun anyone’s accountability for it. Use
+it before the crisis where possible and during one where necessary; establish the operating model
+once, then govern by exception. Scale by criticality: govern the twenty entities that run the
+business deliberately, and let the long tail be governed by convention.</p>
+<h2 id="principles">Principles</h2>
+<ol>
+<li>Data rulings are decisions. System of record, quality thresholds, retention terms, and access
+grants follow the <a href="/portfolio/knowledge/insights/requirements-are-decisions-not-documents/">RDR Model</a>
+discipline: owned, reasoned, revisitable.</li>
+<li>Ownership is business ownership. Data is owned where its meaning lives, by named business roles;
+technology stewards the plumbing, never the truth.</li>
+<li>Quality is fitness, not perfection. Data is good when it is fit for the decisions and processes
+that consume it, measured against rules those consumers set.</li>
+<li>Truth is singular and declared. Every critical entity has one system of record, decided once,
+recorded, and enforced at the boundaries.</li>
+<li>Lifecycle by design. Creation, use, retention, and disposal are decided when data is born, not
+discovered when a regulator asks.</li>
+<li>Governed data enables; ungoverned data taxes. The measure of the capability is faster programs,
+confident automation, and calm audits, not the thickness of its policy binder.</li>
+</ol>
+<h2 id="from-the-delivery-playbooks-to-data-governance">From the delivery playbooks to data governance</h2>
+<p>The delivery sequence generates data decisions constantly; governance is where they live and stay
+honest. Discovery’s data layer (where truth lives, where reconciliation effort is spent) becomes
+the entity inventory’s first draft. Solution design’s data rulings (system of record, ownership,
+movement) are governance decisions made in delivery context, and they land in the governance record
+rather than dying with the program. Integration’s truth rulings and contracts define what crosses
+boundaries and on whose authority. The handoff rule is the same as the rest of the sequence: made
+mechanical. Every program-level data decision is recorded once, in the shared governance record,
+and inherited by the next program instead of re-litigated by it.</p>
+<h2 id="the-data-governance-lifecycle">The data governance lifecycle</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Stage</th><th>What happens</th><th>The test of done</th></tr></thead><tbody><tr><td>Inventory</td><td>Critical entities cataloged: meaning, systems, flows, consumers</td><td>You can answer “what data runs the business” without a workshop</td></tr><tr><td>Assign</td><td>Owners and stewards named per entity; decision rights published</td><td>No critical entity is orphaned; everyone knows who rules on meaning</td></tr><tr><td>Rule</td><td>Quality rules, truth rulings, lifecycle and access terms decided and recorded</td><td>The rules that matter exist, with owners and revisit triggers</td></tr><tr><td>Measure</td><td>Quality measured against the rules; issues routed to owners</td><td>”How good is our data” is a claim with evidence, per entity</td></tr><tr><td>Remediate</td><td>Issues fixed at source where possible, managed where not</td><td>Quality trends are owned numbers, not annual surprises</td></tr><tr><td>Comply</td><td>Regulatory obligations mapped to entities and enforced by design</td><td>The audit is a reading exercise, not a reconstruction</td></tr><tr><td>Evolve</td><td>Rules, ownership, and scope revisited on trigger</td><td>Governance keeps pace with the estate instead of fossilizing</td></tr></tbody></table>
+<h2 id="ownership-and-stewardship">Ownership and stewardship</h2>
+<p>Two roles, deliberately distinct. The data owner is the business role accountable for an entity:
+its meaning, its quality rules, its access terms, and the rulings when consumers disagree.
+Ownership is per entity and named; a committee that owns everything owns nothing. The data steward
+does the standing work on the owner’s behalf: monitoring quality, triaging issues, maintaining
+metadata, and shepherding changes. Stewardship is where governance most often dies of aspiration,
+so define it as observable behaviors with evidence, the
+<a href="/portfolio/knowledge/insights/adoption-is-the-real-go-live/">Adoption Ledger</a> discipline applied to a
+standing role: which checks run, which issues get triaged within what window, which metadata stays
+current. A stewardship model that cannot be evidenced is an org chart decoration.</p>
+<p>The full ownership model distinguishes five roles, and the line that matters runs between strategic
+accountability and operational responsibility:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Role</th><th>Accountability</th><th>In practice</th></tr></thead><tbody><tr><td>Executive sponsor</td><td>Strategic: that critical data is governed at all, and funded</td><td>Rules on cross-entity disputes; owns the capability’s mandate</td></tr><tr><td>Data owner</td><td>Strategic: an entity’s meaning, quality rules, and access terms</td><td>The business role who decides; one per entity, named</td></tr><tr><td>Data steward</td><td>Operational: the standing work of quality, triage, and metadata</td><td>Acts on the owner’s behalf, with evidenced behaviors</td></tr><tr><td>Data custodian</td><td>Operational: the technical safekeeping of the data</td><td>Runs the platforms, pipelines, controls, and backups to the rules</td></tr><tr><td>Data consumer</td><td>Operational: fit use, and the duty to report unfitness</td><td>Uses data within its terms; feeds issues back to stewards</td></tr></tbody></table>
+<p>Sponsors and owners are accountable for what the data means and may be used for; stewards,
+custodians, and consumers are responsible for what happens to it day to day. Collapse the two and
+governance fails in one of two ways: executives ruling on field formats, or engineers ruling on
+meaning.</p>
+<h2 id="data-quality-management">Data quality management</h2>
+<p>Quality starts with the consumers: for each critical entity, the processes and decisions that
+consume it define fitness, and fitness becomes a small set of measurable rules drawn from six
+dimensions:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Dimension</th><th>The question it answers</th><th>Measured by</th></tr></thead><tbody><tr><td>Accuracy</td><td>Does the value reflect reality?</td><td>Verification against the authoritative source or the world</td></tr><tr><td>Completeness</td><td>Is everything that should be present, present?</td><td>Required-field and required-record coverage</td></tr><tr><td>Consistency</td><td>Does the same fact agree with itself across systems?</td><td>Cross-system comparison on shared keys</td></tr><tr><td>Timeliness</td><td>Is the data current enough for its use?</td><td>Age against the consuming process’s tolerance</td></tr><tr><td>Validity</td><td>Does the value conform to its rules and formats?</td><td>Rule and domain checks at entry and at rest</td></tr><tr><td>Uniqueness</td><td>Does each real-world thing exist exactly once?</td><td>Duplicate detection on the entity’s identity</td></tr></tbody></table>
+<p>Each dimension is measured independently, because they fail independently: a record can be complete
+and stale, valid and wrong, unique and inconsistent with its twin in the next system. Improving one
+dimension does not automatically improve the others, deduplication does nothing for accuracy, and a
+timely feed can deliver invalid values faster, so an entity’s rules name which dimensions its
+consumers actually depend on, and the measurement reports them separately. Rules are owned by the data owner, measured where the data lives, and reported as claims
+with evidence per the <a href="/portfolio/knowledge/insights/the-status-report-that-tells-the-truth/">Evidence-Backed Status</a>
+discipline: the rule, the current measure, the trend, and the decision requested of the owner.
+Remediate at source where the source is reachable, at the boundary where it is not, and record the
+choice; a downstream cleansing routine nobody remembers is an incident with a delay on it.</p>
+<h2 id="master-data-and-truth">Master data and truth</h2>
+<p>Master data, the entities many systems share (customers, products, suppliers, employees, chart of
+accounts), is where the singular-truth principle earns its keep. Per entity: one declared system of
+record; declared survivorship rules where records merge; and boundaries that enforce the ruling,
+which is exactly the contract discipline the
+<a href="/portfolio/knowledge/playbooks/enterprise-integration-strategy-playbook/">Integration Strategy Playbook</a>
+establishes. Whether the architecture centralizes mastering in a dedicated platform or federates it
+across systems is a platform decision, made against the
+<a href="/portfolio/knowledge/insights/the-platform-decision-that-constrains-the-next-decade/">Constraint Horizon</a>
+questions, not against a demo. What governance insists on either way: the ruling exists, is
+recorded, and is enforced somewhere real.</p>
+<h2 id="metadata-management">Metadata management</h2>
+<p>Metadata is the estate’s self-knowledge: what each entity means, where it lives, how it flows, who
+owns it, and what rules bind it. Keep the ambition honest, a maintained glossary of critical
+entities, lineage for the flows that matter (regulatory reporting, financial truth, AI training and
+inference paths), and currency as a stewardship behavior, beats an enterprise catalog bought in
+optimism and abandoned in year two. The test is usability: a new analyst, architect, or auditor can
+answer “what is this field, where does it come from, and can I trust it” without a meeting.</p>
+<h2 id="lifecycle-and-compliance">Lifecycle and compliance</h2>
+<p>Data is governed across eight lifecycle stages, each with its responsibilities and expected
+controls:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Stage</th><th>Governance responsibility</th><th>Expected controls</th></tr></thead><tbody><tr><td>Create</td><td>Owner rules on purpose and classification at birth</td><td>Purpose recorded; sensitivity classified; owner assigned</td></tr><tr><td>Capture</td><td>Stewards enforce quality at the point of entry</td><td>Validity and completeness checks; source recorded for lineage</td></tr><tr><td>Validate</td><td>Quality rules applied before data is trusted</td><td>Dimension checks against the entity’s rules; failures routed to stewards</td></tr><tr><td>Store</td><td>Custodians keep it safe on the owner’s terms</td><td>Access per least privilege; protection matching classification; backups tested</td></tr><tr><td>Share</td><td>Boundaries enforce truth and contracts</td><td>System-of-record ruling honored; contracts versioned; recipients within purpose</td></tr><tr><td>Use</td><td>Consumers stay within purpose; unfitness reported</td><td>Purpose limitation; usage auditable for the sensitive tier</td></tr><tr><td>Archive</td><td>Retention terms applied, retrieval preserved</td><td>Retention per the recorded term; access narrowed; retrieval tested</td></tr><tr><td>Retire</td><td>Disposal actually deletes, and can prove it</td><td>Certified deletion across copies; disposal evidenced for audit</td></tr></tbody></table>
+<p>Lifecycle terms are decided at creation: why the data exists (purpose), how long it lives
+(retention), who may see it (access, least-privilege by default), and how it dies (disposal that
+actually deletes). Compliance then stops being a project: obligations (privacy regimes, sector
+rules, contractual terms) are mapped to entities, the entities’ lifecycle terms implement the
+obligations, and evidence accumulates as a byproduct. Access and retention rulings on sensitive
+entities are the vital few in the
+<a href="/portfolio/knowledge/insights/assurance-is-what-lets-leaders-say-yes/">Proportionate Assurance</a> sense:
+independently verified, not self-attested. The goal, as everywhere in this library, is the calm
+audit: the trail exists because the work made it.</p>
+<h2 id="ai-ready-data-foundations">AI-ready data foundations</h2>
+<p>AI raises the stakes on every section above, because models consume data at scale and act on it
+with confidence. AI-ready means, concretely: training and inference data whose lineage is known
+(what fed this model, from where, as of when); quality measured on the paths AI consumes, with
+thresholds that gate automation; access and purpose rules that survive the tempting shortcut of
+“just point it at everything”; and staleness treated as a failure mode, wired to the
+<a href="/portfolio/knowledge/insights/automate-the-toil-not-the-judgment/">Escalation Seam</a> so automation stands
+down when its data degrades rather than acting on yesterday’s truth. The
+<a href="/portfolio/knowledge/insights/automate-the-toil-not-the-judgment/">Toil-Judgment Line’s</a> placement
+discipline applies to governance itself: automate the measuring and monitoring toil; keep the
+meaning rulings, quality thresholds, and access grants with accountable humans. An organization
+that cannot say what fed its model has not deployed AI; it has deployed a liability with a
+dashboard.</p>
+<h2 id="the-governance-operating-model">The governance operating model</h2>
+<p>Responsibilities, decision rights, and escalation, published and short:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Role</th><th>Owns</th><th>Decision rights</th><th>Escalates to</th></tr></thead><tbody><tr><td>Business (data owners)</td><td>Entity meaning, quality rules, access terms</td><td>Rulings on meaning, fitness, and use</td><td>Sponsor or data council</td></tr><tr><td>Data stewards</td><td>Standing quality, triage, metadata currency</td><td>Routine remediation within the rules</td><td>Data owner</td></tr><tr><td>Enterprise architecture</td><td>Truth rulings’ enforcement, platform and lineage design</td><td>Where rulings are enforced; mastering architecture</td><td>Design authority</td></tr><tr><td>Engineering and operations</td><td>Pipelines, controls, measurement plumbing</td><td>Implementation within the standards</td><td>Enterprise architecture</td></tr><tr><td>Compliance</td><td>Obligation mapping, verification of the vital few</td><td>What requires independent verification</td><td>Executive sponsor</td></tr></tbody></table>
+<p>Escalation is the short path from a steward’s finding to an owner’s ruling; a quality issue that
+waits for a quarterly council was escalated to a calendar, not a decision-maker. Governance
+ceremonies are proportionate: a standing data council for cross-entity rulings and scope, and
+everything else by exception.</p>
+<h2 id="metrics">Metrics</h2>
+<p>Measure the capability by what it enables. Leading: critical entities with named owners (should be
+all, and the trend is the truth), quality rules measured on schedule, stewardship behaviors
+evidenced, data decisions recorded versus re-litigated. Lagging: report disputes (“which number is
+true” meetings, trending down), migration and integration delays attributed to data, audit findings
+and their recurrence, and AI incidents traced to data staleness or lineage gaps. Report both sets
+as claims with evidence, and let time-to-trust, how quickly a new program or model can rely on an
+entity, become the number that buys the budget.</p>
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li>Governance as a project: a framework launched, a binder produced, a capability never operated.</li>
+<li>Technology ownership: stewards ruling on meaning because the business never showed up.</li>
+<li>Perfection quality: measuring everything against everything instead of fitness against use.</li>
+<li>The catalog gambit: buying metadata software instead of maintaining metadata behaviors.</li>
+<li>Truth by negotiation: system of record decided per meeting, per report, forever.</li>
+<li>Compliance by reconstruction: the annual scramble instead of lifecycle by design.</li>
+<li>AI on ungoverned data: automating confidently on inputs nobody owns.</li>
+<li>Governing the long tail with the same rigor as the critical twenty, and drowning.</li>
+</ul>
+<h2 id="data-governance-maturity-model">Data governance maturity model</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Level</th><th>Name</th><th>Characteristics</th></tr></thead><tbody><tr><td>Level 1</td><td>Reactive</td><td>Truth by negotiation; quality discovered in incidents; compliance by heroics</td></tr><tr><td>Level 2</td><td>Defined</td><td>Critical entities inventoried; owners named; rules written for the worst pain</td></tr><tr><td>Level 3</td><td>Managed</td><td>Quality measured against recorded rules; lifecycle terms applied; issues routed to owners</td></tr><tr><td>Level 4</td><td>Governed</td><td>Stewardship evidenced; proportionate verification on the vital few; boundaries enforce truth; audits calm</td></tr><tr><td>Level 5</td><td>Data-Driven Enterprise</td><td>Data governed as a strategic asset: programs inherit rulings, AI gates on quality and lineage, and decisions across the enterprise run on data everyone can trust</td></tr></tbody></table>
+<p>Organizations mature from isolated practices to enterprise governance in that order: from reacting
+to incidents (Level 1), to defining ownership and rules (Level 2), to operating measurement and
+lifecycle (Level 3), to governing with evidence and proportionate verification (Level 4), until
+governed data stops being a program and becomes the ground the enterprise decides on (Level 5). One
+habit per program, made standard.</p>
+<h2 id="deliverables">Deliverables</h2>
+<ol>
+<li>The critical entity inventory with named owners and stewards.</li>
+<li>The governance record: quality rules, truth rulings, lifecycle and access terms, all in decision
+form.</li>
+<li>The quality measurement pack, reported as evidence per entity.</li>
+<li>The obligation-to-entity compliance map with its verification evidence.</li>
+<li>The AI data readiness record: lineage, gates, and stand-down conditions for automated consumers.</li>
+<li>The operating model: roles, decision rights, escalation, and ceremony cadence.</li>
+</ol>
+<h2 id="learning-path">Learning path</h2>
+<p>This playbook governs the asset the delivery sequence keeps touching. Behind it, in order: the
+<a href="/portfolio/knowledge/playbooks/enterprise-discovery-playbook/">Enterprise Discovery Playbook</a> where the data
+layer is first evidenced, the
+<a href="/portfolio/knowledge/playbooks/enterprise-requirements-management-playbook/">Enterprise Requirements Management Playbook</a>
+where data requirements join the baseline, the
+<a href="/portfolio/knowledge/playbooks/enterprise-solution-design-playbook/">Enterprise Solution Design Playbook</a>
+where the rulings are designed, and the
+<a href="/portfolio/knowledge/playbooks/enterprise-integration-strategy-playbook/">Enterprise Integration Strategy Playbook</a>
+where they are enforced at boundaries. The conceptual spine remains
+<a href="/portfolio/knowledge/insights/requirements-are-decisions-not-documents/">Requirements Are Decisions, Not Documents</a>
+with its <a href="/portfolio/knowledge/templates/requirements-decision-record-template/">template</a>, and around it:
+<a href="/portfolio/knowledge/insights/assurance-is-what-lets-leaders-say-yes/">Assurance Is What Lets Leaders Say Yes</a>
+for the verification tiers,
+<a href="/portfolio/knowledge/insights/adoption-is-the-real-go-live/">Adoption Is the Real Go-Live</a> for evidenced
+stewardship,
+<a href="/portfolio/knowledge/insights/automate-the-toil-not-the-judgment/">Automate the Toil, Not the Judgment</a> for
+AI gating and the governance of automation itself, and
+<a href="/portfolio/knowledge/insights/the-status-report-that-tells-the-truth/">The Status Report That Tells the Truth</a>
+for how data quality reaches its owners.</p>
+<h2 id="how-this-playbook-uses-the-framework-library">How this playbook uses the framework library</h2>
+<p>The pattern, applied to the estate’s most-shared asset: the RDR Model turns every data ruling into
+an owned, revisitable decision. Evidence-Backed Status carries quality reporting. The Adoption
+Ledger makes stewardship observable. Proportionate Assurance scales verification to consequence.
+The Constraint Horizon governs mastering and platform choices. The Toil-Judgment Line and
+Escalation Seam gate what AI may consume and when it must stand down. One system, one language, now
+spanning discovery, requirements, design, integration, and the data underneath all of it.</p>  </div> <section class="leaf__author" aria-label="About the author" data-astro-cid-5ega6rs2> <a href="/portfolio/knowledge/authors/vanessa-salonoy/" data-astro-cid-qtsfwbd5 class="author-chip"><span class="author-chip__avatar author-chip__initials" aria-hidden="true" data-astro-cid-qtsfwbd5>VS</span><span class="author-chip__meta" data-astro-cid-qtsfwbd5> <span class="author-chip__name" data-astro-cid-qtsfwbd5>Vanessa Salonoy</span> <span class="author-chip__role" data-astro-cid-qtsfwbd5>Enterprise Digital Transformation Consultant | ERP, CRM, AI Automation &amp; Business Strategy</span> </span> </a>  </section> <nav class="leaf__prevnext" aria-label="Series navigation" data-astro-cid-5ega6rs2> <a class="leaf__pn" href="/portfolio/knowledge/playbooks/enterprise-ai-automation-strategy-playbook/" data-astro-cid-5ega6rs2><span data-astro-cid-5ega6rs2>&larr; Previous</span><strong data-astro-cid-5ega6rs2>Enterprise AI &amp; Automation Strategy Playbook</strong></a> <a class="leaf__pn leaf__pn--next" href="/portfolio/knowledge/playbooks/enterprise-discovery-playbook/" data-astro-cid-5ega6rs2><span data-astro-cid-5ega6rs2>Next &rarr;</span><strong data-astro-cid-5ega6rs2>Enterprise Discovery Playbook</strong></a> </nav> <section class="leaf__related" aria-labelledby="related-h" data-astro-cid-5ega6rs2> <h2 id="related-h" data-astro-cid-5ega6rs2>Related resources</h2> <div class="leaf__related-grid" data-astro-cid-5ega6rs2> <article class="card" data-astro-cid-dd5txfcy> <div class="card__top" data-astro-cid-dd5txfcy><span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Checklists</span> </span> </div> <h3 class="card__title" data-astro-cid-dd5txfcy> <a class="card__link" href="/portfolio/knowledge/checklists/audit-readiness-checklist/" data-astro-cid-dd5txfcy>Audit-Readiness Checklist</a> </h3> <p class="card__summary" data-astro-cid-dd5txfcy>Audit-readiness should be a byproduct, not a project. Verify decisions, assurance tiers, evidence, lifecycle, and access before someone asks.</p>   </article> <article class="card" data-astro-cid-dd5txfcy> <div class="card__top" data-astro-cid-dd5txfcy><span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Insights</span> </span> </div> <h3 class="card__title" data-astro-cid-dd5txfcy> <a class="card__link" href="/portfolio/knowledge/insights/assurance-is-what-lets-leaders-say-yes/" data-astro-cid-dd5txfcy>Assurance Is What Lets Leaders Say Yes</a> </h3> <p class="card__summary" data-astro-cid-dd5txfcy>Governance that only says no is cost. Proportionate Assurance scales scrutiny to consequence, so leaders approve fast with evidence behind them.</p>   </article> <article class="card" data-astro-cid-dd5txfcy> <div class="card__top" data-astro-cid-dd5txfcy><span class="badge" style="--badge-accent: var(--text-muted);" data-astro-cid-35zd7xm4>   <span class="badge__label" data-astro-cid-35zd7xm4>Insights</span> </span> </div> <h3 class="card__title" data-astro-cid-dd5txfcy> <a class="card__link" href="/portfolio/knowledge/insights/adoption-is-the-real-go-live/" data-astro-cid-dd5txfcy>Adoption Is the Real Go-Live</a> </h3> <p class="card__summary" data-astro-cid-dd5txfcy>Cutover is a technical event; adoption is the business one. The Adoption Ledger tracks the behaviors that prove a transformation actually landed.</p>   </article>  </div> </section> </article> <aside class="leaf__rail" aria-label="Article tools" data-astro-cid-5ega6rs2> <div class="leaf__rail-inner" data-astro-cid-5ega6rs2> <div class="rail-block" data-astro-cid-vltmujbe> <p class="rail-block__title" data-astro-cid-vltmujbe>Share</p> <button type="button" class="copy-button" data-copy-button data-copy-value="https://vanessa00001.github.io/portfolio/knowledge/playbooks/enterprise-data-governance-playbook/" data-astro-cid-52zhjzn3> <svg class="copy-button__icon copy-button__icon--copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-52zhjzn3> <rect x="9" y="9" width="12" height="12" rx="2" data-astro-cid-52zhjzn3></rect> <path d="M5 15V5a2 2 0 0 1 2-2h10" data-astro-cid-52zhjzn3></path> </svg> <svg class="copy-button__icon copy-button__icon--done" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-52zhjzn3> <path d="M5 13l4 4L19 7" data-astro-cid-52zhjzn3></path> </svg> <span class="copy-button__label" data-copy-label data-astro-cid-52zhjzn3>Copy link</span> <span class="visually-hidden" role="status" aria-live="polite" data-copy-status data-astro-cid-52zhjzn3></span> </button>   </div>  </div> </aside> </div> </div>  </main> <footer class="site-footer" data-astro-cid-35ed7um5> <div class="site-footer__inner container" data-astro-cid-35ed7um5> <nav class="site-footer__cols" aria-label="Footer" data-astro-cid-35ed7um5> <div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>Knowledge Types</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/insights/" data-astro-cid-35ed7um5>Insights</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/playbooks/" data-astro-cid-35ed7um5>Playbooks</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/frameworks/" data-astro-cid-35ed7um5>Frameworks</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/templates/" data-astro-cid-35ed7um5>Templates</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/automation-labs/" data-astro-cid-35ed7um5>Automation Lab</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/case-studies/" data-astro-cid-35ed7um5>Case Studies</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/resources/" data-astro-cid-35ed7um5>Resources</a> </li> </ul> </div><div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>Capabilities</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/business-analysis-and-requirements/" data-astro-cid-35ed7um5>Business Analysis &amp; Requirements</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/project-and-delivery-management/" data-astro-cid-35ed7um5>Project &amp; Delivery Management</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/intelligent-automation-and-ai/" data-astro-cid-35ed7um5>Intelligent Automation &amp; AI</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/change-adoption-and-stakeholder-management/" data-astro-cid-35ed7um5>Change, Adoption &amp; Stakeholder Management</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/governance-risk-and-assurance/" data-astro-cid-35ed7um5>Governance, Risk &amp; Assurance</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/enterprise-systems-strategy/" data-astro-cid-35ed7um5>Enterprise Systems Strategy</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/capabilities/" data-astro-cid-35ed7um5>All capabilities</a> </li> </ul> </div><div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>Start Here</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/start-here/" data-astro-cid-35ed7um5>Featured</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/search/" data-astro-cid-35ed7um5>Search</a> </li> </ul> </div><div class="site-footer__col" data-astro-cid-35ed7um5> <h2 class="site-footer__heading" data-astro-cid-35ed7um5>About</h2> <ul data-astro-cid-35ed7um5> <li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/about/" data-astro-cid-35ed7um5>About</a> </li><li data-astro-cid-35ed7um5> <a href="/portfolio/knowledge/contact/" data-astro-cid-35ed7um5>Let&#39;s Talk</a> </li> </ul> </div> </nav> <p class="site-footer__meta" data-astro-cid-35ed7um5> <span data-astro-cid-35ed7um5>&copy; 2026 Knowledge Center.</span> <span data-astro-cid-35ed7um5>Built to Master Blueprint v1.6.</span> </p> </div> </footer>  </body></html>  
