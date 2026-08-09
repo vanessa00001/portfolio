@@ -1357,5 +1357,12 @@ html.js .prob:not(.flipped) .prob-front .prob-hint::before{animation:flipspin 4s
      replace the IDs there. Loaded with `defer` so it never blocks rendering.
      =================================================================== -->
 <script defer src="analytics.js"></script>
+
+  <!-- Vane AI. The same component the Knowledge Center loads, served from the
+       Knowledge Center deployment: one client, one Worker, one evidence corpus.
+       The portfolio is a host, not a second implementation. Relative path so it
+       resolves under /portfolio/ without hardcoding the site root. -->
+  <vane-ai data-endpoint="https://vane-ai-answerability.vanessa-salonoy.workers.dev"></vane-ai>
+  <script defer src="knowledge/vane/vane-ai.js"></script>
 </body>
 </html>
