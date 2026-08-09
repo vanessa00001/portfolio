@@ -290,12 +290,16 @@ class VaneAI extends HTMLElement {
         + `<ul>${cites}</ul></div>`
       : '';
     const acts = (d.contactActions || []).map((a) =>
-      `<a class="action" href="${esc(a.href)}">${esc(a.label)}</a>`).join('');
+      `<a class="action" href="${esc(a.href)}" data-type="${esc(a.type)}">${esc(a.label)}</a>`).join('');
     const body = esc(d.answer || '').split(/\n\n+/).map((p) => `<p>${p}</p>`).join('');
     // Sources above the answer: a visitor should see where this came from before
     // reading what it says, not scroll past a claim to find its basis.
-    this.log.appendChild(el(
-      `<div class="a">${sources}${body}${acts ? `<div class="actions">${acts}</div>` : ''}</div>`));
+    const node = el(
+      `<div class="a">${sources}${body}${acts ? `<div class="actions">${acts}</div>` : ''}</div>`);
+    node.querySelectorAll('.action[data-type="message"]').forEach((a) => {
+      a.addEventListener('click', (e) => this.toContactForm(e, a.getAttribute('href')));
+    });
+    this.log.appendChild(node);
     this.status.textContent = 'Answer ready';
   }
 
@@ -308,6 +312,26 @@ class VaneAI extends HTMLElement {
     node.querySelector('button').addEventListener('click', () => this.ask());
     this.log.appendChild(node);
     this.status.textContent = msg;
+  }
+
+  /** The message action reaches the same destination two ways, depending on
+   *  whether this host actually renders the contact form. On the portfolio the
+   *  form is on the page, so following the link would scroll it behind an open
+   *  panel and look like nothing happened: close first, then scroll and focus.
+   *  On the Knowledge Center there is no form, so the link navigates normally.
+   *  The test is capability, not hostname, so any future host with a contact
+   *  form gets the better behaviour without being named here. The destination
+   *  itself stays application-owned; this only chooses how to reach it. */
+  toContactForm(event, href) {
+    const anchor = (href || '').split('#')[1];
+    const target = anchor && document.getElementById(anchor);
+    const field = target && target.querySelector('input, textarea, select');
+    if (!target || !field) return;            // no form here: let the link navigate
+    event.preventDefault();
+    this.close();
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+    setTimeout(() => field.focus({ preventScroll: true }), reduce ? 0 : 420);
   }
 
   /** Scroll to newest content after the browser has laid out the response,
